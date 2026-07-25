@@ -1,5 +1,6 @@
 <?php
 /**
+ * Kadence Child Theme Functions — v2026.07.26
  * Enqueue child styles.
  */
 function child_enqueue_styles() {
