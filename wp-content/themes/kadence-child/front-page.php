@@ -11,7 +11,7 @@ get_header();
 <main id="primary" class="site-main sf-homepage">
 
     <!-- HERO SECTION -->
-    <section class="sf-hero-section sf-hero-has-slider">
+    <section class="sf-hero-section sf-hero-has-slider" aria-label="Hero - Registered NDIS Service Provider in Australia">
 
         <!-- BACKGROUND IMAGE SLIDER -->
         <div class="sf-hero-slider" id="sfHeroSlider" aria-hidden="true">
@@ -117,7 +117,7 @@ get_header();
     </section>
 
     <!-- TRUST STATS SECTION -->
-    <section class="sf-stats-section">
+    <section class="sf-stats-section" aria-label="Key statistics about our NDIS services in Australia">
         <div class="sf-container sf-stats-grid">
             <div class="sf-stat-card">
                 <div class="sf-stat-number">24/7</div>
@@ -143,11 +143,11 @@ get_header();
     </section>
 
     <!-- SERVICES SECTION -->
-    <section id="services" class="sf-section sf-services-section">
+    <section id="services" class="sf-section sf-services-section" aria-label="NDIS disability support services">
         <div class="sf-container">
             <div class="sf-text-center">
-                <h2 class="sf-section-title">NDIS & DVA Services</h2>
-                <p class="sf-section-subtitle">We partner with you, your family, and mainstream providers to coordinate consistent and structured care.</p>
+                <h2 class="sf-section-title">NDIS & DVA Services We Provide as a Registered NDIS Service Provider</h2>
+                <p class="sf-section-subtitle">As a trusted <strong>NDIS Service Provider in Australia</strong>, we partner with you, your family, and mainstream providers to coordinate consistent, person-centered care across all five states.</p>
             </div>
             
             <div class="sf-services-grid">
@@ -156,8 +156,8 @@ get_header();
                     <div class="sf-service-card-icon">
                         <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                     </div>
-                    <h3 class="sf-service-title">Support Coordination</h3>
-                    <p class="sf-service-text">We connect you to mainstream medical networks, GP visits, psychologists, crisis housing, and psychiatric providers.</p>
+                    <h3 class="sf-service-title"><a href="/services/" style="color: inherit; text-decoration: none;">Support Coordination</a></h3>
+                    <p class="sf-service-text">Our NDIS support coordination service connects you to mainstream medical networks, GP visits, psychologists, crisis housing, and psychiatric providers across Australia.</p>
                     <ul class="sf-service-features">
                         <li>GP & specialist links</li>
                         <li>Mainstream care integration</li>
@@ -170,8 +170,8 @@ get_header();
                     <div class="sf-service-card-icon">
                         <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
                     </div>
-                    <h3 class="sf-service-title">Case Management</h3>
-                    <p class="sf-service-text">A structured approach to advocacy, goals identification, intervention monitoring, and long-term milestone reviews.</p>
+                    <h3 class="sf-service-title"><a href="/services/" style="color: inherit; text-decoration: none;">Case Management</a></h3>
+                    <p class="sf-service-text">Our NDIS case management takes a structured approach to advocacy, goals identification, intervention monitoring, and long-term milestone reviews for participants.</p>
                     <ul class="sf-service-features">
                         <li>Custom case plans</li>
                         <li>Permanent coordinators</li>
@@ -184,8 +184,8 @@ get_header();
                     <div class="sf-service-card-icon">
                         <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
                     </div>
-                    <h3 class="sf-service-title">Crisis Accommodation</h3>
-                    <p class="sf-service-text">Safe, temporary transitional group housing with structured support while transitioning to permanent tenancy.</p>
+                    <h3 class="sf-service-title"><a href="/services/" style="color: inherit; text-decoration: none;">Crisis Accommodation</a></h3>
+                    <p class="sf-service-text">As a Registered NDIS Service Provider, we offer safe, temporary transitional group housing with structured support while transitioning to permanent tenancy.</p>
                     <ul class="sf-service-features">
                         <li>Transitional group houses</li>
                         <li>Safe environments</li>
@@ -198,8 +198,8 @@ get_header();
                     <div class="sf-service-card-icon">
                         <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
                     </div>
-                    <h3 class="sf-service-title">Domestic Violence Support</h3>
-                    <p class="sf-service-text">Immediate protection, food assistance, legal aid referrals, and emergency housing for victims of domestic abuse.</p>
+                    <h3 class="sf-service-title"><a href="/services/" style="color: inherit; text-decoration: none;">Domestic Violence Support</a></h3>
+                    <p class="sf-service-text">Immediate protection, food assistance, legal aid referrals, and emergency housing for NDIS participants experiencing domestic and family violence in Australia.</p>
                     <ul class="sf-service-features">
                         <li>Emergency accommodation</li>
                         <li>Liaison with legal aid</li>
@@ -212,8 +212,8 @@ get_header();
                     <div class="sf-service-card-icon">
                         <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                     </div>
-                    <h3 class="sf-service-title">Personal & Nursing Care</h3>
-                    <p class="sf-service-text">Professional support with daily living, house cleaning, domestic tasks, personal hygiene, and customized clinical nursing.</p>
+                    <h3 class="sf-service-title"><a href="/services/" style="color: inherit; text-decoration: none;">Personal & Nursing Care</a></h3>
+                    <p class="sf-service-text">Professional NDIS personal care support with daily living, house cleaning, domestic tasks, personal hygiene, and customized clinical nursing services.</p>
                     <ul class="sf-service-features">
                         <li>House cleaning & domestic tasks</li>
                         <li>Qualified nursing care</li>
@@ -226,8 +226,8 @@ get_header();
                     <div class="sf-service-card-icon">
                         <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
                     </div>
-                    <h3 class="sf-service-title">Capacity Building</h3>
-                    <p class="sf-service-text">Targeted mentorship and programs designed to foster self-advocacy, community participation, and long-term independence.</p>
+                    <h3 class="sf-service-title"><a href="/services/" style="color: inherit; text-decoration: none;">Capacity Building</a></h3>
+                    <p class="sf-service-text">Targeted mentorship and NDIS capacity building programs designed to foster self-advocacy, community participation, and long-term independence for participants.</p>
                     <ul class="sf-service-features">
                         <li>Welfare worker guidance</li>
                         <li>Life skills development</li>
@@ -239,11 +239,11 @@ get_header();
     </section>
 
     <!-- STATE COVERAGE MAP SECTION -->
-    <section id="locations" class="sf-section sf-coverage-section">
+    <section id="locations" class="sf-section sf-coverage-section" aria-label="NDIS service coverage areas across Australia">
         <div class="sf-container">
             <div class="sf-text-center">
-                <h2 class="sf-section-title">Our Coverage</h2>
-                <p class="sf-section-subtitle">Support Foundation has liaison offices and support workers active in major Australian regions.</p>
+                <h2 class="sf-section-title">Where We Operate as an NDIS Service Provider in Australia</h2>
+                <p class="sf-section-subtitle">Support Foundation is a <strong>Registered NDIS Service Provider in Australia</strong> with liaison offices and support workers active across five major Australian states and territories.</p>
             </div>
             
             <div class="sf-coverage-grid">
@@ -280,8 +280,8 @@ get_header();
     <section class="sf-section sf-ethics-section">
         <div class="sf-container sf-ethics-grid">
             <div class="sf-ethics-content">
-                <h2>Committed to the <span>Highest Standards</span> of Ethical Care</h2>
-                <p>Beyond our legal obligations, we believe in the absolute dignity of every individual. Our workflows and principles strictly align with leading Australian frameworks to protect your choice and privacy.</p>
+                <h2>Committed to the <span>Highest Standards</span> of Ethical NDIS Care in Australia</h2>
+                <p>Beyond our legal obligations as a <strong>Registered NDIS Service Provider</strong>, we believe in the absolute dignity of every individual. Our workflows and principles strictly align with leading Australian frameworks to protect your choice and privacy.</p>
                 <div class="sf-ethics-points">
                     <div class="sf-ethics-card">
                         <h4 class="sf-ethics-card-title">NDIS Compliance</h4>
@@ -342,6 +342,54 @@ get_header();
                         <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 8px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                     </a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION (On-Page AEO for Featured Snippets) -->
+    <section id="faq" class="sf-section sf-faq-section" aria-label="Frequently asked questions about NDIS services" style="background: var(--sf-bg-secondary, #f8f9fa); padding: 4rem 0;">
+        <div class="sf-container">
+            <div class="sf-text-center">
+                <h2 class="sf-section-title">Frequently Asked Questions About Our NDIS Services</h2>
+                <p class="sf-section-subtitle">Common questions about Support Foundation, our NDIS registration, services, and coverage areas.</p>
+            </div>
+            <div style="max-width: 800px; margin: 2rem auto 0; display: flex; flex-direction: column; gap: 1rem;">
+                <details style="background: white; border-radius: 12px; padding: 1.25rem 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,.08); cursor: pointer;">
+                    <summary style="font-weight: 600; font-size: 1.05rem; color: #1a1a2e; list-style: none; display: flex; justify-content: space-between; align-items: center;">What is Support Foundation Australia?
+                        <span style="font-size: 1.3rem; transition: transform .2s;">+</span>
+                    </summary>
+                    <p style="margin-top: 0.75rem; color: #555; line-height: 1.7;">Support Foundation Australia is a <strong>Registered NDIS Service Provider in Australia</strong> (NDIS #4050064716). We offer 24/7 crisis support, support coordination, emergency accommodation, personal care, and domestic violence support across NSW, VIC, ACT, SA, and TAS. Call <a href="tel:0283861433" style="color: #10b981;">02-8386-1433</a>.</p>
+                </details>
+                <details style="background: white; border-radius: 12px; padding: 1.25rem 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,.08); cursor: pointer;">
+                    <summary style="font-weight: 600; font-size: 1.05rem; color: #1a1a2e; list-style: none; display: flex; justify-content: space-between; align-items: center;">What services does this NDIS Service Provider in Australia offer?
+                        <span style="font-size: 1.3rem; transition: transform .2s;">+</span>
+                    </summary>
+                    <p style="margin-top: 0.75rem; color: #555; line-height: 1.7;">As a Registered NDIS Service Provider, we offer: Support Coordination & Specialist Support Coordination, Case Management & Plan Management, 24/7 Crisis Support & Emergency Housing, Short-Term Accommodation (STA), Domestic Violence Support & Safety Planning, Personal Care & Nursing Care, Community Participation & Capacity Building, and Psychosocial Recovery Coaching.</p>
+                </details>
+                <details style="background: white; border-radius: 12px; padding: 1.25rem 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,.08); cursor: pointer;">
+                    <summary style="font-weight: 600; font-size: 1.05rem; color: #1a1a2e; list-style: none; display: flex; justify-content: space-between; align-items: center;">What areas in Australia does Support Foundation cover?
+                        <span style="font-size: 1.3rem; transition: transform .2s;">+</span>
+                    </summary>
+                    <p style="margin-top: 0.75rem; color: #555; line-height: 1.7;">Support Foundation operates as an <strong>NDIS Service Provider in Australia</strong> across five states and territories: New South Wales (Sydney, Roselands, Merrylands), Victoria (Melbourne, Jacana), Australian Capital Territory (Canberra), South Australia (Adelaide), and Tasmania (Hobart). Our head office is at Roselands, NSW 2196.</p>
+                </details>
+                <details style="background: white; border-radius: 12px; padding: 1.25rem 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,.08); cursor: pointer;">
+                    <summary style="font-weight: 600; font-size: 1.05rem; color: #1a1a2e; list-style: none; display: flex; justify-content: space-between; align-items: center;">How do I make a referral to Support Foundation?
+                        <span style="font-size: 1.3rem; transition: transform .2s;">+</span>
+                    </summary>
+                    <p style="margin-top: 0.75rem; color: #555; line-height: 1.7;">You can make a referral by calling <a href="tel:0283861433" style="color: #10b981;">02-8386-1433</a>, emailing <a href="mailto:info@supportfoundation.com.au" style="color: #10b981;">info@supportfoundation.com.au</a>, or completing our <a href="https://zfrmz.com/sIh6uDqI2c9PaujmOoTR" target="_blank" rel="noopener" style="color: #10b981;">online referral form</a>. We accept referrals from participants, families, hospitals, LACs, and other NDIS service providers.</p>
+                </details>
+                <details style="background: white; border-radius: 12px; padding: 1.25rem 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,.08); cursor: pointer;">
+                    <summary style="font-weight: 600; font-size: 1.05rem; color: #1a1a2e; list-style: none; display: flex; justify-content: space-between; align-items: center;">Is Support Foundation available 24/7 for crisis support?
+                        <span style="font-size: 1.3rem; transition: transform .2s;">+</span>
+                    </summary>
+                    <p style="margin-top: 0.75rem; color: #555; line-height: 1.7;">Yes. As a <strong>Registered NDIS Service Provider in Australia</strong>, our crisis support line operates 24 hours a day, 7 days a week, 365 days a year. Emergency accommodation placement and crisis response are available around the clock. Regular office hours are Monday–Friday, 9am–5pm AEDT.</p>
+                </details>
+                <details style="background: white; border-radius: 12px; padding: 1.25rem 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,.08); cursor: pointer;">
+                    <summary style="font-weight: 600; font-size: 1.05rem; color: #1a1a2e; list-style: none; display: flex; justify-content: space-between; align-items: center;">What is the NDIS provider registration number for Support Foundation?
+                        <span style="font-size: 1.3rem; transition: transform .2s;">+</span>
+                    </summary>
+                    <p style="margin-top: 0.75rem; color: #555; line-height: 1.7;">Support Foundation Australia's NDIS Provider Registration Number is <strong>4050064716</strong>. This can be verified through the <a href="https://www.ndiscommission.gov.au/" target="_blank" rel="noopener" style="color: #10b981;">NDIS Quality and Safeguards Commission</a>.</p>
+                </details>
             </div>
         </div>
     </section>
