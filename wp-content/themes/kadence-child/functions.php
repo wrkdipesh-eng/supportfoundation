@@ -48,19 +48,50 @@ function sf_add_top_header_badge() {
             }
         }
 
-        // 3. Top Bar \u2014 Animated Trust Ticker (replaces static NDIS badge)
-        var topHeader = document.querySelector(".site-top-header-inner-wrap");
-        if (topHeader) {
-            // Hide any existing static Registered NDIS text elements
-            var customizerHtmls = topHeader.querySelectorAll(".header-html-inner");
+        // 3. Top Bar — Animated Trust Ticker & Contact Info (Guaranteed Injection)
+        var masthead = document.querySelector("#masthead");
+        var topWrap  = document.querySelector(".site-top-header-wrap");
+        var topInner = document.querySelector(".site-top-header-inner-wrap");
+
+        // If top bar wrap is missing (e.g. disabled in Customizer), create it
+        if (!topWrap && masthead) {
+            topWrap = document.createElement("div");
+            topWrap.className = "site-top-header-wrap item-is-fixed";
+            topWrap.innerHTML = '<div class="site-top-header-inner-wrap sf-container">'
+                + '<div class="site-header-top-section-center"></div>'
+                + '<div class="site-header-top-section-right"></div>'
+                + '</div>';
+            masthead.insertBefore(topWrap, masthead.firstChild);
+            topInner = topWrap.querySelector(".site-top-header-inner-wrap");
+        }
+
+        if (topInner) {
+            // Ensure center section for ticker exists
+            var topCenter = topInner.querySelector(".site-header-top-section-center");
+            if (!topCenter) {
+                topCenter = document.createElement("div");
+                topCenter.className = "site-header-top-section-center";
+                topInner.appendChild(topCenter);
+            }
+
+            // Ensure right section for contact info exists
+            var topRight = topInner.querySelector(".site-header-top-section-right");
+            if (!topRight) {
+                topRight = document.createElement("div");
+                topRight.className = "site-header-top-section-right";
+                topInner.appendChild(topRight);
+            }
+
+            // Hide static Registered NDIS elements
+            var customizerHtmls = topInner.querySelectorAll(".header-html-inner");
             customizerHtmls.forEach(function(el) {
                 if (el.textContent.indexOf("Registered NDIS") !== -1) {
                     el.style.display = "none";
                 }
             });
 
-            // Inject animated ticker if not already there
-            if (!topHeader.querySelector(".sf-trust-ticker-wrap")) {
+            // Inject ticker into center
+            if (!topCenter.querySelector(".sf-trust-ticker-wrap")) {
                 var tickerItems = [
                     { icon: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline>', color: "#2dd4bf", text: "Registered NDIS & DVA Provider \u00b7 #4050064716" },
                     { icon: '<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>', color: "#a78bfa", text: "24/7 Crisis Support & Emergency Placement" },
@@ -69,39 +100,47 @@ function sf_add_top_header_badge() {
                     { icon: '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line>', color: "#2dd4bf", text: "AASW & ACWA Ethical Compliance Guaranteed" }
                 ];
 
-                function makeTickerHTML() {
-                    // Build 2 copies for seamless infinite loop
-                    var html = '<div class="sf-trust-ticker">';
-                    for (var r = 0; r < 2; r++) {
-                        tickerItems.forEach(function(item, i) {
-                            html += '<span class="sf-ticker-item">'
-                                + '<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="' + item.color + '" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">' + item.icon + '</svg>'
-                                + item.text
-                                + '</span>'
-                                + (i < tickerItems.length - 1 ? '<span class="sf-ticker-sep">\u22c5</span>' : '');
-                        });
-                        if (r === 0) html += '<span class="sf-ticker-sep">\u22c5</span>';
-                    }
-                    html += '</div>';
-                    return html;
+                var html = '<div class="sf-trust-ticker">';
+                for (var r = 0; r < 2; r++) {
+                    tickerItems.forEach(function(item, i) {
+                        html += '<span class="sf-ticker-item">'
+                            + '<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="' + item.color + '" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">' + item.icon + '</svg>'
+                            + item.text
+                            + '</span>'
+                            + (i < tickerItems.length - 1 ? '<span class="sf-ticker-sep">\u22c5</span>' : '');
+                    });
+                    if (r === 0) html += '<span class="sf-ticker-sep">\u22c5</span>';
                 }
+                html += '</div>';
 
                 var tickerWrap = document.createElement("div");
                 tickerWrap.className = "sf-trust-ticker-wrap";
-                tickerWrap.innerHTML = makeTickerHTML();
+                tickerWrap.innerHTML = html;
+                topCenter.appendChild(tickerWrap);
+            }
 
-                // Insert at the start of topHeader so it takes center position
-                var firstChild = topHeader.querySelector(".site-header-top-section-center");
-                if (firstChild) {
-                    firstChild.insertBefore(tickerWrap, firstChild.firstChild);
-                } else {
-                    topHeader.insertBefore(tickerWrap, topHeader.firstChild);
-                }
+            // Inject social icons + phone number into right section
+            if (!topRight.querySelector(".sf-topbar-contact")) {
+                topRight.innerHTML = '<div class="sf-topbar-contact">'
+                    + '<a href="https://www.facebook.com/profile.php?id=61556399253595" target="_blank" rel="noopener" aria-label="Facebook" class="sf-topbar-social">'
+                    +   '<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>'
+                    + '</a>'
+                    + '<a href="https://www.instagram.com/supportfoundation.au/" target="_blank" rel="noopener" aria-label="Instagram" class="sf-topbar-social">'
+                    +   '<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>'
+                    + '</a>'
+                    + '<a href="https://www.linkedin.com/company/support-foundation-australia" target="_blank" rel="noopener" aria-label="LinkedIn" class="sf-topbar-social">'
+                    +   '<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>'
+                    + '</a>'
+                    + '<span class="sf-topbar-divider"></span>'
+                    + '<a href="tel:0283861433" class="sf-topbar-phone">'
+                    +   '<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right:4px;vertical-align:middle;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>'
+                    +   'Call Us&nbsp;<strong>02-8386-1433</strong>'
+                    + '</a>'
+                    + '</div>';
             }
         }
 
-        // 4. Sticky Header & Logo Shrink Effect on Scroll
-        var masthead = document.querySelector("#masthead");
+        // 4. Sticky Header & Lock Logo Size
         if (masthead) {
             var handleScroll = function() {
                 if (window.scrollY > 30) {
@@ -111,59 +150,23 @@ function sf_add_top_header_badge() {
                 }
             };
             window.addEventListener("scroll", handleScroll);
-            handleScroll(); // Initial check
+            handleScroll();
         }
 
-        // 5. Hero Background Slider
-        var slides = document.querySelectorAll(".sf-slide");
-        var dots   = document.querySelectorAll(".sf-dot");
-        if (slides.length > 1) {
-            var current = 0;
-            var total   = slides.length;
-
-            function goToSlide(index) {
-                slides[current].classList.remove("sf-slide--active");
-                dots[current].classList.remove("sf-dot--active");
-                current = (index + total) % total;
-                slides[current].classList.add("sf-slide--active");
-                dots[current].classList.add("sf-dot--active");
-            }
-
-            // Auto-play every 8 seconds
-            var sliderTimer = setInterval(function() {
-                goToSlide(current + 1);
-            }, 8000);
-
-            // Dot click navigation
-            dots.forEach(function(dot, i) {
-                dot.addEventListener("click", function() {
-                    clearInterval(sliderTimer);
-                    goToSlide(i);
-                    sliderTimer = setInterval(function() { goToSlide(current + 1); }, 8000);
-                });
-            });
+        // Lock logo size against inline style mutations by theme JS
+        var logoImg = document.querySelector(".site-branding img");
+        if (logoImg) {
+            var lockLogo = function() {
+                logoImg.style.setProperty("height", "48px", "important");
+                logoImg.style.setProperty("max-height", "48px", "important");
+                logoImg.style.setProperty("min-height", "48px", "important");
+                logoImg.style.setProperty("width", "auto", "important");
+            };
+            lockLogo();
+            var observer = new MutationObserver(lockLogo);
+            observer.observe(logoImg, { attributes: true, attributeFilter: ["style", "height", "width"] });
         }
 
-        // 7. Inject social icons + phone number into top bar right section
-        var topRight = document.querySelector(".site-header-top-section-right");
-        if (topRight && !topRight.querySelector(".sf-topbar-contact")) {
-            topRight.innerHTML = '<div class="sf-topbar-contact">'
-                + '<a href="https://www.facebook.com/profile.php?id=61556399253595" target="_blank" rel="noopener" aria-label="Facebook" class="sf-topbar-social">'
-                +   '<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>'
-                + '</a>'
-                + '<a href="https://www.instagram.com/supportfoundation.au/" target="_blank" rel="noopener" aria-label="Instagram" class="sf-topbar-social">'
-                +   '<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>'
-                + '</a>'
-                + '<a href="https://www.linkedin.com/company/support-foundation-australia" target="_blank" rel="noopener" aria-label="LinkedIn" class="sf-topbar-social">'
-                +   '<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>'
-                + '</a>'
-                + '<span class="sf-topbar-divider"></span>'
-                + '<a href="tel:0283861433" class="sf-topbar-phone">'
-                +   '<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right:4px;vertical-align:middle;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>'
-                +   'Call Us&nbsp;<strong>02-8386-1433</strong>'
-                + '</a>'
-                + '</div>';
-        }
     });
     </script>
     <?php
