@@ -273,12 +273,12 @@ Text Domain: kadence-child
 }
 
 .sf-stack-card {
-    background: rgba(255, 255, 255, 0.85);
-    border: 1px solid var(--glass-border);
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
     backdrop-filter: blur(12px);
-    border-radius: 12px;
+    border-radius: 14px;
     padding: 1.5rem;
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     align-items: flex-start;
@@ -286,34 +286,35 @@ Text Domain: kadence-child
 }
 
 .sf-stack-card:nth-child(1) {
-    transform: translateX(-15px);
+    transform: translateX(-10px);
     animation: float 6s ease-in-out infinite;
+    border-left: 4px solid #7a00df;
 }
 
 .sf-stack-card:nth-child(2) {
-    transform: translateX(15px);
+    transform: translateX(10px);
     animation: float 6s ease-in-out infinite 2s;
-    border-left: 4px solid var(--primary);
+    border-left: 4px solid #049f82;
 }
 
 .sf-stack-card:nth-child(3) {
     transform: translateX(-5px);
     animation: float 6s ease-in-out infinite 4s;
-    border-left: 4px solid var(--secondary);
+    border-left: 4px solid #7a00df;
 }
 
 .sf-stack-card:hover {
     transform: translateY(-5px) scale(1.02);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 20px 35px -10px rgba(4, 159, 130, 0.15);
     background: #ffffff;
 }
 
 .sf-card-icon {
-    width: 44px;
-    height: 44px;
-    border-radius: 8px;
-    background-color: var(--secondary-light);
-    color: var(--secondary);
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+    background-color: rgba(122, 0, 223, 0.08);
+    color: #7a00df;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -321,8 +322,13 @@ Text Domain: kadence-child
 }
 
 .sf-stack-card:nth-child(2) .sf-card-icon {
-    background-color: rgba(4, 159, 130, 0.1);
-    color: var(--primary);
+    background-color: rgba(4, 159, 130, 0.08);
+    color: #049f82;
+}
+
+.sf-stack-card:nth-child(3) .sf-card-icon {
+    background-color: rgba(122, 0, 223, 0.08);
+    color: #7a00df;
 }
 
 .sf-card-title {
