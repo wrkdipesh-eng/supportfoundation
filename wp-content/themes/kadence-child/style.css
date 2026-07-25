@@ -924,19 +924,28 @@ Text Domain: kadence-child
     transform: scale(1.02) !important;
 }
 
-/* Smooth Logo Shrink on Scroll */
-#masthead.sf-header-scrolled .site-branding a.brand img.custom-logo {
+/* Smooth Logo Shrink on Scroll & Ironclad Override of Kadence Sticky Swap */
+#masthead.sf-header-scrolled .site-branding a.brand img.custom-logo,
+.kadence-sticky-header.item-is-fixed .site-branding a.brand img.custom-logo,
+.kadence-sticky-header.item-is-fixed:not(.item-at-start) .site-branding a.brand img {
+    display: block !important;
     max-height: 42px !important;
 }
 
-#masthead.sf-header-scrolled .site-main-header-inner-wrap {
+#masthead.sf-header-scrolled .site-main-header-inner-wrap,
+.kadence-sticky-header.item-is-fixed .site-main-header-inner-wrap {
     min-height: 64px !important;
 }
 
-/* CRITICAL: Hide duplicate Kadence sticky logo image completely */
+/* CRITICAL: Force hide Kadence sticky logo image under all states, including scrolling */
+.kadence-sticky-header.item-is-fixed:not(.item-at-start) .site-branding a.brand.has-sticky-logo img.kadence-sticky-logo,
 .site-branding img.kadence-sticky-logo,
 img.kadence-sticky-logo {
     display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
 }
 
 /* Hide any stray floating badge under the main header logo */

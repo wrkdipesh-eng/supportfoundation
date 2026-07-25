@@ -18,7 +18,11 @@ function sf_add_top_header_badge() {
     ?>
     <script>
     document.addEventListener("DOMContentLoaded", function() {
-        // 1. Remove duplicate sticky logo elements inside site branding
+        // 1. Remove duplicate sticky logo elements and disable Kadence logo swap on scroll
+        var brandLinks = document.querySelectorAll(".site-branding a.brand");
+        brandLinks.forEach(function(link) {
+            link.classList.remove("has-sticky-logo");
+        });
         var stickyLogos = document.querySelectorAll(".site-branding img.kadence-sticky-logo");
         stickyLogos.forEach(function(img) {
             img.remove();
