@@ -983,17 +983,39 @@ Text Domain: kadence-child
     background: #06261f !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
     padding: 0 !important;
-    height: 36px !important;
-    overflow: hidden !important;
+    margin: 0 !important;
+    height: 40px !important;
+    min-height: 40px !important;
+    max-height: 40px !important;
+    overflow: visible !important;
     transition: all 0.3s ease !important;
+    z-index: 10000 !important;
+}
+
+.site-top-header-inner-wrap,
+.site-header-top-section-left,
+.site-header-top-section-center,
+.site-header-top-section-right {
+    height: 40px !important;
+    min-height: 40px !important;
+    max-height: 40px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    align-content: center !important;
+    box-sizing: border-box !important;
+    line-height: 1 !important;
 }
 
 .site-top-header-inner-wrap {
-    height: 36px !important;
-    display: flex !important;
-    align-items: center !important;
+    max-width: 1240px !important;
+    margin: 0 auto !important;
+    padding: 0 1.5rem !important;
+    justify-content: space-between !important;
     overflow: hidden !important;
-    flex-wrap: nowrap !important;
 }
 
 /* Keep left hidden — ticker + right corner only */
@@ -1001,104 +1023,37 @@ Text Domain: kadence-child
     display: none !important;
 }
 
-/* Show right section — phone + socials at right corner */
-.site-header-top-section-right {
-    display: flex !important;
-    align-items: center !important;
-    flex-shrink: 0 !important;
-    height: 36px !important;
-    padding-right: 1.25rem !important;
-    gap: 0.5rem !important;
-}
-
+/* Center section for trust ticker */
 .site-header-top-section-center {
-    display: flex !important;
-    align-items: center !important;
     justify-content: flex-start !important;
     flex: 1 1 auto !important;
     min-width: 0 !important;
     overflow: hidden !important;
-    height: 36px !important;
 }
 
-/* Hide phone/social widgets in top bar center — ticker takes that space */
+/* Hide default Kadence customizer widgets in top bar center */
 .site-header-top-section-center > .site-header-item:not(:has(.sf-trust-ticker-wrap)) {
     display: none !important;
 }
 
-/* ---- Right section: social icon buttons ---- */
-.site-header-top-section-right .social-button,
-.site-header-top-section-right .header-social-wrap .social-button {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 26px !important;
-    height: 26px !important;
-    border-radius: 50% !important;
-    background: rgba(255,255,255,0.08) !important;
-    color: rgba(255,255,255,0.75) !important;
-    font-size: 0.78rem !important;
-    transition: background 0.2s ease, color 0.2s ease !important;
-    text-decoration: none !important;
-}
-
-.site-header-top-section-right .social-button:hover,
-.site-header-top-section-right .header-social-wrap .social-button:hover {
-    background: #049f82 !important;
-    color: #ffffff !important;
-}
-
-.site-header-top-section-right .social-button svg,
-.site-header-top-section-right .header-social-wrap .social-button svg {
-    width: 13px !important;
-    height: 13px !important;
-    fill: currentColor !important;
-}
-
-/* ---- Right section: phone / HTML text ---- */
-.site-header-top-section-right .header-html,
-.site-header-top-section-right .header-html p {
-    font-family: 'Outfit', sans-serif !important;
-    font-size: 0.78rem !important;
-    font-weight: 700 !important;
-    color: rgba(255,255,255,0.82) !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    white-space: nowrap !important;
-}
-
-.site-header-top-section-right .header-html a,
-.site-header-top-section-right .header-html strong {
-    color: #2dd4bf !important;
-    font-weight: 700 !important;
-    text-decoration: none !important;
-    letter-spacing: 0.02em !important;
-    transition: color 0.2s ease !important;
-}
-
-.site-header-top-section-right .header-html a:hover {
-    color: #ffffff !important;
+/* Show right section — phone + socials at right corner */
+.site-header-top-section-right {
+    flex-shrink: 0 !important;
+    justify-content: flex-end !important;
+    padding-left: 1rem !important;
 }
 
 /* ---- JS-injected top bar right: contact wrapper ---- */
 .sf-topbar-contact {
     display: flex !important;
     align-items: center !important;
-    gap: 6px !important;
-    height: 36px !important;
-    padding: 0 1rem 0 0 !important;
+    justify-content: flex-end !important;
+    gap: 8px !important;
+    height: 40px !important;
+    margin: 0 !important;
+    padding: 0 !important;
     white-space: nowrap !important;
-}
-
-/* Divider line between ticker and contact block */
-.site-header-top-section-right::before {
-    content: '';
-    display: block;
-    width: 1px;
-    height: 18px;
-    background: rgba(255,255,255,0.15);
-    margin-right: 8px;
-    flex-shrink: 0;
+    line-height: 1 !important;
 }
 
 /* Social icon links */
@@ -1109,16 +1064,25 @@ Text Domain: kadence-child
     width: 26px !important;
     height: 26px !important;
     border-radius: 50% !important;
-    background: rgba(255,255,255,0.08) !important;
-    color: rgba(255,255,255,0.75) !important;
-    transition: background 0.2s ease, color 0.2s ease !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease !important;
     text-decoration: none !important;
     flex-shrink: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 .sf-topbar-social:hover {
     background: #049f82 !important;
-    color: #fff !important;
+    color: #ffffff !important;
+    transform: translateY(-1px) !important;
+}
+
+.sf-topbar-social svg {
+    width: 13px !important;
+    height: 13px !important;
+    display: block !important;
 }
 
 /* Small vertical divider between socials and phone */
@@ -1126,7 +1090,7 @@ Text Domain: kadence-child
     display: inline-block !important;
     width: 1px !important;
     height: 16px !important;
-    background: rgba(255,255,255,0.15) !important;
+    background: rgba(255, 255, 255, 0.18) !important;
     margin: 0 6px !important;
     flex-shrink: 0 !important;
 }
@@ -1136,19 +1100,24 @@ Text Domain: kadence-child
     display: inline-flex !important;
     align-items: center !important;
     font-family: 'Outfit', sans-serif !important;
-    font-size: 0.78rem !important;
+    font-size: 0.825rem !important;
     font-weight: 600 !important;
-    color: rgba(255,255,255,0.82) !important;
+    color: rgba(255, 255, 255, 0.9) !important;
     text-decoration: none !important;
     white-space: nowrap !important;
     transition: color 0.2s ease !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1 !important;
 }
 
 .sf-topbar-phone strong {
     color: #2dd4bf !important;
     font-weight: 700 !important;
-    margin-left: 2px !important;
+    margin-left: 4px !important;
+    font-size: 0.875rem !important;
     letter-spacing: 0.02em !important;
+    transition: color 0.2s ease !important;
 }
 
 .sf-topbar-phone:hover,
