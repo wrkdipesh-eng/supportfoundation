@@ -11,8 +11,22 @@ function child_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'child_enqueue_styles' );
 
 /**
+ * Automatically flush WordPress rewrite rules on deploy to resolve 404 errors on all subpages
+ */
+add_action('init', 'sf_auto_fix_404_permalinks', 99);
+function sf_auto_fix_404_permalinks() {
+    if (get_option('sf_permalinks_fix_v3') !== 'done') {
+        global $wp_rewrite;
+        $wp_rewrite->set_permalink_structure('/%postname%/');
+        flush_rewrite_rules(true);
+        update_option('sf_permalinks_fix_v3', 'done');
+    }
+}
+
+/**
  * Add custom functions here
  */
+
 
 add_action('wp_footer', 'sf_add_top_header_badge');
 function sf_add_top_header_badge() {
