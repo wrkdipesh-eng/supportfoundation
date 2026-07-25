@@ -11,7 +11,24 @@ get_header();
 <main id="primary" class="site-main sf-homepage">
 
     <!-- HERO SECTION -->
-    <section class="sf-hero-section">
+    <section class="sf-hero-section sf-hero-has-slider">
+
+        <!-- BACKGROUND IMAGE SLIDER -->
+        <div class="sf-hero-slider" id="sfHeroSlider" aria-hidden="true">
+            <div class="sf-slide sf-slide--active" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/hero-slide-1.png');"></div>
+            <div class="sf-slide" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/hero-slide-2.png');"></div>
+            <div class="sf-slide" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/hero-slide-3.png');"></div>
+            <!-- Dark gradient overlay -->
+            <div class="sf-slide-overlay"></div>
+        </div>
+
+        <!-- Slide Navigation Dots -->
+        <div class="sf-slider-dots" role="tablist" aria-label="Hero image slider">
+            <button class="sf-dot sf-dot--active" data-slide="0" aria-label="Slide 1" role="tab"></button>
+            <button class="sf-dot" data-slide="1" aria-label="Slide 2" role="tab"></button>
+            <button class="sf-dot" data-slide="2" aria-label="Slide 3" role="tab"></button>
+        </div>
+
         <div class="sf-container sf-hero-grid">
             <div class="sf-hero-content">
                 <span class="sf-hero-badge">

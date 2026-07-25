@@ -112,6 +112,47 @@ function sf_add_top_header_badge() {
             window.addEventListener("scroll", handleScroll);
             handleScroll(); // Initial check
         }
+
+        // 5. Hero Background Slider
+        var slides = document.querySelectorAll(".sf-slide");
+        var dots   = document.querySelectorAll(".sf-dot");
+        if (slides.length > 1) {
+            var current = 0;
+            var total   = slides.length;
+
+            function goToSlide(index) {
+                slides[current].classList.remove("sf-slide--active");
+                dots[current].classList.remove("sf-dot--active");
+                current = (index + total) % total;
+                slides[current].classList.add("sf-slide--active");
+                dots[current].classList.add("sf-dot--active");
+            }
+
+            // Auto-play every 5 seconds
+            var sliderTimer = setInterval(function() {
+                goToSlide(current + 1);
+            }, 5000);
+
+            // Dot click navigation
+            dots.forEach(function(dot, i) {
+                dot.addEventListener("click", function() {
+                    clearInterval(sliderTimer);
+                    goToSlide(i);
+                    sliderTimer = setInterval(function() { goToSlide(current + 1); }, 5000);
+                });
+            });
+        }
+
+        // 6. Force top bar to single-line — hide any non-ticker items
+        var topCenter = document.querySelector(".site-header-top-section-center");
+        if (topCenter) {
+            var topItems = topCenter.querySelectorAll(".site-header-item");
+            topItems.forEach(function(item) {
+                if (!item.querySelector(".sf-trust-ticker-wrap")) {
+                    item.style.display = "none";
+                }
+            });
+        }
     });
     </script>
     <?php

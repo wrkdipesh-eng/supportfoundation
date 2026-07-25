@@ -161,34 +161,120 @@ Text Domain: kadence-child
     transform: translateY(-2px);
 }
 
-/* Hero Section */
+/* ============================================
+   Hero Section + Background Slider
+   ============================================ */
 .sf-hero-section {
-    background: linear-gradient(145deg, #f6fbf9 0%, #f7f3fd 100%);
-    padding: 11rem 1.5rem 6rem 1.5rem;
-    border-bottom: 1px solid var(--border);
+    background: #0e1a14;
+    padding: 10rem 1.5rem 5rem 1.5rem;
+    border-bottom: none;
     position: relative;
     overflow: hidden;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
 }
 
-.sf-hero-section::before {
-    content: '';
+/* --- Slider container (absolute, full-cover) --- */
+.sf-hero-slider {
     position: absolute;
-    top: -20%;
-    right: -10%;
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(4, 159, 130, 0.03) 0%, transparent 70%);
+    inset: 0;
+    z-index: 0;
+}
+
+.sf-slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.4s ease-in-out;
+    will-change: opacity;
+}
+
+.sf-slide--active {
+    opacity: 1;
+}
+
+/* Dark gradient overlay so text is always readable */
+.sf-slide-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        105deg,
+        rgba(6, 20, 13, 0.82) 0%,
+        rgba(6, 20, 13, 0.55) 55%,
+        rgba(6, 20, 13, 0.2) 100%
+    );
     z-index: 1;
 }
 
+/* Dot navigation */
+.sf-slider-dots {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.65rem;
+    z-index: 10;
+}
+
+.sf-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.35);
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.sf-dot--active,
+.sf-dot:hover {
+    background: #049f82;
+    width: 24px;
+    border-radius: 99px;
+    box-shadow: 0 0 10px rgba(4, 159, 130, 0.6);
+}
+
+/* Hero inner grid — must be above the slider */
 .sf-hero-grid {
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
     gap: 4rem;
     align-items: center;
     position: relative;
-    z-index: 2;
+    z-index: 5;
+    width: 100%;
+}
+
+/* Adjust hero text color for dark photo background */
+.sf-hero-has-slider .sf-hero-badge {
+    background: rgba(4, 159, 130, 0.2) !important;
+    border-color: rgba(4, 159, 130, 0.4) !important;
+    color: #2dd4bf !important;
+}
+
+.sf-hero-has-slider .sf-hero-title {
+    color: #ffffff !important;
+}
+
+.sf-hero-has-slider .sf-hero-title span {
+    color: #2dd4bf !important;
+}
+
+.sf-hero-has-slider .sf-hero-description {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.sf-hero-has-slider .sf-trust-badge {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.sf-hero-has-slider .sf-trust-badge svg {
+    color: #2dd4bf !important;
 }
 
 .sf-hero-content {
@@ -870,16 +956,20 @@ Text Domain: kadence-child
 
 /* 2. Top Utility Announcement Bar */
 .site-top-header-wrap {
-    background: #06261f !important; /* Deep luxury dark emerald theme */
+    background: #06261f !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-    padding: 0.25rem 0 !important;
+    padding: 0 !important;
+    height: 36px !important;
+    overflow: hidden !important;
     transition: all 0.3s ease !important;
 }
 
 .site-top-header-inner-wrap {
-    min-height: 38px !important;
+    height: 36px !important;
     display: flex !important;
     align-items: center !important;
+    overflow: hidden !important;
+    flex-wrap: nowrap !important;
 }
 
 .site-header-top-section-center {
@@ -887,7 +977,15 @@ Text Domain: kadence-child
     align-items: center !important;
     justify-content: space-between !important;
     width: 100% !important;
-    gap: 1rem !important;
+    gap: 0 !important;
+    flex-wrap: nowrap !important;
+    overflow: hidden !important;
+    height: 36px !important;
+}
+
+/* Hide phone/social widgets in top bar — ticker takes full width */
+.site-header-top-section-center > .site-header-item:not(:has(.sf-trust-ticker-wrap)) {
+    display: none !important;
 }
 
 /* Top Utility Bar - NDIS Micro Pill Badge: HIDDEN (replaced by ticker) */
