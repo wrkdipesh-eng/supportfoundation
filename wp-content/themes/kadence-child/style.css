@@ -972,11 +972,18 @@ Text Domain: kadence-child
     flex-wrap: nowrap !important;
 }
 
+.site-header-top-section-left,
+.site-header-top-section-right {
+    display: none !important;
+}
+
 .site-header-top-section-center {
     display: flex !important;
     align-items: center !important;
-    justify-content: space-between !important;
+    justify-content: center !important;
     width: 100% !important;
+    max-width: 100% !important;
+    flex: 1 1 100% !important;
     gap: 0 !important;
     flex-wrap: nowrap !important;
     overflow: hidden !important;
@@ -997,24 +1004,25 @@ Text Domain: kadence-child
    Animated Trust Ticker — fills top bar
    ================================================ */
 .sf-trust-ticker-wrap {
-    overflow: hidden;
-    flex: 1;
-    min-width: 0;
-    display: flex;
-    align-items: center;
+    overflow: hidden !important;
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    display: flex !important;
+    align-items: center !important;
     mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
     -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
 }
 
 .sf-trust-ticker {
-    display: flex;
-    align-items: center;
-    gap: 0;
-    white-space: nowrap;
-    animation: sf-ticker-scroll 30s linear infinite;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0 !important;
+    white-space: nowrap !important;
+    animation: sf-ticker-scroll 30s linear infinite !important;
 }
 
-.sf-trust-ticker:hover { animation-play-state: paused; }
+.sf-trust-ticker:hover { animation-play-state: paused !important; }
 
 @keyframes sf-ticker-scroll {
     0%   { transform: translateX(0); }
@@ -1022,27 +1030,28 @@ Text Domain: kadence-child
 }
 
 .sf-ticker-item {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 0 1.5rem;
-    font-family: 'Outfit', sans-serif;
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 0.82);
-    letter-spacing: 0.03em;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.4rem !important;
+    padding: 0 1.5rem !important;
+    font-family: 'Outfit', sans-serif !important;
+    font-size: 0.78rem !important;
+    font-weight: 600 !important;
+    color: #2dd4bf !important;
+    letter-spacing: 0.03em !important;
 }
 
 .sf-ticker-item svg {
-    flex-shrink: 0;
-    opacity: 0.9;
+    flex-shrink: 0 !important;
+    opacity: 0.9 !important;
+    color: inherit !important;
 }
 
 .sf-ticker-sep {
-    color: rgba(45, 212, 191, 0.4);
-    font-size: 1rem;
-    line-height: 1;
-    padding: 0 0.5rem;
+    color: rgba(45, 212, 191, 0.4) !important;
+    font-size: 1rem !important;
+    line-height: 1 !important;
+    padding: 0 0.5rem !important;
 }
 
 /* Top Utility Bar - Phone & Socials */
@@ -1430,10 +1439,17 @@ img.kadence-sticky-logo {
 
 /* ---- Main Footer Body ---- */
 .sf-footer-main {
-    background: #0c1410;
-    padding: 4.5rem 0 3.5rem;
-    position: relative;
-    overflow: hidden;
+    background: #0c1410 !important;
+    color: #e2e8f0 !important;
+    padding: 4.5rem 0 3.5rem !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.sf-footer-main p,
+.sf-footer-main span,
+.sf-footer-main li {
+    color: #a4b3ac !important;
 }
 
 /* Subtle radial glow blobs for depth */
@@ -1488,30 +1504,30 @@ img.kadence-sticky-logo {
     opacity: 0.92;
 }
 .sf-footer-logo-text {
-    font-family: 'Outfit', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: #ffffff;
-    letter-spacing: -0.02em;
+    font-family: 'Outfit', sans-serif !important;
+    font-size: 1.5rem !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
+    letter-spacing: -0.02em !important;
 }
 
 .sf-footer-tagline {
-    font-family: 'Outfit', sans-serif;
-    font-size: 1.15rem;
-    font-weight: 500;
-    color: rgba(255,255,255,0.5);
-    line-height: 1.4;
+    font-family: 'Outfit', sans-serif !important;
+    font-size: 1.15rem !important;
+    font-weight: 500 !important;
+    color: rgba(255,255,255,0.7) !important;
+    line-height: 1.4 !important;
     margin: 0 0 0.85rem 0 !important;
 }
 .sf-footer-tagline strong {
-    color: #ffffff;
-    font-weight: 800;
+    color: #ffffff !important;
+    font-weight: 800 !important;
 }
 
 .sf-footer-about {
-    font-size: 0.85rem;
-    color: #6b7a74;
-    line-height: 1.7;
+    font-size: 0.85rem !important;
+    color: #9ab0a6 !important;
+    line-height: 1.7 !important;
     margin: 0 0 1.5rem 0 !important;
 }
 
