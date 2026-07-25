@@ -1,0 +1,11 @@
+# Support Foundation Australia - Robots.txt
+User-agent: *
+Allow: /
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /readme.html
+Disallow: /license.txt
+
+# XML Sitemap Pointers
+Sitemap: https://www.supportfoundation.com.au/sitemap_index.xml
+Sitemap: https://www.supportfoundation.com.au/wp-sitemap.xml

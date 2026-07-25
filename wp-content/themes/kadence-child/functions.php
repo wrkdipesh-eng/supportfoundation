@@ -376,3 +376,118 @@ function sf_custom_footer() {
     </footer>
     <?php
 }
+
+/* =====================================================
+ * COMPLETE ON-PAGE SEO ENGINE & STRUCTURED DATA (JSON-LD)
+ * ===================================================== */
+add_action('wp_head', 'sf_inject_onpage_seo_engine', 1);
+function sf_inject_onpage_seo_engine() {
+    $site_url = home_url('/');
+    $current_url = is_front_page() ? $site_url : get_permalink();
+    $page_title = is_front_page() 
+        ? 'Support Foundation — Registered NDIS & DVA Service Provider' 
+        : wp_get_document_title();
+    $meta_desc = 'Support Foundation is an Australian Registered NDIS & DVA Service Provider (#4050064716) offering 24/7 crisis support, support coordination, accommodation, and personal care across NSW, VIC, ACT, SA, and TAS.';
+    $logo_url = get_stylesheet_directory_uri() . '/images/logo.png';
+    ?>
+    <!-- ON-PAGE SEO META TAGS -->
+    <meta name="description" content="<?php echo esc_attr($meta_desc); ?>">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="<?php echo esc_url($current_url); ?>">
+    <meta name="geo.region" content="AU-NSW">
+    <meta name="geo.placename" content="Sydney, NSW, Australia">
+    <meta name="geo.position" content="-33.9318;151.0825">
+    <meta name="ICBM" content="-33.9318, 151.0825">
+
+    <!-- OPEN GRAPH META TAGS -->
+    <meta property="og:locale" content="en_AU">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="<?php echo esc_attr($page_title); ?>">
+    <meta property="og:description" content="<?php echo esc_attr($meta_desc); ?>">
+    <meta property="og:url" content="<?php echo esc_url($current_url); ?>">
+    <meta property="og:site_name" content="Support Foundation Australia">
+    <meta property="og:image" content="https://www.supportfoundation.com.au/wp-content/uploads/2024/02/cropped-support-foundation-logo.png">
+
+    <!-- TWITTER CARDS -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<?php echo esc_attr($page_title); ?>">
+    <meta name="twitter:description" content="<?php echo esc_attr($meta_desc); ?>">
+    <meta name="twitter:image" content="https://www.supportfoundation.com.au/wp-content/uploads/2024/02/cropped-support-foundation-logo.png">
+
+    <!-- SCHEMA.ORG JSON-LD STRUCTURED DATA -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["MedicalBusiness", "GovernmentService", "LocalBusiness"],
+          "@id": "<?php echo esc_url($site_url); ?>#organization",
+          "name": "Support Foundation Australia",
+          "legalName": "Support Foundation Australia Pty Ltd",
+          "url": "<?php echo esc_url($site_url); ?>",
+          "logo": "<?php echo esc_url($logo_url); ?>",
+          "telephone": "02-8386-1433",
+          "email": "info@supportfoundation.com.au",
+          "identifier": "NDIS Provider #4050064716",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Roselands",
+            "addressRegion": "NSW",
+            "postalCode": "2196",
+            "addressCountry": "AU"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -33.9318,
+            "longitude": 151.0825
+          },
+          "areaServed": [
+            { "@type": "AdministrativeArea", "name": "New South Wales" },
+            { "@type": "AdministrativeArea", "name": "Victoria" },
+            { "@type": "AdministrativeArea", "name": "Australian Capital Territory" },
+            { "@type": "AdministrativeArea", "name": "South Australia" },
+            { "@type": "AdministrativeArea", "name": "Tasmania" }
+          ],
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "09:00",
+              "closes": "17:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+              "opens": "00:00",
+              "closes": "23:59"
+            }
+          ],
+          "sameAs": [
+            "https://www.facebook.com/profile.php?id=61556399253595",
+            "https://www.instagram.com/supportfoundation.au/",
+            "https://www.linkedin.com/company/support-foundation-australia"
+          ]
+        },
+        {
+          "@type": "Service",
+          "@id": "<?php echo esc_url($site_url); ?>#ndis-support-coordination",
+          "name": "NDIS Support Coordination & Case Management",
+          "provider": { "@id": "<?php echo esc_url($site_url); ?>#organization" },
+          "serviceType": "Disability Support & Coordination",
+          "areaServed": "AU"
+        },
+        {
+          "@type": "Service",
+          "@id": "<?php echo esc_url($site_url); ?>#crisis-accommodation",
+          "name": "24/7 Crisis Support & Emergency Housing Placement",
+          "provider": { "@id": "<?php echo esc_url($site_url); ?>#organization" },
+          "serviceType": "Emergency Crisis Accommodation",
+          "areaServed": "AU"
+        }
+      ]
+    }
+    </script>
+    <?php
+}
+
