@@ -944,14 +944,15 @@ Text Domain: kadence-child
 /* Scrolled Sticky Header Effects (Glassmorphism + Box Shadow) */
 #masthead.sf-header-scrolled,
 #masthead.sf-header-scrolled .site-main-header-wrap {
-    background: rgba(255, 255, 255, 0.95) !important;
-    backdrop-filter: blur(16px) -webkit-backdrop-filter: blur(16px) !important;
-    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08) !important;
+    background: rgba(255, 255, 255, 0.97) !important;
+    backdrop-filter: blur(18px) !important;
+    -webkit-backdrop-filter: blur(18px) !important;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07) !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
 }
 
 #masthead.sf-header-scrolled .site-top-header-wrap {
-    display: none !important; /* Smoothly collapse top bar on scroll for clean sticky header */
+    display: none !important;
 }
 
 /* 2. Top Utility Announcement Bar */
@@ -1126,17 +1127,39 @@ Text Domain: kadence-child
     transform: scale(1.02) !important;
 }
 
-/* Smooth Logo Shrink on Scroll & Ironclad Override of Kadence Sticky Swap */
+/* Smooth Logo — LOCK size on scroll, no shrinking */
 #masthead.sf-header-scrolled .site-branding a.brand img.custom-logo,
 .kadence-sticky-header.item-is-fixed .site-branding a.brand img.custom-logo,
-.kadence-sticky-header.item-is-fixed:not(.item-at-start) .site-branding a.brand img {
+.kadence-sticky-header.item-is-fixed:not(.item-at-start) .site-branding a.brand img,
+.kadence-sticky-header.item-is-fixed .site-branding img,
+.kadence-scroll-shrink .site-branding img,
+#masthead .site-branding img {
     display: block !important;
-    max-height: 42px !important;
+    max-height: 48px !important;
+    min-height: 40px !important;
+    height: 48px !important;
+    width: auto !important;
+    transition: none !important;
 }
 
 #masthead.sf-header-scrolled .site-main-header-inner-wrap,
 .kadence-sticky-header.item-is-fixed .site-main-header-inner-wrap {
-    min-height: 64px !important;
+    min-height: 68px !important;
+    height: 68px !important;
+}
+
+/* Kill Kadence body padding-top injection — it creates the white gap above hero */
+body.has-sticky-main-header,
+body.kadence-scrolled,
+body {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* Ensure Kadence's #wrapper doesn't get offset */
+#wrapper {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
 }
 
 /* CRITICAL: Force hide Kadence sticky logo image under all states, including scrolling */
