@@ -956,3 +956,41 @@ Text Domain: kadence-child
     text-decoration: underline !important;
 }
 
+/* 4. Top Header NDIS Badge Styles */
+.sf-top-nav-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.9rem;
+    background-color: rgba(4, 159, 130, 0.06) !important;
+    color: #049f82 !important;
+    border: 1px solid rgba(4, 159, 130, 0.18) !important;
+    border-radius: 99px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 0.775rem;
+    letter-spacing: 0.02em;
+    height: fit-content;
+    align-self: center;
+    box-shadow: 0 2px 5px rgba(4, 159, 130, 0.05);
+}
+
+.sf-top-nav-badge svg {
+    color: #049f82 !important;
+    margin-right: 5px;
+}
+
+/* Adjust flex for top bar row center section to balance items */
+.site-header-top-section-center {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+}
+
+@media (max-width: 1024px) {
+    .sf-top-nav-badge {
+        display: none !important;
+    }
+}
+
+
