@@ -1,11 +1,40 @@
 # Support Foundation Australia - Robots.txt
+# SEO + GEO + AEO Optimized
+
 User-agent: *
 Allow: /
 Disallow: /wp-admin/
 Disallow: /wp-includes/
 Disallow: /readme.html
 Disallow: /license.txt
+Disallow: /xmlrpc.php
+Disallow: /wp-trackback.php
+Disallow: /?s=
+Disallow: /search/
+Allow: /wp-admin/admin-ajax.php
 
-# XML Sitemap Pointers
+# Allow AI Crawlers (GEO Optimization)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# XML Sitemaps
 Sitemap: https://www.supportfoundation.com.au/sitemap_index.xml
 Sitemap: https://www.supportfoundation.com.au/wp-sitemap.xml
+
+# LLMs.txt for AI Engine Discovery (GEO)
+# https://www.supportfoundation.com.au/llms.txt

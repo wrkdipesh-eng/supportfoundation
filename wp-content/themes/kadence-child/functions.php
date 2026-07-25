@@ -377,27 +377,60 @@ function sf_custom_footer() {
     <?php
 }
 
-/* =====================================================
- * COMPLETE ON-PAGE SEO ENGINE & STRUCTURED DATA (JSON-LD)
- * ===================================================== */
-add_action('wp_head', 'sf_inject_onpage_seo_engine', 1);
-function sf_inject_onpage_seo_engine() {
-    $site_url = home_url('/');
+/* ==========================================================================
+ * COMPLETE SEO / GEO / AEO ENGINE
+ * SEO  = Search Engine Optimization (Google, Bing)
+ * GEO  = Generative Engine Optimization (AI Overviews, Perplexity, ChatGPT)
+ * AEO  = Answer Engine Optimization (Featured Snippets, Voice Search)
+ * ========================================================================== */
+
+/* --- 1. PERFORMANCE HINTS (preconnect, dns-prefetch, preload) --- */
+add_action('wp_head', 'sf_performance_hints', 0);
+function sf_performance_hints() { ?>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+<?php }
+
+/* --- 2. SEO META TAGS, OPEN GRAPH, TWITTER CARDS, GEO TAGS --- */
+add_action('wp_head', 'sf_seo_meta_engine', 1);
+function sf_seo_meta_engine() {
+    $site_url    = home_url('/');
     $current_url = is_front_page() ? $site_url : get_permalink();
-    $page_title = is_front_page() 
-        ? 'Support Foundation — Registered NDIS & DVA Service Provider' 
+    $page_title  = is_front_page()
+        ? 'Support Foundation — Registered NDIS & DVA Service Provider | Sydney NSW'
         : wp_get_document_title();
-    $meta_desc = 'Support Foundation is an Australian Registered NDIS & DVA Service Provider (#4050064716) offering 24/7 crisis support, support coordination, accommodation, and personal care across NSW, VIC, ACT, SA, and TAS.';
-    $logo_url = get_stylesheet_directory_uri() . '/images/logo.png';
+    $meta_desc   = is_front_page()
+        ? 'Support Foundation is an Australian Registered NDIS & DVA Service Provider (#4050064716) offering 24/7 crisis support, support coordination, emergency accommodation, and personal care across NSW, VIC, ACT, SA, and TAS. Call 02-8386-1433.'
+        : get_the_excerpt() ?: 'Support Foundation Australia — Registered NDIS Provider offering disability support services across Australia.';
+    $logo_url    = 'https://www.supportfoundation.com.au/wp-content/uploads/2024/02/cropped-support-foundation-logo.png';
+    $keywords    = 'NDIS provider Sydney, NDIS support coordination, crisis accommodation Australia, disability support services, DVA service provider, emergency housing NDIS, personal care NDIS, case management disability, Support Foundation Australia, NDIS provider NSW VIC ACT SA TAS';
     ?>
-    <!-- ON-PAGE SEO META TAGS -->
+    <!-- SEO META TAGS -->
     <meta name="description" content="<?php echo esc_attr($meta_desc); ?>">
+    <meta name="keywords" content="<?php echo esc_attr($keywords); ?>">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="Support Foundation Australia">
+    <meta name="publisher" content="Support Foundation Australia Pty Ltd">
     <link rel="canonical" href="<?php echo esc_url($current_url); ?>">
+
+    <!-- GEO-TARGETING META TAGS -->
     <meta name="geo.region" content="AU-NSW">
-    <meta name="geo.placename" content="Sydney, NSW, Australia">
+    <meta name="geo.placename" content="Roselands, Sydney, NSW, Australia">
     <meta name="geo.position" content="-33.9318;151.0825">
     <meta name="ICBM" content="-33.9318, 151.0825">
+    <meta name="DC.title" content="<?php echo esc_attr($page_title); ?>">
+    <meta name="DC.creator" content="Support Foundation Australia">
+    <meta name="DC.language" content="en-AU">
+    <meta name="DC.coverage" content="Australia">
+    <meta name="DC.rights" content="Copyright Support Foundation Australia Pty Ltd">
+    <meta name="language" content="English">
+    <meta name="rating" content="General">
+    <meta name="distribution" content="Global">
+    <meta name="revisit-after" content="3 days">
 
     <!-- OPEN GRAPH META TAGS -->
     <meta property="og:locale" content="en_AU">
@@ -406,88 +439,382 @@ function sf_inject_onpage_seo_engine() {
     <meta property="og:description" content="<?php echo esc_attr($meta_desc); ?>">
     <meta property="og:url" content="<?php echo esc_url($current_url); ?>">
     <meta property="og:site_name" content="Support Foundation Australia">
-    <meta property="og:image" content="https://www.supportfoundation.com.au/wp-content/uploads/2024/02/cropped-support-foundation-logo.png">
+    <meta property="og:image" content="<?php echo esc_url($logo_url); ?>">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
 
     <!-- TWITTER CARDS -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="<?php echo esc_attr($page_title); ?>">
     <meta name="twitter:description" content="<?php echo esc_attr($meta_desc); ?>">
-    <meta name="twitter:image" content="https://www.supportfoundation.com.au/wp-content/uploads/2024/02/cropped-support-foundation-logo.png">
+    <meta name="twitter:image" content="<?php echo esc_url($logo_url); ?>">
+    <?php
+}
 
-    <!-- SCHEMA.ORG JSON-LD STRUCTURED DATA -->
+/* --- 3. SCHEMA.ORG JSON-LD STRUCTURED DATA (SEO + GEO + AEO) --- */
+add_action('wp_head', 'sf_structured_data_engine', 2);
+function sf_structured_data_engine() {
+    $site_url = home_url('/');
+    $logo_url = 'https://www.supportfoundation.com.au/wp-content/uploads/2024/02/cropped-support-foundation-logo.png';
+    ?>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "<?php echo esc_url($site_url); ?>#website",
+          "url": "<?php echo esc_url($site_url); ?>",
+          "name": "Support Foundation Australia",
+          "description": "Registered NDIS & DVA Service Provider offering 24/7 crisis support across Australia",
+          "publisher": { "@id": "<?php echo esc_url($site_url); ?>#organization" },
+          "inLanguage": "en-AU",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "<?php echo esc_url($site_url); ?>?s={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
+        },
         {
           "@type": ["MedicalBusiness", "GovernmentService", "LocalBusiness"],
           "@id": "<?php echo esc_url($site_url); ?>#organization",
           "name": "Support Foundation Australia",
           "legalName": "Support Foundation Australia Pty Ltd",
           "url": "<?php echo esc_url($site_url); ?>",
-          "logo": "<?php echo esc_url($logo_url); ?>",
-          "telephone": "02-8386-1433",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "<?php echo esc_url($logo_url); ?>",
+            "width": 300,
+            "height": 100
+          },
+          "image": "<?php echo esc_url($logo_url); ?>",
+          "telephone": "+61-2-8386-1433",
           "email": "info@supportfoundation.com.au",
-          "identifier": "NDIS Provider #4050064716",
-          "priceRange": "$$",
+          "identifier": {
+            "@type": "PropertyValue",
+            "name": "NDIS Provider Number",
+            "value": "4050064716"
+          },
+          "priceRange": "NDIS Funded",
+          "currenciesAccepted": "AUD",
+          "paymentAccepted": "NDIS Plan Managed, Self-Managed, Agency Managed",
           "address": {
             "@type": "PostalAddress",
-            "addressLocality": "Roselands",
+            "streetAddress": "Roselands",
+            "addressLocality": "Sydney",
             "addressRegion": "NSW",
             "postalCode": "2196",
-            "addressCountry": "AU"
+            "addressCountry": {
+              "@type": "Country",
+              "name": "AU"
+            }
           },
           "geo": {
             "@type": "GeoCoordinates",
             "latitude": -33.9318,
             "longitude": 151.0825
           },
+          "hasMap": "https://www.google.com/maps?q=Roselands+NSW+2196+Australia",
           "areaServed": [
-            { "@type": "AdministrativeArea", "name": "New South Wales" },
-            { "@type": "AdministrativeArea", "name": "Victoria" },
-            { "@type": "AdministrativeArea", "name": "Australian Capital Territory" },
-            { "@type": "AdministrativeArea", "name": "South Australia" },
-            { "@type": "AdministrativeArea", "name": "Tasmania" }
+            { "@type": "State", "name": "New South Wales", "sameAs": "https://en.wikipedia.org/wiki/New_South_Wales" },
+            { "@type": "State", "name": "Victoria", "sameAs": "https://en.wikipedia.org/wiki/Victoria_(state)" },
+            { "@type": "State", "name": "Australian Capital Territory" },
+            { "@type": "State", "name": "South Australia" },
+            { "@type": "State", "name": "Tasmania" }
           ],
           "openingHoursSpecification": [
             {
               "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
               "opens": "09:00",
-              "closes": "17:00"
+              "closes": "17:00",
+              "validFrom": "2024-01-01"
             },
             {
               "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+              "description": "24/7 Crisis Line",
+              "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
               "opens": "00:00",
               "closes": "23:59"
+            }
+          ],
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "+61-2-8386-1433",
+              "contactType": "customer service",
+              "areaServed": "AU",
+              "availableLanguage": ["English","Nepali","Hindi"],
+              "hoursAvailable": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+                "opens": "09:00",
+                "closes": "17:00"
+              }
+            },
+            {
+              "@type": "ContactPoint",
+              "telephone": "+61-2-8386-1433",
+              "contactType": "emergency",
+              "areaServed": "AU",
+              "availableLanguage": "English",
+              "hoursAvailable": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+                "opens": "00:00",
+                "closes": "23:59"
+              }
             }
           ],
           "sameAs": [
             "https://www.facebook.com/profile.php?id=61556399253595",
             "https://www.instagram.com/supportfoundation.au/",
-            "https://www.linkedin.com/company/support-foundation-australia"
-          ]
+            "https://www.linkedin.com/company/support-foundation-australia",
+            "https://telegra.ph/Support-Foundation-Australia--Registered-NDIS-Service-Provider-07-25"
+          ],
+          "knowsAbout": [
+            "NDIS Support Coordination",
+            "Crisis Accommodation",
+            "Disability Services",
+            "Domestic Violence Support",
+            "Personal Care",
+            "Case Management",
+            "Emergency Housing"
+          ],
+          "slogan": "Quick Response. Quality You Can Trust. Quantity & Value."
         },
         {
           "@type": "Service",
-          "@id": "<?php echo esc_url($site_url); ?>#ndis-support-coordination",
-          "name": "NDIS Support Coordination & Case Management",
+          "@id": "<?php echo esc_url($site_url); ?>#support-coordination",
+          "name": "NDIS Support Coordination",
           "provider": { "@id": "<?php echo esc_url($site_url); ?>#organization" },
-          "serviceType": "Disability Support & Coordination",
-          "areaServed": "AU"
+          "serviceType": "Support Coordination",
+          "description": "Level 2 and Level 3 Specialist Support Coordination helping NDIS participants connect with services, manage crises, and build independence.",
+          "areaServed": "AU",
+          "audience": { "@type": "Audience", "audienceType": "NDIS Participants" }
         },
         {
           "@type": "Service",
           "@id": "<?php echo esc_url($site_url); ?>#crisis-accommodation",
-          "name": "24/7 Crisis Support & Emergency Housing Placement",
+          "name": "24/7 Crisis Support & Emergency Housing",
           "provider": { "@id": "<?php echo esc_url($site_url); ?>#organization" },
-          "serviceType": "Emergency Crisis Accommodation",
+          "serviceType": "Crisis Accommodation",
+          "description": "Round-the-clock emergency accommodation placement for NDIS participants experiencing housing crises, domestic violence, or unsafe living conditions.",
+          "areaServed": "AU",
+          "availableChannel": {
+            "@type": "ServiceChannel",
+            "servicePhone": { "@type": "ContactPoint", "telephone": "+61-2-8386-1433" },
+            "availableLanguage": "English"
+          }
+        },
+        {
+          "@type": "Service",
+          "@id": "<?php echo esc_url($site_url); ?>#personal-care",
+          "name": "Personal Care & Nursing Care",
+          "provider": { "@id": "<?php echo esc_url($site_url); ?>#organization" },
+          "serviceType": "Personal Care",
+          "description": "Assistance with daily living activities including showering, dressing, medication management, meal preparation, and 24-hour support.",
+          "areaServed": "AU"
+        },
+        {
+          "@type": "Service",
+          "@id": "<?php echo esc_url($site_url); ?>#dv-support",
+          "name": "Domestic Violence Support & Safety Planning",
+          "provider": { "@id": "<?php echo esc_url($site_url); ?>#organization" },
+          "serviceType": "Domestic Violence Support",
+          "description": "Safety planning, crisis accommodation, specialist support coordination, and relocation assistance for NDIS participants affected by domestic and family violence.",
+          "areaServed": "AU"
+        },
+        {
+          "@type": "Service",
+          "@id": "<?php echo esc_url($site_url); ?>#capacity-building",
+          "name": "Capacity Building & Community Participation",
+          "provider": { "@id": "<?php echo esc_url($site_url); ?>#organization" },
+          "serviceType": "Capacity Building",
+          "description": "Skills development, social participation, employment readiness, and community access programs to build independence and confidence.",
           "areaServed": "AU"
         }
       ]
     }
     </script>
+    <?php
+
+    /* --- AEO: FAQ Schema for Featured Snippets & Voice Search --- */
+    if ( is_front_page() ) { ?>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Support Foundation Australia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Support Foundation Australia is a Registered NDIS and DVA Service Provider (NDIS #4050064716) offering 24/7 crisis support, support coordination, emergency accommodation, personal care, and domestic violence support across NSW, VIC, ACT, SA, and TAS. Call 02-8386-1433."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What services does Support Foundation provide?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Support Foundation provides: (1) Support Coordination & Specialist Support Coordination, (2) Case Management & Plan Management, (3) 24/7 Crisis Support & Emergency Housing, (4) Short-Term Accommodation (STA), (5) Domestic Violence Support & Safety Planning, (6) Personal Care & Nursing Care, (7) Community Participation & Capacity Building, and (8) Psychosocial Recovery Coaching."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What areas does Support Foundation cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Support Foundation operates across five Australian states and territories: New South Wales (NSW), Victoria (VIC), Australian Capital Territory (ACT), South Australia (SA), and Tasmania (TAS). Head office is in Roselands, Sydney NSW 2196."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I make a referral to Support Foundation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can make a referral by: (1) Calling 02-8386-1433, (2) Emailing info@supportfoundation.com.au, or (3) Completing the online referral form at https://zfrmz.com/sIh6uDqI2c9PaujmOoTR. Support Foundation accepts referrals from participants, families, hospitals, LACs, and other service providers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Support Foundation available 24/7?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Support Foundation's crisis support line operates 24 hours a day, 7 days a week, 365 days a year. Regular office hours are Monday to Friday, 9am to 5pm AEDT. Emergency accommodation placement and crisis response are available around the clock."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the NDIS provider number for Support Foundation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Support Foundation Australia's NDIS Provider Registration Number is 4050064716. This can be verified through the NDIS Quality and Safeguards Commission."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- AEO: Speakable Schema for Voice Search (Google Assistant) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Support Foundation Australia — NDIS Service Provider",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".sf-hero-title", ".sf-hero-description", ".sf-card-title", ".sf-card-desc"]
+      },
+      "url": "<?php echo esc_url($site_url); ?>"
+    }
+    </script>
+
+    <!-- SEO: BreadcrumbList for Homepage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "<?php echo esc_url($site_url); ?>" }
+      ]
+    }
+    </script>
+    <?php } else { ?>
+    <!-- SEO: BreadcrumbList for Subpages -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "<?php echo esc_url($site_url); ?>" },
+        { "@type": "ListItem", "position": 2, "name": "<?php echo esc_attr(get_the_title()); ?>", "item": "<?php echo esc_url(get_permalink()); ?>" }
+      ]
+    }
+    </script>
+    <?php }
+}
+
+/* --- 4. GEO: Multi-Location Service Area Pages Schema --- */
+add_action('wp_head', 'sf_geo_multi_location_schema', 3);
+function sf_geo_multi_location_schema() {
+    if ( ! is_front_page() ) return;
+    $site_url = home_url('/');
+    $locations = array(
+        array('name' => 'Sydney',    'region' => 'NSW', 'lat' => -33.8688, 'lng' => 151.2093),
+        array('name' => 'Melbourne', 'region' => 'VIC', 'lat' => -37.8136, 'lng' => 144.9631),
+        array('name' => 'Canberra',  'region' => 'ACT', 'lat' => -35.2802, 'lng' => 149.1310),
+        array('name' => 'Adelaide',  'region' => 'SA',  'lat' => -34.9285, 'lng' => 138.6007),
+        array('name' => 'Hobart',    'region' => 'TAS', 'lat' => -42.8821, 'lng' => 147.3272),
+    );
+    ?>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "<?php echo esc_url($site_url); ?>#geo-locations",
+      "name": "Support Foundation Australia",
+      "department": [
+        <?php foreach ($locations as $i => $loc) : ?>
+        {
+          "@type": "LocalBusiness",
+          "name": "Support Foundation — <?php echo $loc['name']; ?>",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "<?php echo $loc['name']; ?>",
+            "addressRegion": "<?php echo $loc['region']; ?>",
+            "addressCountry": "AU"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": <?php echo $loc['lat']; ?>,
+            "longitude": <?php echo $loc['lng']; ?>
+          },
+          "telephone": "+61-2-8386-1433",
+          "url": "<?php echo esc_url($site_url); ?>"
+        }<?php echo ($i < count($locations) - 1) ? ',' : ''; ?>
+        <?php endforeach; ?>
+      ]
+    }
+    </script>
+    <?php
+}
+
+/* --- 5. AEO: Add Semantic HTML Microdata to Existing Content --- */
+add_filter('the_content', 'sf_aeo_enhance_content', 20);
+function sf_aeo_enhance_content($content) {
+    // Add itemscope to service-related content blocks
+    $content = str_replace(
+        '<div class="sf-services-section"',
+        '<div class="sf-services-section" itemscope itemtype="https://schema.org/ItemList"',
+        $content
+    );
+    return $content;
+}
+
+/* --- 6. SEO: Optimized Title Tag Structure --- */
+add_filter('pre_get_document_title', 'sf_seo_title_tag', 99);
+function sf_seo_title_tag($title) {
+    if (is_front_page()) {
+        return 'Support Foundation Australia — Registered NDIS & DVA Provider | 24/7 Crisis Support Sydney';
+    }
+    return $title;
+}
+
+/* --- 7. SEO: Add hreflang for Australian English --- */
+add_action('wp_head', 'sf_hreflang_tags', 4);
+function sf_hreflang_tags() {
+    $current_url = is_front_page() ? home_url('/') : get_permalink();
+    ?>
+    <link rel="alternate" hreflang="en-au" href="<?php echo esc_url($current_url); ?>">
+    <link rel="alternate" hreflang="en" href="<?php echo esc_url($current_url); ?>">
+    <link rel="alternate" hreflang="x-default" href="<?php echo esc_url($current_url); ?>">
     <?php
 }
 
