@@ -1237,16 +1237,33 @@ Text Domain: kadence-child
     justify-content: space-between !important;
 }
 
+/* CSS Variables Override — Lock Kadence Logo Sticky Variables */
+:root,
+body,
+#masthead,
+.site-branding,
+.site-main-header-wrap,
+.kadence-sticky-header {
+    --global-header-logo-max-height: 48px !important;
+    --global-header-sticky-logo-max-height: 48px !important;
+    --header-sticky-logo-height: 48px !important;
+    --header-logo-height: 48px !important;
+}
+
 /* Logo Alignment, Scroll Shrink Effect & Removal of Duplicate Sticky Logo */
 .site-branding {
     display: flex !important;
     align-items: center !important;
     padding: 0 !important;
     margin: 0 !important;
+    height: 48px !important;
 }
 
-.site-branding a.brand img.custom-logo,
+.site-branding a,
+.site-branding a.brand,
 .site-branding img,
+.site-branding a.brand img,
+.site-branding a.brand img.custom-logo,
 #masthead .site-branding img,
 #masthead .site-branding a.brand img,
 #masthead .site-branding a.brand img.custom-logo,
@@ -1258,15 +1275,19 @@ Text Domain: kadence-child
 .kadence-sticky-header.item-is-fixed .site-branding a.brand img,
 .kadence-sticky-header.item-is-fixed .site-branding a.brand img.custom-logo,
 .kadence-sticky-header.item-is-fixed:not(.item-at-start) .site-branding a.brand img,
-.kadence-scroll-shrink .site-branding img {
+.kadence-scroll-shrink .site-branding img,
+.kadence-sticky-header.item-is-fixed .site-branding img.custom-logo {
     display: block !important;
     max-height: 48px !important;
     min-height: 48px !important;
     height: 48px !important;
     width: auto !important;
+    max-width: none !important;
     transform: none !important;
     transition: none !important;
     opacity: 1 !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
 .site-main-header-inner-wrap,

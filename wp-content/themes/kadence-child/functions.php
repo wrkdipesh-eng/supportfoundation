@@ -153,18 +153,30 @@ function sf_add_top_header_badge() {
             handleScroll();
         }
 
-        // Lock logo size against inline style mutations by theme JS
-        var logoImg = document.querySelector(".site-branding img");
-        if (logoImg) {
-            var lockLogo = function() {
-                logoImg.style.setProperty("height", "48px", "important");
-                logoImg.style.setProperty("max-height", "48px", "important");
-                logoImg.style.setProperty("min-height", "48px", "important");
-                logoImg.style.setProperty("width", "auto", "important");
-            };
-            lockLogo();
-            var observer = new MutationObserver(lockLogo);
-            observer.observe(logoImg, { attributes: true, attributeFilter: ["style", "height", "width"] });
+        // Lock logo size firmly across all logo images and Kadence CSS variables
+        var lockAllLogos = function() {
+            if (masthead) {
+                masthead.style.setProperty("--global-header-logo-max-height", "48px", "important");
+                masthead.style.setProperty("--global-header-sticky-logo-max-height", "48px", "important");
+                masthead.style.setProperty("--header-sticky-logo-height", "48px", "important");
+            }
+            var allLogos = document.querySelectorAll(".site-branding img, #masthead img.custom-logo, .kadence-sticky-header img");
+            allLogos.forEach(function(img) {
+                img.style.setProperty("height", "48px", "important");
+                img.style.setProperty("max-height", "48px", "important");
+                img.style.setProperty("min-height", "48px", "important");
+                img.style.setProperty("width", "auto", "important");
+                img.style.setProperty("transform", "none", "important");
+            });
+        };
+        lockAllLogos();
+        window.addEventListener("scroll", lockAllLogos);
+        window.addEventListener("resize", lockAllLogos);
+
+        var logoContainer = document.querySelector(".site-branding");
+        if (logoContainer) {
+            var observer = new MutationObserver(lockAllLogos);
+            observer.observe(logoContainer, { childList: true, subtree: true, attributes: true, attributeFilter: ["style", "class", "height"] });
         }
 
     });
