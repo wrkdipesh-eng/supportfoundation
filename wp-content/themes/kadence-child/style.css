@@ -770,34 +770,192 @@ Text Domain: kadence-child
 }
 
 /* ==========================================================================
-   Premium Header & Footer Styling Overrides
+   Ultra-Modern Sticky Header & Utility Top Bar Design System
    ========================================================================== */
 
-/* 1. Header Styles */
+/* 1. Global Header Container & Sticky Navigation */
+#masthead {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 9999 !important;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    width: 100% !important;
+}
+
+.transparent-header #masthead {
+    position: sticky !important;
+    top: 0 !important;
+}
+
+/* Scrolled Sticky Header Effects (Glassmorphism + Box Shadow) */
+#masthead.sf-header-scrolled,
+#masthead.sf-header-scrolled .site-main-header-wrap {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(16px) -webkit-backdrop-filter: blur(16px) !important;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+#masthead.sf-header-scrolled .site-top-header-wrap {
+    display: none !important; /* Smoothly collapse top bar on scroll for clean sticky header */
+}
+
+/* 2. Top Utility Announcement Bar */
+.site-top-header-wrap {
+    background: #06261f !important; /* Deep luxury dark emerald theme */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    padding: 0.25rem 0 !important;
+    transition: all 0.3s ease !important;
+}
+
+.site-top-header-inner-wrap {
+    min-height: 38px !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.site-header-top-section-center {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    gap: 1rem !important;
+}
+
+/* Top Utility Bar - NDIS Micro Pill Badge */
+.sf-top-nav-badge {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.4rem !important;
+    padding: 0.3rem 0.9rem !important;
+    background: rgba(4, 159, 130, 0.18) !important;
+    color: #2dd4bf !important;
+    border: 1px solid rgba(45, 212, 191, 0.3) !important;
+    border-radius: 99px !important;
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 0.775rem !important;
+    letter-spacing: 0.02em !important;
+    box-shadow: 0 0 12px rgba(45, 212, 191, 0.15) !important;
+}
+
+.sf-top-nav-badge .sf-badge-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #2dd4bf;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #2dd4bf;
+    display: inline-block;
+}
+
+.sf-top-nav-badge svg {
+    color: #2dd4bf !important;
+}
+
+/* Top Utility Bar - Phone & Socials */
+.header-html p,
+.header-html a {
+    color: #e2e8f0 !important;
+    font-family: 'Outfit', sans-serif !important;
+    font-size: 0.825rem !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+}
+
+.header-html a strong,
+.header-html a {
+    color: #2dd4bf !important;
+    font-weight: 700 !important;
+    transition: color 0.2s ease !important;
+}
+
+.header-html a:hover {
+    color: #ffffff !important;
+    text-decoration: underline !important;
+}
+
+.header-social-wrap .social-button {
+    color: #cbd5e1 !important;
+    background: rgba(255, 255, 255, 0.06) !important;
+    border-radius: 50% !important;
+    width: 28px !important;
+    height: 28px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.3s ease !important;
+}
+
+.header-social-wrap .social-button:hover {
+    background: #049f82 !important;
+    color: #ffffff !important;
+    transform: translateY(-2px) !important;
+}
+
+/* 3. Main Navigation & Branding Layout */
+.site-main-header-wrap {
+    background: #ffffff !important;
+    transition: background 0.3s ease, padding 0.3s ease !important;
+}
+
+.site-main-header-inner-wrap {
+    min-height: 72px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+}
+
+/* Logo Alignment & Removal of Overlapping Badge under Logo */
+.site-branding {
+    display: flex !important;
+    align-items: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
 .site-branding a.brand img.custom-logo {
-    max-height: 46px !important;
+    max-height: 48px !important;
     width: auto !important;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease !important;
+    display: block !important;
 }
 
 .site-branding a.brand:hover img.custom-logo {
-    transform: scale(1.02);
+    transform: scale(1.02) !important;
+}
+
+/* Hide any stray floating badge under the main header logo */
+.site-main-header-wrap .sf-hero-badge,
+.site-branding .sf-hero-badge,
+.site-branding + .sf-hero-badge,
+.site-header-main-section-left .sf-hero-badge {
+    display: none !important;
+}
+
+/* Primary Navigation Menu Styling */
+.main-navigation .primary-menu-container > ul {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
 }
 
 .main-navigation .primary-menu-container > ul > li.menu-item > a {
     font-family: 'Outfit', sans-serif !important;
     font-weight: 600 !important;
     font-size: 0.95rem !important;
-    letter-spacing: 0.01em !important;
-    transition: color 0.3s ease !important;
+    color: #1e293b !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 6px !important;
+    transition: all 0.3s ease !important;
 }
 
 .main-navigation .primary-menu-container > ul > li.menu-item > a:hover,
 .main-navigation .primary-menu-container > ul > li.menu-item.current-menu-item > a {
     color: #049f82 !important;
+    background: rgba(4, 159, 130, 0.06) !important;
 }
 
-/* Staff Login Premium Button */
+/* Action Button ("Staff Login") */
 #main-header .header-button,
 .mobile-header-button-wrap .mobile-header-button {
     background: linear-gradient(135deg, #049f82 0%, #7a00df 100%) !important;
@@ -805,22 +963,21 @@ Text Domain: kadence-child
     border-radius: 99px !important;
     padding: 0.7rem 1.6rem !important;
     font-family: 'Outfit', sans-serif !important;
-    font-weight: 600 !important;
+    font-weight: 700 !important;
     font-size: 0.9rem !important;
     color: #ffffff !important;
-    box-shadow: 0 4px 12px rgba(4, 159, 130, 0.25) !important;
+    box-shadow: 0 4px 14px rgba(4, 159, 130, 0.25) !important;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    text-transform: none !important;
 }
 
 #main-header .header-button:hover,
 .mobile-header-button-wrap .mobile-header-button:hover {
     transform: translateY(-2px) !important;
-    box-shadow: 0 6px 18px rgba(122, 0, 223, 0.35) !important;
-    background: linear-gradient(135deg, #03846c 0%, #6600bc 100%) !important;
+    box-shadow: 0 8px 22px rgba(122, 0, 223, 0.35) !important;
+    filter: brightness(1.05) !important;
 }
 
-/* 2. Footer Styles */
+/* 4. Footer Styles */
 #colophon {
     background: #111613 !important;
     color: #a4aca7 !important;
@@ -932,7 +1089,7 @@ Text Domain: kadence-child
     margin-top: 1.25rem !important;
 }
 
-/* 3. Bottom Copyright Bar Styles */
+/* Bottom Copyright Bar Styles */
 .site-bottom-footer-wrap {
     background: #0b0e0c !important;
     border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
@@ -956,41 +1113,16 @@ Text Domain: kadence-child
     text-decoration: underline !important;
 }
 
-/* 4. Top Header NDIS Badge Styles */
-.sf-top-nav-badge {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.35rem 0.9rem;
-    background-color: rgba(4, 159, 130, 0.06) !important;
-    color: #049f82 !important;
-    border: 1px solid rgba(4, 159, 130, 0.18) !important;
-    border-radius: 99px;
-    font-family: 'Outfit', sans-serif;
-    font-weight: 600;
-    font-size: 0.775rem;
-    letter-spacing: 0.02em;
-    height: fit-content;
-    align-self: center;
-    box-shadow: 0 2px 5px rgba(4, 159, 130, 0.05);
-}
-
-.sf-top-nav-badge svg {
-    color: #049f82 !important;
-    margin-right: 5px;
-}
-
-/* Adjust flex for top bar row center section to balance items */
-.site-header-top-section-center {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    width: 100% !important;
-}
-
+/* 5. Responsive Mobile Styles */
 @media (max-width: 1024px) {
-    .sf-top-nav-badge {
+    .site-top-header-wrap {
         display: none !important;
     }
+    
+    .site-main-header-inner-wrap {
+        min-height: 60px !important;
+    }
 }
+
 
 
