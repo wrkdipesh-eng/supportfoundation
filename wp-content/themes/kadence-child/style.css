@@ -1080,15 +1080,80 @@ Text Domain: kadence-child
     color: #ffffff !important;
 }
 
-/* Divider between ticker and right section */
+/* ---- JS-injected top bar right: contact wrapper ---- */
+.sf-topbar-contact {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    height: 36px !important;
+    padding: 0 1rem 0 0 !important;
+    white-space: nowrap !important;
+}
+
+/* Divider line between ticker and contact block */
 .site-header-top-section-right::before {
     content: '';
     display: block;
     width: 1px;
     height: 18px;
-    background: rgba(255,255,255,0.12);
-    margin-right: 0.75rem;
+    background: rgba(255,255,255,0.15);
+    margin-right: 8px;
     flex-shrink: 0;
+}
+
+/* Social icon links */
+.sf-topbar-social {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 26px !important;
+    height: 26px !important;
+    border-radius: 50% !important;
+    background: rgba(255,255,255,0.08) !important;
+    color: rgba(255,255,255,0.75) !important;
+    transition: background 0.2s ease, color 0.2s ease !important;
+    text-decoration: none !important;
+    flex-shrink: 0 !important;
+}
+
+.sf-topbar-social:hover {
+    background: #049f82 !important;
+    color: #fff !important;
+}
+
+/* Small vertical divider between socials and phone */
+.sf-topbar-divider {
+    display: inline-block !important;
+    width: 1px !important;
+    height: 16px !important;
+    background: rgba(255,255,255,0.15) !important;
+    margin: 0 6px !important;
+    flex-shrink: 0 !important;
+}
+
+/* Phone link */
+.sf-topbar-phone {
+    display: inline-flex !important;
+    align-items: center !important;
+    font-family: 'Outfit', sans-serif !important;
+    font-size: 0.78rem !important;
+    font-weight: 600 !important;
+    color: rgba(255,255,255,0.82) !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    transition: color 0.2s ease !important;
+}
+
+.sf-topbar-phone strong {
+    color: #2dd4bf !important;
+    font-weight: 700 !important;
+    margin-left: 2px !important;
+    letter-spacing: 0.02em !important;
+}
+
+.sf-topbar-phone:hover,
+.sf-topbar-phone:hover strong {
+    color: #ffffff !important;
 }
 
 /* Top Utility Bar - NDIS Micro Pill Badge: HIDDEN (replaced by ticker) */
