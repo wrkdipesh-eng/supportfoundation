@@ -965,17 +965,29 @@ Text Domain: kadence-child
 }
 
 /* Scrolled Sticky Header Effects (Glassmorphism + Box Shadow) */
-#masthead.sf-header-scrolled,
 #masthead.sf-header-scrolled .site-main-header-wrap {
     background: rgba(255, 255, 255, 0.97) !important;
     backdrop-filter: blur(18px) !important;
     -webkit-backdrop-filter: blur(18px) !important;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07) !important;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
 }
 
+/* Ensure top bar stays clean and intact without collapsing or causing white gap */
 #masthead.sf-header-scrolled .site-top-header-wrap {
+    display: block !important;
+    background: #06261f !important;
+}
+
+/* Zero out any Kadence sticky placeholder elements that create white gap strips */
+.kadence-sticky-header-placeholder,
+.kadence-header-sticky-space,
+.kadence-sticky-header-spacer,
+.item-is-fixed-placeholder {
     display: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 /* 2. Top Utility Announcement Bar */

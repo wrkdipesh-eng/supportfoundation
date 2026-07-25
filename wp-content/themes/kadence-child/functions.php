@@ -148,6 +148,9 @@ function sf_add_top_header_badge() {
                 } else {
                     masthead.classList.remove("sf-header-scrolled");
                 }
+                // Strip any Kadence spacer placeholders that create white gap strips
+                var placeholders = document.querySelectorAll(".kadence-sticky-header-placeholder, .kadence-header-sticky-space, .item-is-fixed-placeholder");
+                placeholders.forEach(function(el) { el.remove(); });
             };
             window.addEventListener("scroll", handleScroll);
             handleScroll();
