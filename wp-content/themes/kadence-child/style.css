@@ -1498,10 +1498,13 @@ img.kadence-sticky-logo {
     margin-bottom: 1.25rem;
 }
 .sf-footer-logo {
-    max-height: 52px;
+    max-height: 56px;
     width: auto;
-    filter: brightness(0) invert(1);
-    opacity: 0.92;
+    /* No filter — display logo in its original colors */
+    border-radius: 12px;
+    padding: 6px 10px;
+    background: rgba(255, 255, 255, 0.96);
+    display: inline-block;
 }
 .sf-footer-logo-text {
     font-family: 'Outfit', sans-serif !important;

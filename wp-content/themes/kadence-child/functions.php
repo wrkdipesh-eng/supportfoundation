@@ -128,17 +128,17 @@ function sf_add_top_header_badge() {
                 dots[current].classList.add("sf-dot--active");
             }
 
-            // Auto-play every 5 seconds
+            // Auto-play every 8 seconds
             var sliderTimer = setInterval(function() {
                 goToSlide(current + 1);
-            }, 5000);
+            }, 8000);
 
             // Dot click navigation
             dots.forEach(function(dot, i) {
                 dot.addEventListener("click", function() {
                     clearInterval(sliderTimer);
                     goToSlide(i);
-                    sliderTimer = setInterval(function() { goToSlide(current + 1); }, 5000);
+                    sliderTimer = setInterval(function() { goToSlide(current + 1); }, 8000);
                 });
             });
         }
@@ -282,7 +282,6 @@ function sf_custom_footer() {
             <div class="sf-footer-container sf-footer-bottom-inner">
                 <p class="sf-footer-copy">
                     &copy; <?php echo date('Y'); ?> Support Foundation Australia Pty Ltd &nbsp;|&nbsp;
-                    ABN: 000 000 000 &nbsp;|&nbsp;
                     NDIS Registered Provider
                 </p>
                 <nav class="sf-footer-legal" aria-label="Legal links">
