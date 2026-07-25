@@ -405,7 +405,7 @@ function sf_seo_meta_engine() {
         : wp_get_document_title();
     $meta_desc   = is_front_page()
         ? 'Support Foundation is a Registered NDIS Service Provider in Australia (#4050064716). As a trusted NDIS Service Provider in Australia, we offer 24/7 crisis support, support coordination, emergency accommodation & personal care across NSW, VIC, ACT, SA & TAS. Call 02-8386-1433.'
-        : get_the_excerpt() ?: 'Support Foundation — Registered NDIS Service Provider in Australia offering disability support, crisis accommodation & support coordination.';
+        : (get_the_excerpt() ? get_the_excerpt() : 'Support Foundation — Registered NDIS Service Provider in Australia offering disability support, crisis accommodation & support coordination.');
     $logo_url    = 'https://www.supportfoundation.com.au/wp-content/uploads/2024/02/cropped-support-foundation-logo.png';
     $keywords    = 'Registered NDIS Service Provider, NDIS Service Provider in Australia, Registered NDIS Service Provider in Australia, NDIS provider Sydney, NDIS support coordination, crisis accommodation Australia, DVA service provider, emergency housing NDIS, personal care NDIS, NDIS provider NSW, Support Foundation Australia, disability support services Australia';
     ?>
