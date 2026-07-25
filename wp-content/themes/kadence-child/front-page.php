@@ -39,7 +39,7 @@ get_header();
                     Empowering Lives,<br>Restoring <span>Autonomy</span>
                 </h1>
                 <p class="sf-hero-description">
-                    We connect participants with holistic, person-centered support. From case management and support coordination to emergency crisis housing, we ensure your voice and choices lead the way.
+                    As a <strong>Registered NDIS Service Provider in Australia</strong>, we connect participants with holistic, person-centered support. From case management and support coordination to emergency crisis housing, our trusted <strong>NDIS Service Provider</strong> team ensures your voice and choices lead the way.
                 </p>
                 <div class="sf-hero-ctas">
                     <a href="https://zfrmz.com/sIh6uDqI2c9PaujmOoTR" target="_blank" class="sf-btn sf-btn-primary">
