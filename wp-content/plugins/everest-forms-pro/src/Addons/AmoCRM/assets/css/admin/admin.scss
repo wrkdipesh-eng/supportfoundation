@@ -1,0 +1,61 @@
+/* Form Field Integration */
+
+.evf-provider-connection {
+	.everest-forms-source-account-add {
+		.amocrm-connection-form {
+			display: flex;
+			flex-direction: column;
+
+			strong {
+				display: inline-block;
+				min-width: 240px;
+			}
+
+			input {
+				font-weight: 400;
+			}
+
+			.everest-forms-hidden {
+				display: none !important;
+			}
+		}
+
+		.everest-forms-hidden {
+			display: none;
+		}
+	}
+
+	.evf-provider-accounts {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+/* Global Settings Integration */
+
+.evf-account-connect {
+	.amocrm-connection-form {
+		display: flex;
+		flex-direction: column;
+		strong {
+			display: inline-block;
+			min-width: 200px;
+		}
+
+		select {
+			font-weight: 400;
+			width: calc(33% - 20px) !important;
+			margin: 15px 0;
+		}
+	}
+
+	.everest-forms-btn {
+		margin-top: 24px;
+	}
+	.everest_forms_get_access_code_btn {
+		margin-top: 0 !important;
+	}
+}
+.everest_forms_connect_to_amocrm {
+	margin-top: 0 !important;
+}

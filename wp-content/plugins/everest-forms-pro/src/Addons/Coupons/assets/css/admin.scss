@@ -1,0 +1,987 @@
+// ============================================================
+// Variables
+// ============================================================
+$primary: #7545bb;
+$white: #ffffff;
+$border: #e2e8f0;
+$border-light: #dcdcdc;
+$text-dark: #222222;
+$text-mid: #383838;
+$text-muted: #6b6b6b;
+$success: #16a34a;
+$success-bg: #f0fdf4;
+$danger: #dc2626;
+$radius: 6px;
+$radius-sm: 4px;
+
+.wrap h1.wp-heading-inline {
+	margin-right: 1em;
+}
+
+.wp-header-end {
+	visibility: visible;
+	margin-top: 16px;
+	height: 1px;
+	background-color: rgba(204, 204, 204, 0.2);
+}
+
+a#everest-forms-coupons__heading {
+	text-decoration: none;
+	color: #64748b;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 26px;
+}
+
+.everest-forms-coupon__submit {
+	margin: 16px 38px 0 0;
+}
+
+// ============================================================
+// Create coupon wrapper
+// ============================================================
+
+.everest-forms-coupons-create-coupon__wrapper {
+	// margin: 60px auto;
+	// background: $white;
+	// border-radius: 7px;
+	// padding: 28px;
+}
+
+// ============================================================
+// Coupons form
+// ============================================================
+
+.evf-coupons-form {
+	display: flex;
+	flex-direction: column;
+
+	.evf-coupon-header {
+		padding: 0 24px;
+	}
+
+	.evf-field {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 20px;
+		margin-bottom: 24px;
+
+		input[type='radio']{
+			background-color: white !important;
+
+			&:focus {
+				outline: none;
+				box-shadow: none;
+			}
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&>input {
+			width: 76%;
+			border-color: #e9e9e9;
+			background-color: $white;
+		}
+
+		.evf-coupon-status-inactive {
+			margin-left: 1em;
+		}
+
+		.evf-field-label {
+			font-size: 15px;
+			font-weight: 600;
+			color: $text-mid;
+			max-width: 300px;
+			width: 100%;
+		}
+
+		.evf-field-container {
+			display: flex;
+			flex-direction: column;
+			flex: 1;
+
+			&>input {
+				border-color: #e1e1e1;
+				padding: 0 12px;
+				box-shadow: none;
+				color: #383838;
+
+				&:focus {
+					outline: none;
+					box-shadow: none;
+					border-color: #7e3bd0;
+				}
+			}
+		}
+
+		.select2 {
+			&-container {
+				width: 100% !important;
+				flex: 1;
+			}
+		}
+	}
+
+	#publishing-action {
+		margin-top: 24px;
+		display: flex;
+		flex-direction: row-reverse;
+		gap: 16px;
+	}
+}
+
+// ============================================================
+// EVF Coupon Field
+// ============================================================
+
+.everest-forms-coupons {
+	display: flex;
+	justify-content: space-between;
+
+	.widefat.primary-input {
+		flex: 1;
+		margin-right: 16px;
+	}
+
+	.evf-coupon-apply {
+		padding: 0 16px;
+		margin-bottom: 5px;
+	}
+}
+
+// ============================================================
+// Coupon field error state
+// ============================================================
+
+.evf-field.everest-forms-invalid.evf-has-error {
+	align-items: normal;
+
+	.evf-field-label {
+		color: #e63946;
+	}
+
+	input {
+		border: 1px solid #e63946;
+		background-color: #fff7f7;
+	}
+
+	.evf-error {
+		margin-top: 18px;
+		color: #e63946;
+	}
+}
+
+// ============================================================
+// Header
+// ============================================================
+
+.everest-forms-coupons__header {
+	display: flex;
+	padding: 0 24px;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid $border;
+	background: var(--white, $white);
+	margin-bottom: 40px;
+	margin-top: -10px;
+
+	.everest-forms-coupons__left-container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	div#everest-forms-coupons__logo {
+		display: flex;
+		align-items: center;
+		gap: 2px;
+		height: 74px;
+	}
+
+	button#evf-coupon__screen-options {
+		color: $text-dark;
+		font-size: 14px;
+		line-height: 21px;
+		border-color: #eaeaea;
+		border-radius: $radius-sm;
+		padding: 8px 16px;
+		background: #eaeaea;
+	}
+
+	button#show-settings-link {
+		display: none;
+	}
+
+	span#everest-forms-logo__separator {
+		padding: 0 20px;
+		color: $border;
+		font-size: 40px;
+		font-weight: 100;
+	}
+
+	a#everest-forms-coupons__heading {
+		font-size: 16px;
+		text-decoration: none;
+		font-weight: 600;
+		color: $text-dark;
+	}
+}
+
+// ============================================================
+// Empty state
+// ============================================================
+
+.evf-empty-list-table-container {
+	display: flex;
+	padding: 30px 0;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+h3#everest-forms-coupons__empty {
+	color: var(--Grey-grey-500, #222);
+	font-size: 22px;
+	font-style: normal;
+	font-weight: 600;
+}
+
+p#everest-forms-coupons__empty-desc {
+	color: var(--Grey-grey-300, $text-muted);
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 150%;
+}
+
+// ============================================================
+// Create coupon modal / dialog
+// ============================================================
+
+.jconfirm-everest-forms-coupon__left .jconfirm-box-container {
+	display: flex;
+	padding: 40px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+	gap: 16px;
+	align-self: stretch;
+}
+
+form.everest-forms-coupons__form {
+	display: flex;
+	text-align: left;
+	gap: 16px;
+	padding: 0 40px;
+	padding-inline: 0;
+	margin-bottom: 16px;
+}
+
+.everest-forms-coupon__submit {
+	margin: 0;
+	text-align: right;
+}
+
+.everest-forms-coupons__create-coupon {
+	width: 297px;
+	border-radius: $radius-sm;
+	border: 1px solid #e9e9e9;
+	background: $white;
+	padding: 14px 16px;
+
+	&.everest-forms-coupon__active {
+		border-color: $primary;
+	}
+}
+
+span.coupon-option__text {
+	color: var(--Grey-grey-500, #222);
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 150%;
+}
+
+p.everest-forms-coupon__description {
+	color: var(--Grey-grey-400, $text-mid);
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 150%;
+	padding-top: 10px;
+}
+
+input#create_single_coupon,
+input#create_bulk_coupon {
+	margin-top: -2px;
+	margin-right: 8px;
+	vertical-align: middle;
+	border-color: #bababa;
+	background-color: white !important;
+
+	&:checked {
+		border-color: #7545bb;
+
+		&::before {
+			background: #7545bb;
+
+			@media screen and (max-width: 782px) {
+				width: 0.5rem;
+				height: 0.5rem;
+				margin: 0.1875rem;
+			}
+		}
+	}
+
+	@media screen and (max-width: 782px) {
+		width: 1rem;
+		height: 1rem;
+	}
+
+	&:focus{
+		outline: none;
+		box-shadow: none;
+	}
+
+	&:checked::before {
+		background-color: $primary;
+	}
+
+	&:checked {
+		border-color: $primary;
+	}
+}
+
+// ============================================================
+// Create coupon page header
+// ============================================================
+
+a#coupon-back__icon {
+	background: #f4f4f4;
+	padding: 10px;
+	display: flex;
+	// width: 2%;
+	align-items: center;
+	border-radius: $radius;
+}
+
+.everest-forms-coupons-create {
+	&__header {
+		display: flex;
+		gap: 18px;
+		align-items: center;
+		padding-bottom: 20px;
+	}
+}
+
+#everest-forms-coupons-create__heading {
+	color: #222;
+	font-weight: 600;
+	line-height: 150%;
+}
+
+// ============================================================
+// Discount type selector
+// ============================================================
+
+.evf-coupon-discount {
+	&__type {
+		padding: 14px 16px;
+		border: 1px solid #e9e9e9;
+		border-radius: $radius-sm;
+		max-width: 240px;
+		width: 100%;
+		margin-right: 20px;
+		cursor: pointer;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__desc {
+		color: $text-mid;
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 150%;
+	}
+}
+
+input#evf-coupon-discount-type-fixed,
+input#evf-coupon-discount-type-percent,
+input#evf-coupon-status-active,
+input#evf-coupon-status-inactive,
+input.evf-coupon-stackable {
+	&:checked::before {
+		background-color: #7547bb;
+	}
+}
+
+.everest-forms-coupon-discount-active {
+	border-color: $primary;
+}
+
+// ============================================================
+// Save / Cancel buttons
+// ============================================================
+
+a.everest-forms-coupon__cancel.everest-forms-btn {
+	background: $white;
+	border: 1px solid #bababa;
+	border-radius: $radius-sm;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 150%;
+	color: $text-muted;
+}
+
+input.everest-forms-coupons__save {
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 150%;
+}
+
+// ============================================================
+// Misc form inputs
+// ============================================================
+
+input#evf-coupon-name,
+input#evf-coupon-code,
+input#evf-coupon-start-date,
+input#evf-coupon-end-date,
+input#evf-coupon-discount-amount {
+	height: 38px;
+}
+
+button#evf-coupon__screen-options {
+	color: $text-dark;
+	font-size: 14px;
+	line-height: 21px;
+	border-color: #eaeaea;
+	border-radius: $radius-sm;
+	padding: 8px 16px;
+	background: #eaeaea;
+}
+
+// ============================================================
+// jConfirm dialog
+// ============================================================
+
+.jconfirm.jconfirm-modern.jconfirm-everest-forms-coupon__left.jconfirm-open {
+	.jconfirm-box.jconfirm-hilight-shake {
+		padding: 40px !important;
+	}
+}
+
+.jconfirm-title-c.jconfirm-hand {
+	text-align: left !important;
+}
+
+// ============================================================
+// Coupon list table wrapper
+// ============================================================
+
+.everest-forms-coupons-list-table__wrapper {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 100%;
+	box-sizing: border-box;
+
+	// Top nav: heading + create button
+	#everest-forms-coupon-list-table__nav {
+		width: 100%;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		margin-bottom: 16px;
+		gap: 16px;
+
+		h3#everest-forms-coupons-list-table__heading {
+			color: $text-dark;
+			font-size: 22px;
+			font-weight: 600;
+			line-height: 33px;
+			margin: 0;
+		}
+
+		button#everest-forms-coupons__create-btn {
+			display: inline-flex;
+			align-items: center;
+			gap: 6px;
+			padding: 8px 16px !important;
+			background: $primary;
+			color: $white;
+			font-size: 14px;
+			font-weight: 500;
+			line-height: 22px !important;
+			border: none;
+			border-radius: $radius-sm;
+			cursor: pointer;
+			text-decoration: none;
+			transition: background 0.2s;
+
+			&:hover {
+				background: #5e35a0;
+			}
+
+			span#everest-forms-coupons-create-plus {
+				font-size: 18px;
+				line-height: 1;
+				margin: 0;
+			}
+		}
+	}
+
+	// Filter tabs (All / Published)
+	ul.subsubsub {
+		display: flex;
+		align-items: center;
+		gap: 4px;
+		margin: 0 0 12px 0;
+		padding: 0;
+		list-style: none;
+		flex-wrap: wrap;
+
+		li {
+			display: flex;
+			align-items: center;
+			gap: 4px;
+			color: $text-muted;
+			font-size: 13px;
+
+			&:not(:last-child)::after {
+				content: '|';
+				color: $border-light;
+				margin: 0 2px;
+			}
+
+			a {
+				color: $text-muted;
+				text-decoration: none;
+				padding: 4px 10px;
+				border-radius: $radius-sm;
+				font-size: 13px;
+				transition:
+					background 0.15s,
+					color 0.15s;
+
+				&:hover {
+					color: $primary;
+					background: #f3eeff;
+				}
+
+				&.current {
+					color: $primary;
+					background: #f3eeff;
+					font-weight: 600;
+				}
+
+				.count {
+					font-weight: 400;
+					color: inherit;
+				}
+			}
+		}
+	}
+
+	// Search box
+	p.coupon-search-box {
+		position: absolute;
+		margin: 0 0 14px 0;
+		width: 260px;
+		right: 20px;
+
+		input#search_input-search-input {
+			width: 100%;
+			height: 36px;
+			padding: 0 36px 0 12px;
+			border: 1px solid $border;
+			border-radius: $radius-sm;
+			font-size: 13px;
+			color: $text-dark;
+			background: $white;
+			outline: none;
+			box-sizing: border-box;
+			transition: border-color 0.2s;
+
+			&::placeholder {
+				color: $text-muted;
+			}
+
+			&:focus {
+				border-color: $primary;
+				box-shadow: 0 0 0 2px rgba(117, 69, 187, 0.12);
+			}
+		}
+
+		button#coupon-search__icon {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			border: none;
+			background: none;
+			display: flex;
+			align-items: center;
+			padding: 0 8px;
+			cursor: pointer;
+
+			svg path {
+				stroke: $text-muted;
+			}
+		}
+	}
+
+	// HR separator
+	>hr {
+		width: 100%;
+		border: none;
+		border-top: 1px solid $border-light;
+		margin: 10px 0;
+		visibility: hidden; // FIXED: Hide the HR that causes the extra line in Image 2
+	}
+
+	// Pagination wrapper + bulk actions (top)
+	.coupon-pagination__wrapper {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		border-top: none;
+		padding-top: 0;
+	}
+
+	.tablenav.top {
+		display: flex;
+		align-items: center;
+		justify-content: left;
+		flex-wrap: wrap;
+		gap: 8px;
+		margin-bottom: 0;
+		padding: 0;
+
+		.alignleft.actions.bulkactions {
+			display: flex;
+			align-items: center;
+			gap: 12px; // FIXED: Increased from 8px to 12px for better spacing between dropdown and button
+
+			select#bulk-action-selector-top {
+				height: 32px;
+				border: 1px solid $border;
+				border-radius: $radius-sm;
+				font-size: 13px;
+				color: $text-mid;
+				padding: 0 28px 0 10px;
+				background: $white;
+				cursor: pointer;
+
+				&:focus {
+					border-color: $primary;
+					outline: none;
+				}
+			}
+
+			input#doaction {
+				height: 32px;
+				padding: 0 14px;
+				border: 1px solid $border;
+				border-radius: $radius-sm;
+				font-size: 13px;
+				color: $text-mid;
+				background: $white;
+				cursor: pointer;
+				transition:
+					border-color 0.2s,
+					color 0.2s;
+
+				&:hover {
+					border-color: $primary;
+					color: $primary;
+				}
+			}
+		}
+
+		.tablenav-pages {
+			display: flex;
+			align-items: center;
+			gap: 4px;
+			font-size: 13px;
+			color: $text-muted;
+			margin-left: auto; // FIXED: Push pagination controls to the right for better spacing
+
+			.displaying-num {
+				margin-right: 6px;
+			}
+
+			.pagination-links {
+				display: flex;
+				align-items: center;
+				gap: 2px;
+			}
+
+			.tablenav-pages-navspan,
+			input.current-page {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				min-width: 28px;
+				height: 28px;
+				border: 1px solid $border;
+				border-radius: $radius-sm;
+				font-size: 13px;
+				color: $text-mid;
+				background: $white;
+				cursor: pointer;
+				text-decoration: none;
+				padding: 0 4px;
+				box-sizing: border-box;
+
+				&.disabled {
+					opacity: 0.4;
+					cursor: not-allowed;
+					pointer-events: none;
+				}
+			}
+
+			input.current-page {
+				width: 40px;
+				text-align: center;
+				border-color: $primary;
+			}
+
+			.paging-input {
+				display: flex;
+				align-items: center;
+				gap: 4px;
+				font-size: 13px;
+				color: $text-muted;
+			}
+		}
+	}
+
+	.tablenav-pages.one-page {
+		width: 100%;
+		text-align: right;
+	}
+
+	// Hide WP default bottom tablenav
+	.tablenav.bottom {
+		display: none;
+	}
+
+	// Table
+	// table.wp-list-table.coupons {
+	// 	width: 100%;
+	// 	border-collapse: collapse;
+	// 	border: 1px solid $border-light;
+	// 	border-radius: $radius;
+	// 	overflow: hidden;
+	// 	margin: 0;
+	// 	font-size: 13px;
+
+	// 	th#status,
+	// 	th#actions {
+	// 		color: $text-mid;
+	// 	}
+
+	// 	thead tr {
+	// 		background: #f8fafc;
+
+	// 		th,
+	// 		td {
+	// 			padding: 10px 14px;
+	// 			font-size: 12px;
+	// 			font-weight: 600;
+	// 			color: $text-muted;
+	// 			text-transform: uppercase;
+	// 			letter-spacing: 0.04em;
+	// 			border-bottom: 1px solid $border-light;
+	// 			white-space: nowrap;
+
+	// 			a {
+	// 				color: $text-muted;
+	// 				text-decoration: none;
+	// 				display: inline-flex;
+	// 				align-items: center;
+	// 				gap: 4px;
+
+	// 				&:hover {
+	// 					color: $primary;
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+
+	// 	tfoot {
+	// 		display: none;
+	// 	}
+
+	// 	tbody tr {
+	// 		background: $white;
+	// 		transition: background 0.15s;
+
+	// 		&:hover {
+	// 			background: #fafafa;
+	// 		}
+
+	// 		&:not(:last-child) td,
+	// 		&:not(:last-child) th {
+	// 			border-bottom: 1px solid $border-light;
+	// 		}
+
+	// 		td,
+	// 		th {
+	// 			padding: 12px 14px;
+	// 			color: $text-mid;
+	// 			font-size: 13px;
+	// 			vertical-align: middle;
+
+	// 			span {
+	// 				color: $text-mid;
+	// 				line-height: 24px;
+	// 			}
+
+	// 			&.check-column {
+	// 				width: 40px;
+	// 				padding: 12px 10px;
+
+	// 				input[type='checkbox'] {
+	// 					margin: 0;
+	// 					cursor: pointer;
+	// 				}
+	// 			}
+
+	// 			// Action icons — forced inline
+	// 			&.actions.column-actions {
+	// 				width: 90px;
+	// 				white-space: nowrap;
+
+	// 				> a,
+	// 				> span.sep {
+	// 					display: inline-flex;
+	// 					align-items: center;
+	// 					vertical-align: middle;
+	// 				}
+
+	// 				span.sep {
+	// 					color: $border-light;
+	// 					font-size: 16px !important;
+	// 					font-weight: 300 !important;
+	// 					margin: 0 2px;
+	// 					line-height: 1;
+	// 				}
+
+	// 				a {
+	// 					display: inline-flex;
+	// 					align-items: center;
+	// 					justify-content: center;
+	// 					width: 28px;
+	// 					height: 28px;
+	// 					border-radius: $radius-sm;
+	// 					transition: background 0.15s;
+
+	// 					&:hover {
+	// 						background: #f1f5f9;
+
+	// 						svg path {
+	// 							stroke: $primary;
+	// 							fill: $primary;
+	// 						}
+	// 					}
+
+	// 					svg {
+	// 						display: block;
+
+	// 						path {
+	// 							transition: stroke 0.15s, fill 0.15s;
+	// 						}
+	// 					}
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// }
+
+	// Status badges
+	.evf-badge {
+		display: inline-flex;
+		align-items: center;
+		padding: 2px 10px;
+		border-radius: 20px;
+		font-size: 12px;
+		font-weight: 500;
+		line-height: 20px;
+
+		&.evf-badge-success {
+			color: $success;
+			background: $success-bg;
+		}
+
+		&.evf-badge-danger {
+			color: $danger;
+			background: #fef2f2;
+		}
+	}
+
+	// Bottom pagination
+	#everest-forms-coupons__pagination-bottom {
+		width: 100%;
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+		margin-top: 12px;
+		padding-top: 12px;
+		// border-top: 1px solid #e1e1e1;
+
+		.tablenav-pages {
+			display: flex;
+			align-items: center;
+			gap: 6px;
+			flex-direction: row-reverse;
+
+			.displaying-num {
+				font-size: 13px;
+				color: $text-muted;
+				margin-right: 8px;
+			}
+		}
+
+		span.pagination-links {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 6px;
+		}
+
+		.tablenav-pages-navspan {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			min-width: 28px;
+			height: 28px;
+			border: 1px solid $border;
+			border-radius: $radius-sm;
+			font-size: 13px;
+			color: $text-mid;
+			background: $white;
+			cursor: pointer;
+			padding: 0 4px;
+
+			&.disabled {
+				opacity: 0.4;
+				cursor: not-allowed;
+				pointer-events: none;
+			}
+		}
+
+		.paging-input {
+			font-size: 13px;
+			color: $text-muted;
+			padding: 0 4px;
+		}
+	}
+}

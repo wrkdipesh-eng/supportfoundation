@@ -1,0 +1,8 @@
+/* Drip radio icon */
+.evf-drip-eu-consent {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.evf-drip-eu-consent h4 {
+  grid-column: 1/-1;
+}

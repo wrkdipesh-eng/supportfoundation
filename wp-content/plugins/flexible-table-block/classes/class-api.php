@@ -1,0 +1,172 @@
+<?php
+/**
+ * @package Flexible_Table_Block
+ * @author Aki Hamano
+ * @license GPL-2.0+
+ */
+
+namespace Flexible_Table_Block;
+
+use WP_Error;
+use WP_REST_Response;
+
+class Api {
+
+	/**
+	 * Constructor
+	 */
+	public function __construct() {
+		// Register REST API route.
+		add_action( 'rest_api_init', array( $this, 'register_routes' ) );
+	}
+
+	/**
+	 * Register REST API route
+	 */
+	public function register_routes() {
+
+		register_rest_route(
+			FTB_NAMESPACE . '/v1',
+			'/options',
+			array(
+				array(
+					'methods'             => 'GET',
+					'callback'            => array( $this, 'get_options' ),
+					'permission_callback' => function () {
+						return current_user_can( 'edit_posts' );
+					},
+				),
+				array(
+					'methods'             => 'POST',
+					'callback'            => array( $this, 'update_options' ),
+					'permission_callback' => function () {
+						$show_global_setting = get_option( Option::OPTION_NAMES['show_global_setting'], Settings::OPTIONS['show_global_setting']['default'] );
+
+						if ( $show_global_setting ) {
+							return current_user_can( 'edit_posts' );
+						} else {
+							return current_user_can( 'manage_options' );
+						}
+					},
+				),
+				array(
+					'methods'             => 'DELETE',
+					'callback'            => array( $this, 'delete_options' ),
+					'permission_callback' => function () {
+						return current_user_can( 'manage_options' );
+					},
+				),
+			)
+		);
+	}
+
+	/**
+	 * Get options
+	 *
+	 * @return WP_REST_Response|WP_Error
+	 */
+	public function get_options() {
+		$options              = Settings::get_options();
+		$options['block_css'] = Helper::minify_css( Helper::get_block_css( '.editor-styles-wrapper ' ) );
+		return rest_ensure_response( $options );
+	}
+
+	/**
+	 * Update options
+	 *
+	 * @return WP_REST_Response|WP_Error
+	 */
+	public function update_options( $request ) {
+		$params = $request->get_json_params();
+
+		// Sanitize option values.
+		foreach ( $params as $key => $value ) {
+			if ( ! array_key_exists( $key, Settings::OPTIONS ) ) {
+				continue;
+			}
+
+			if ( 'boolean' === Settings::OPTIONS[ $key ]['type'] ) {
+				$value = $value ? 1 : 0;
+			}
+
+			if ( 'array' === Settings::OPTIONS[ $key ]['type'] ) {
+				if ( ! is_array( $value ) ) {
+					continue;
+				}
+
+				$default = Settings::OPTIONS[ $key ]['default'];
+
+				// Keep only known keys; values are validated at output time.
+				$new_value = array();
+				foreach ( $value as $array_key => $array_value ) {
+					if ( ! array_key_exists( $array_key, $default ) ) {
+						continue;
+					}
+
+					if ( is_array( $array_value ) ) {
+						// Nested values such as cell_padding.
+						$sub_default = is_array( $default[ $array_key ] ) ? $default[ $array_key ] : array();
+						$sub_value   = array();
+						foreach ( $array_value as $sub_key => $sub_item ) {
+							if ( array_key_exists( $sub_key, $sub_default ) ) {
+								$sub_value[ $sub_key ] = $sub_item;
+							}
+						}
+						$new_value[ $array_key ] = $sub_value;
+					} else {
+						$new_value[ $array_key ] = $array_value;
+					}
+				}
+
+				$value = $new_value;
+			}
+
+			if ( isset( Settings::OPTIONS[ $key ]['range'] ) ) {
+				$min   = Settings::OPTIONS[ $key ]['range']['min'];
+				$max   = Settings::OPTIONS[ $key ]['range']['max'];
+				$value = min( max( $value, $min ), $max );
+			}
+
+			if ( is_wp_error( $value ) ) {
+				return rest_ensure_response(
+					array(
+						'status'  => 'error',
+						'message' => $value->get_error_message(),
+					)
+				);
+			} else {
+				update_option( Option::OPTION_NAMES[ $key ], $value );
+			}
+		}
+
+		return rest_ensure_response(
+			array(
+				'status'    => 'success',
+				'message'   => __( 'Global setting saved.', 'flexible-table-block' ),
+				'block_css' => Helper::minify_css( Helper::get_block_css( '.editor-styles-wrapper ' ) ),
+			)
+		);
+	}
+
+	/**
+	 * Delete options
+	 *
+	 * @return WP_REST_Response|WP_Error
+	 */
+	public function delete_options() {
+		foreach ( Settings::OPTIONS as $key => $value ) {
+			delete_option( Option::OPTION_NAMES[ $key ] );
+		}
+
+		return rest_ensure_response(
+			array(
+				'options'   => Settings::get_options(),
+				'status'    => 'success',
+				'message'   => __( 'Global setting restored.', 'flexible-table-block' ),
+				'block_css' => Helper::minify_css( Helper::get_block_css( '.editor-styles-wrapper ' ) ),
+			)
+		);
+	}
+}
+
+new Api();

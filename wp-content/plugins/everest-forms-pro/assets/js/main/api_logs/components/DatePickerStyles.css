@@ -1,0 +1,339 @@
+.rdrDateRangePickerWrapper {
+	display: flex;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.rdrDefinedRangesWrapper {
+	width: 200px;
+	border-right: 1px solid #e2e8f0;
+	background: #fafafa;
+	padding: 16px 0;
+}
+
+.rdrStaticRanges {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.rdrStaticRange {
+	border: 0;
+	padding: 0;
+	font-size: 14px;
+	background: transparent;
+	text-align: left;
+	cursor: pointer;
+	color: #4a5568;
+	transition: all 0.2s ease;
+	border-radius: 6px;
+	font-weight: 400;
+}
+
+.rdrStaticRange:hover {
+	background: #edf2f7;
+	color: #2d3748;
+}
+
+.rdrStaticRangeSelected {
+	background: #5317aa !important;
+	color: white !important;
+	font-weight: 500;
+}
+
+.rdrStaticRangeLabel {
+	display: block;
+	line-height: 1.4;
+	background: transparent !important;
+}
+
+.rdrCalendarWrapper {
+	background: white;
+	padding: 20px;
+	flex: 1;
+}
+
+.rdrMonths {
+	display: flex;
+	gap: 20px;
+}
+
+.rdrMonth {
+	width: 280px;
+}
+
+/* Date input boxes at top */
+.rdrDateDisplayWrapper {
+	background: transparent;
+	margin-bottom: 16px;
+}
+
+.rdrDateDisplay {
+	display: flex;
+	gap: 16px;
+	justify-content: center;
+}
+
+.rdrDateDisplayItem {
+	flex: 1;
+	background: white;
+	border: 1px solid #cbd5e0;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	box-shadow: none !important;
+}
+
+.rdrDateDisplayItem:hover {
+	border-color: #5317aa;
+}
+
+.rdrDateDisplayItem input {
+	text-align: center;
+	font-size: 14px;
+	font-weight: 500;
+	color: #2d3748;
+	cursor: pointer;
+}
+
+.rdrDateDisplayItemActive {
+	border-color: #5317aa !important;
+	background: #f7f9fc;
+}
+
+/* Month and year header */
+.rdrMonthAndYearWrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-bottom: 16px;
+	height: auto;
+}
+
+.rdrMonthAndYearPickers {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.rdrMonthPicker select,
+.rdrYearPicker select {
+	font-weight: 600;
+	color: #2d3748;
+	font-size: 15px;
+	border: 1px solid #e2e8f0;
+	border-radius: 6px;
+	background: white;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	padding: 0 10px !important;
+}
+
+.rdrMonthPicker select:hover,
+.rdrYearPicker select:hover {
+	border-color: #cbd5e0;
+	background: #fafafa;
+}
+
+/* Navigation buttons */
+.rdrNextPrevButton {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	background: white;
+	border: 1px solid #e2e8f0;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	margin: 0;
+}
+
+.rdrNextPrevButton:hover {
+	background: #f5f0ff;
+	border-color: #5317aa;
+}
+
+.rdrNextPrevButton:hover i {
+	border-color: #5317aa;
+}
+
+.rdrNextPrevButton i {
+	border-width: 4px 4px 0 0;
+	border-style: solid;
+	border-color: #4a5568;
+	display: block;
+	width: 8px;
+	height: 8px;
+	margin: 0;
+	transition: border-color 0.2s ease;
+}
+
+.rdrPprevButton i {
+	transform: rotate(-135deg);
+}
+
+.rdrNextButton i {
+	transform: rotate(45deg);
+}
+
+.rdrWeekDays {
+	display: flex;
+	padding: 12px 0 8px;
+}
+
+.rdrWeekDay {
+	flex: 1;
+	color: #718096;
+	font-weight: 600;
+	font-size: 12px;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+/* Days grid */
+.rdrDays {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.rdrDay {
+	width: 14.285%;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.rdrDayNumber {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 36px;
+	height: 36px;
+	font-size: 14px;
+	font-weight: 400;
+	color: #2d3748;
+	position: relative;
+	z-index: 1;
+	top: 0 !important;
+}
+
+.rdrDayNumber span {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	transition: all 0.2s ease;
+}
+
+/* Today indicator */
+.rdrDayToday .rdrDayNumber span {
+	font-weight: 600;
+	color: #5317aa;
+	position: relative;
+}
+
+.rdrDayToday .rdrDayNumber span:after {
+	content: '';
+	position: absolute;
+	bottom: 2px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background: #5317aa;
+}
+
+/* Passive (disabled) dates */
+.rdrDayPassive .rdrDayNumber span {
+	color: #cbd5e0;
+}
+
+/* Selected range styling - PRIMARY COLOR */
+.rdrStartEdge,
+.rdrEndEdge,
+.rdrInRange {
+	background: #5317aa !important;
+}
+
+.rdrStartEdge {
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+
+.rdrEndEdge {
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+
+.rdrStartEdge.rdrEndEdge {
+	border-radius: 20px;
+}
+
+.rdrInRange {
+	background: #5317aa !important;
+	opacity: 1;
+}
+
+.rdrStartEdge .rdrDayNumber span,
+.rdrEndEdge .rdrDayNumber span,
+.rdrInRange .rdrDayNumber span {
+	color: white !important;
+	font-weight: 500;
+}
+
+/* Selection preview */
+.rdrDayStartPreview,
+.rdrDayInPreview,
+.rdrDayEndPreview {
+	background: rgba(83, 23, 170, 0.1);
+	border: 1px dashed #5317aa;
+}
+
+.rdrDayStartPreview .rdrDayNumber span,
+.rdrDayInPreview .rdrDayNumber span,
+.rdrDayEndPreview .rdrDayNumber span {
+	color: #5317aa !important;
+}
+
+/* Hover effect */
+.rdrDay:not(.rdrDayPassive):not(.rdrDayDisabled):hover .rdrDayNumber span {
+	background: #edf2f7;
+	color: #5317aa;
+	font-weight: 500;
+}
+
+.rdrStartEdge:hover,
+.rdrEndEdge:hover,
+.rdrInRange:hover {
+	background: #4312aa !important;
+}
+
+/* Disabled days */
+.rdrDayDisabled {
+	background-color: transparent;
+}
+
+.rdrDayDisabled .rdrDayNumber span {
+	color: #e2e8f0;
+	cursor: not-allowed;
+}
+
+/* Month name label */
+.rdrMonthName {
+	text-align: left;
+	font-weight: 600;
+	color: #2d3748;
+	font-size: 14px;
+}
+
+/* Fix month labels above calendar */
+.rdrMonths .rdrMonth:first-child .rdrMonthName {
+	margin-bottom: 8px;
+}

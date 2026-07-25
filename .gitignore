@@ -1,0 +1,26 @@
+# Ignore other websites sharing public_html
+/backtobasic.com.au/
+/motherlycare.net.au/
+/motherlyhealthcare.com.au/
+/ndis.supportfoundation.com.au/
+/plannext.com.au/
+/reactcorpdisability.com.au/
+/register.supportfoundation.com.au/
+/sdsupportservices.com.au/
+/seacareservices.com.au/
+/signoff.supportfoundation.com.au/
+/signoffs/
+/ssl/
+
+# Ignore WordPress configuration & uploads
+wp-config.php
+.htaccess
+/wp-content/uploads/
+/wp-content/blogs.dir/
+/wp-content/upgrade/
+/wp-content/backup-db/
+/wp-content/cache/
+/wp-content/ai1wm-backups/
+error_log
+*.wpress
+*.log

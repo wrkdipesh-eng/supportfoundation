@@ -1,0 +1,1578 @@
+@import '../../../everest-forms/assets/css/variables/variables';
+@import '../../../everest-forms/assets/css/menu.scss';
+.tooltipster-base {
+	display: flex;
+	position: absolute;
+	pointer-events: none;
+
+	&.tooltipster-ruler {
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		overflow: hidden;
+		visibility: hidden;
+	}
+
+	.tooltipster-box {
+		border: none;
+		flex: 1 1 auto;
+		border-radius: 3px;
+		background: #333;
+		margin: 0 !important;
+
+		.tooltipster-content {
+			color: $color-white;
+			overflow: auto;
+			font-size: 0.8em;
+			max-width: 150px;
+			max-height: 100%;
+			text-align: center;
+			padding: 0.618em 1em;
+			box-sizing: border-box;
+			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+
+			a {
+				color: #ff7d20;
+			}
+
+			code {
+				padding: 1px;
+				background: #888;
+			}
+		}
+	}
+
+	.tooltipster-arrow {
+		overflow: hidden;
+		position: absolute;
+
+		.tooltipster-arrow-uncropped {
+			position: relative;
+
+			.tooltipster-arrow-border {
+				top: 0;
+				left: 0;
+				width: 0;
+				height: 0;
+				position: absolute;
+				border: 5px solid transparent;
+			}
+
+			.tooltipster-arrow-background {
+				display: none;
+			}
+		}
+	}
+
+	&.tooltipster-top,
+	&.tooltipster-bottom {
+		.tooltipster-arrow {
+			width: 10px;
+			height: 5px;
+			margin-left: -5px;
+		}
+	}
+
+	&.tooltipster-left,
+	&.tooltipster-right {
+		.tooltipster-arrow {
+			top: 0;
+			width: 5px;
+			height: 10px;
+			margin-left: 0;
+			margin-top: -5px;
+		}
+	}
+
+	&.tooltipster-bottom {
+		.tooltipster-arrow {
+			top: -5px;
+
+			.tooltipster-arrow-uncropped {
+				top: -5px;
+
+				.tooltipster-arrow-border {
+					border-bottom-color: #333;
+				}
+			}
+		}
+	}
+
+	&.tooltipster-left {
+		.tooltipster-arrow {
+			right: -5px;
+
+			.tooltipster-arrow-border {
+				border-left-color: #333;
+			}
+		}
+	}
+
+	&.tooltipster-right {
+		.tooltipster-arrow {
+			left: -5px;
+
+			.tooltipster-arrow-uncropped {
+				left: -5px;
+
+				.tooltipster-arrow-border {
+					border-right-color: #333;
+				}
+			}
+		}
+	}
+
+	&.tooltipster-top {
+		.tooltipster-arrow {
+			bottom: -5px;
+
+			.tooltipster-arrow-border {
+				border-top-color: #333;
+			}
+		}
+	}
+
+	&.tooltipster-fade {
+		opacity: 0;
+		transition-property: opacity;
+
+		&.tooltipster-show {
+			opacity: 1;
+		}
+	}
+
+	&.tooltipster-update-rotate {
+		animation: rotating 600ms;
+	}
+}
+.everest-forms {
+	.evf-field-container {
+		.evf-frontend-row {
+			.evf-field {
+				.input-wrapper {
+					position: relative;
+
+					.input-text {
+						padding-left: 32px;
+					}
+
+					.evf-icon {
+						position: absolute;
+						left: 0;
+						top: 50%;
+						transform: translateY(-50%);
+						padding: 9px;
+						font-size: 16px;
+					}
+
+					.evf-icon-password {
+						top: 37%;
+					}
+				}
+
+				&.evf-field-password {
+					.evf-field-password-input {
+						position: relative;
+
+						input {
+							padding-right: 36px;
+						}
+
+						.toggle-password {
+							position: absolute;
+							right: 10px;
+							top: calc(50% - 5px);
+							transform: translateY(-50%);
+						}
+					}
+				}
+				.everest-forms-payment-gateway {
+					.everest-forms-stripe-gateways-tabs {
+						display: flex;
+						flex-direction: row;
+						.evf-tab {
+							margin-right: 20px;
+							.label {
+								text-decoration: none;
+								color: #1e1e1e;
+								padding: 5px;
+								&.active {
+									background: #efefef;
+									border-bottom: 2px solid #469;
+								}
+							}
+						}
+					}
+					.everest-forms-stripe-gateways-contents {
+						margin-top: 20px;
+					}
+				}
+			}
+			.everest_form_signature_canvas-wrap {
+				position: relative;
+
+				.evf-signature-reset {
+					top: 10px;
+					right: 10px;
+					line-height: 1;
+					position: absolute;
+
+					.dashicons {
+						&:hover {
+							color: $red;
+						}
+					}
+				}
+			}
+
+			.everest-forms-field-rating-container {
+				input[type='radio'] {
+					display: none;
+				}
+
+				label {
+					display: inline-block;
+					margin-right: 10px;
+				}
+
+				.everest-forms-field-rating {
+					transition: all 0.25s ease 0s;
+
+					svg {
+						transition: all 0.25s ease 0s;
+						opacity: 0.6;
+					}
+
+					&.hover,
+					&.selected {
+						transform: scale(1.25);
+
+						svg {
+							opacity: 1;
+						}
+					}
+				}
+			}
+
+			label.evf-error {
+				&:empty {
+					display: none;
+				}
+			}
+
+			label.everest-froms-tooltip {
+				display: inline-block;
+
+				.everest-forms-help-tooltip {
+					margin: 0 4px;
+				}
+			}
+
+			.everest-forms-credit-card-cardnumber {
+				input {
+					border: none;
+				}
+			} /*Everest forms uploader styles.*/
+			.everest-forms-uploader {
+				cursor: pointer;
+				padding: 20px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				text-align: center;
+				border: 1px dashed $color_gray-light;
+
+				span {
+					display: block;
+					color: $color_gray-base;
+
+					&.everest-forms-upload-hint {
+						color: $color_gray-light;
+						font-size: 14px;
+					}
+				}
+
+				& + input.dropzone-input {
+					display: none;
+				}
+
+				.dz-message {
+					flex: 0 0 100%;
+					width: 100%;
+
+					svg {
+						margin-bottom: 10px;
+						background: $color_gray-light-skin;
+						height: 48px;
+						width: 48px;
+						padding: 8px;
+						border-radius: 4px;
+					}
+
+					&.hide {
+						display: none;
+					}
+				}
+
+				.dz-preview {
+					flex: 0 0 100%;
+					width: 100%;
+					display: flex;
+					flex-wrap: wrap;
+					align-items: center;
+					margin-bottom: 20px;
+					border-bottom: 1px solid $color_gray-more-lighten;
+					padding-bottom: 20px;
+
+					.dz-image {
+						width: 64px;
+						height: 64px;
+						background: $color_gray-light-skin;
+						flex: 0 0 64px;
+						margin-right: 15px;
+						border-radius: 3px;
+						overflow: hidden;
+					}
+
+					.dz-details {
+						text-align: left;
+						font-size: 14px;
+						flex: 1;
+
+						.dz-size {
+							color: $color_gray-base;
+						}
+
+						.dz-filename {
+							span {
+								color: $color_gray-light;
+							}
+						}
+					}
+
+					.dz-progress {
+						background: $color_gray-more-lighten;
+						border-radius: 2px;
+						height: 4px;
+						width: 100%;
+						margin-left: 80px;
+						order: 4;
+
+						.dz-upload {
+							background-color: $green;
+							border-radius: 2px;
+							height: 4px;
+							transition: all 0.25s ease 0s;
+						}
+					}
+
+					.dz-error-message {
+						font-size: 14px;
+						flex: 0 0 100%;
+						width: 100%;
+						text-align: left;
+						margin-left: 80px;
+						order: 5;
+
+						span {
+							color: $red;
+						}
+					}
+
+					.dz-success-mark,
+					.dz-error-mark {
+						display: none;
+					}
+
+					.dz-remove {
+						font-size: 0;
+						position: relative;
+						height: 28px;
+						width: 28px;
+						display: inline-flex;
+						margin-left: auto;
+						order: 3;
+						border-radius: 14px;
+						border: 2px solid $color_gray-light;
+
+						&::before,
+						&::after {
+							content: '';
+							height: 14px;
+							width: 2px;
+							display: block;
+							background: $color_gray-light;
+							position: absolute;
+							top: 50%;
+							left: 0;
+							right: 0;
+							margin: 0 auto;
+						}
+
+						&::before {
+							transform: translateY(-50%) rotate(45deg);
+						}
+
+						&::after {
+							transform: translateY(-50%) rotate(-45deg);
+						}
+					}
+
+					&.dz-processing {
+						.dz-progress {
+							display: block;
+						}
+					}
+
+					&.dz-complete {
+						.dz-progress {
+							display: none;
+						}
+					}
+
+					&.dz-error {
+						.dz-remove {
+							border-color: $red;
+
+							&::before,
+							&::after {
+								background: $red;
+							}
+						}
+					}
+
+					&:last-child {
+						border-bottom: 0;
+						padding-bottom: 0;
+						margin-bottom: 0;
+					}
+				}
+			}
+
+			.tooltipster-content {
+				ol,
+				ul {
+					margin: inherit;
+					padding: inherit;
+				}
+
+				ul {
+					list-style: inherit;
+				}
+
+				ol {
+					list-style: auto;
+
+					&[type='i'] {
+						list-style-type: lower-roman;
+					}
+					&[type='a'] {
+						list-style-type: lower-alpha;
+					}
+				}
+			}
+		}
+	}
+
+	.evf-submit-container {
+		&.everest-forms-ideal-hidden-submit {
+			display: none;
+		}
+	}
+
+	.everest-forms-pass-strength {
+		border: 1px solid transparent;
+		color: $color_gray-base;
+		font-size: 14px;
+		padding: 3px 5px;
+		text-align: center;
+		width: 100%;
+
+		&.mismatch {
+			background: lighten($red, 33%);
+			border-color: $red;
+			color: $red;
+		}
+		&.very-weak {
+			background: lighten($red, 33%);
+			border-color: $red;
+			color: $red;
+		}
+		&.weak {
+			background: lighten($orange, 45%);
+			border-color: $orange;
+		}
+		&.medium {
+			background: lighten($orange, 40%);
+			border-color: $orange;
+		}
+		&.strong {
+			background: lighten($green, 35%);
+			border-color: $green;
+		}
+		&.everest-forms-progress-bar {
+			background: $color_gray-lighten;
+			border: none;
+			padding: 0;
+
+			&.very-weak {
+				.everest-forms-progress-bar-indicator {
+					background: $red;
+					width: 25%;
+				}
+			}
+
+			&.weak {
+				.everest-forms-progress-bar-indicator {
+					background: adjust-hue($orange, -10);
+					width: 50%;
+				}
+			}
+
+			&.medium {
+				.everest-forms-progress-bar-indicator {
+					background: $orange;
+					width: 75%;
+				}
+			}
+
+			&.strong {
+				.everest-forms-progress-bar-indicator {
+					background: $green;
+					width: 100%;
+				}
+			}
+		}
+
+		&.password-strong {
+			text-align: left;
+			padding: 0px;
+			.strong-password-message {
+				width: 100%;
+				display: none;
+				background: rgba($green, 0.3);
+				border: 1px solid $green;
+				padding: 2px 30px;
+				font-weight: bold;
+				font-size: 12px;
+				text-align: center;
+				margin: 10px 0;
+			}
+
+			.everest-forms-password-fields-wrap {
+				padding-left: 2px;
+				ul {
+					display: flex;
+					flex-wrap: wrap;
+					li {
+						text-align: left;
+						width: 50%;
+						@media (max-width: 767px) {
+							width: 100%;
+						}
+						.evr-dot {
+							width: 8px;
+							height: 8px;
+							margin-right: 10px;
+							border-radius: 8px;
+							background: $green;
+							display: inline-block;
+							position: relative;
+							top: -1px;
+							background: $color_gray-base;
+						}
+						label {
+							display: block;
+							padding-left: 15px;
+							text-indent: -15px;
+							input[type='checkbox'] {
+								width: 13px;
+								height: 13px;
+								padding: 0;
+								margin: 0;
+								vertical-align: bottom;
+								position: relative;
+								top: -1px;
+								*overflow: hidden;
+							}
+							&.strong {
+								color: $green;
+								.evr-dot {
+									background-color: $green;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.evf-divider {
+		margin: 25px 0px 20px;
+		background: none;
+		border-color: $color_gray-lighten;
+		border-width: 2px;
+		border-top-style: solid;
+		&.dashed {
+			border-top-style: dashed;
+		}
+		&.dotted {
+			border-top-style: dotted;
+		}
+		&.thick {
+			border-top-style: solid;
+			border-width: 3px;
+		}
+		&.double {
+			border-top-style: double;
+			border-width: 3px;
+		}
+	}
+	.evf-slider-group {
+		display: flex;
+		align-items: center;
+		margin-top: 15px;
+		margin-bottom: 10px;
+
+		.evf-slider {
+			flex: 1;
+			display: flex;
+			position: relative;
+
+			> .irs {
+				flex: 1;
+
+				.irs {
+					position: absolute;
+					width: 100%;
+
+					.irs-line {
+						background: $color_gray-light;
+						top: 0;
+					}
+				}
+
+				.irs,
+				.irs-bar,
+				.irs-handle {
+					top: 50%;
+					transform: translateY(-50%);
+				}
+
+				&.irs--flat {
+					.irs-single,
+					.irs-min,
+					.irs-max {
+						top: -25px;
+					}
+				}
+
+				&.irs--big {
+					.irs-single,
+					.irs-min,
+					.irs-max {
+						top: -35px;
+					}
+				}
+
+				&.irs--modern {
+					.irs-single,
+					.irs-min,
+					.irs-max {
+						top: -25px;
+					}
+
+					.irs-handle {
+						transform: translateY(10px);
+					}
+				}
+
+				&.irs--sharp {
+					.irs-single,
+					.irs-min,
+					.irs-max {
+						top: -30px;
+					}
+				}
+
+				&.irs--round {
+					.irs-single,
+					.irs-min,
+					.irs-max {
+						top: -35px;
+					}
+				}
+
+				&.irs--square {
+					.irs-handle {
+						transform: translateY(-50%) rotate(45deg);
+					}
+
+					.irs-single,
+					.irs-min,
+					.irs-max {
+						top: -32px;
+					}
+				}
+			}
+
+			.ui-slider-handle {
+				width: 20px;
+				height: 20px;
+				cursor: pointer;
+				margin-left: -8px;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				border-radius: 16px;
+				border: none;
+				background: $color_gray-normal none;
+				box-shadow: 0 0 15px transparentize($color_gray-base, 0.8);
+				z-index: auto;
+			}
+		}
+
+		.ui-slider-range {
+			height: 100%;
+			margin-left: -8px;
+			border-top-left-radius: 2px;
+			border-bottom-left-radius: 2px;
+			background-color: $everestforms;
+		}
+
+		.evf-slider-input-wrapper {
+			margin-left: 16px;
+			display: flex;
+			align-items: center;
+
+			.evf-slider-input {
+				max-width: 80px;
+				margin-bottom: 0;
+			}
+		}
+
+		.evf-range-slider-reset-icon {
+			width: 16px;
+			height: 16px;
+			font-size: 16px;
+			cursor: pointer;
+			margin-left: 10px;
+			color: $color_gray-light;
+			transition: all 0.2s ease 0s;
+		}
+	}
+}
+
+.everest-forms-modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 99999999;
+
+	&::after {
+		content: '';
+		position: absolute;
+		background-color: #0000005b;
+		inset: 0;
+		z-index: 1;
+	}
+
+	.evf-model {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		overflow-y: auto;
+		padding: 24px;
+		border-radius: 8px;
+		box-shadow: 2px 6px 32px 0 #00000020;
+		position: relative;
+		background-color: #fff;
+		z-index: 999;
+		transition: scrollbar 0.5s ease-out;
+		animation: MoveIn 0.5s ease-in-out;
+
+		&::-webkit-scrollbar {
+			width: 10px;
+		}
+
+		&::-webkit-scrollbar-track {
+			width: 20px;
+			background-color: #fff;
+			border-radius: 8px;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			display: none;
+			border-radius: 8px;
+			width: 10px;
+			border: 5px solid #d5d5d5;
+			background-clip: content-box;
+		}
+
+		&:hover::-webkit-scrollbar-thumb {
+			display: block;
+		}
+
+		.evf-close-popup {
+			text-decoration: none;
+			line-height: 20px;
+			color: #a7a7a7;
+			cursor: pointer;
+			font-size: 28px;
+			font-weight: 600;
+			position: absolute;
+			right: 16px;
+			top: 14px;
+			transition: all 0.3s ease-in-out;
+			z-index: 99999;
+
+			&:hover {
+				color: #ff6a6a;
+			}
+		}
+
+		.header-wrap,
+		.footer-wrap {
+			justify-items: center;
+
+			.title {
+				margin: 0px 0px 12px 0px;
+				font-weight: 500;
+				font-size: 30px;
+				line-height: 40px;
+				width: 100%;
+				text-align: center;
+				color: #222222;
+			}
+
+			.desc {
+				font-size: 16px;
+				line-height: 24px;
+				color: #494d50;
+			}
+		}
+		.header-wrap,
+		.footer-wrap {
+			justify-items: center;
+			.title {
+				color: #494d50;
+			}
+			.desc {
+				font-weight: normal;
+				font-style: normal;
+				text-decoration: none;
+				text-transform: none;
+				color: #494d50;
+			}
+		}
+
+		.everest-forms {
+			margin-top: 30px;
+			margin-bottom: 30px;
+
+			.evf-container.default {
+				margin-bottom: 0;
+
+				.everest-form {
+					.evf-submit-container {
+						margin: 24px 0 0 0;
+					}
+				}
+			}
+		}
+
+		&.evf-default {
+			min-width: 45vw;
+			height: 70vh;
+		}
+
+		&.evf-medium {
+			min-width: 55vw;
+			height: 70vh;
+		}
+
+		&.evf-large {
+			min-width: 65vw;
+			height: 70vh;
+		}
+	}
+}
+
+@keyframes MoveIn {
+	0% {
+		transform: translateY(40px);
+		opacity: 0.5;
+	}
+
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.evf-btn-select-all,
+.evf-btn-unselect-all {
+	display: inline-block;
+	text-decoration: none !important;
+	font-size: 13px;
+	line-height: 2.15384615;
+	min-height: 30px;
+	margin: 5px;
+	padding: 0 10px;
+	cursor: pointer;
+	border-width: 1px;
+	border-style: solid;
+	-webkit-appearance: none;
+	border-radius: 3px;
+	white-space: nowrap;
+	box-sizing: border-box;
+}
+#evf-map,
+[id^='evf-map-'] {
+	height: 400px;
+	width: 100%;
+}
+
+/* Coupon Addon */
+
+.everest-forms-coupons {
+	display: flex;
+	gap: 16px;
+
+	.everest-forms-coupons-wrapper {
+		position: relative;
+		width: 50%;
+		align-items: center;
+		flex: 1 1 auto;
+
+		.input-text.evf-payment-coupon {
+			flex: 1;
+			margin-right: 16px;
+		}
+
+		.evf-clear-coupon {
+			position: absolute;
+			top: 0;
+			right: 16px;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+
+	.evf-coupon-apply {
+		margin-bottom: 10px;
+		padding: 0 16px;
+		background-color: #7545bb;
+		color: #fff;
+		border: 1px solid #7545bb;
+		border-radius: 4px;
+		width: auto;
+		white-space: nowrap;
+		display: inline-block;
+
+		&:hover {
+			background: transparent;
+			border: 1px solid #7545bb;
+			color: #7545bb;
+		}
+	}
+}
+
+.evf-coupon-error {
+	width: 71%;
+	font-style: italic;
+	color: #ef233c;
+	padding: 8px 24px;
+	background-color: #ef233b0c;
+	border-top: 2px solid #ef233c;
+
+	.evf-remove-coupon-error {
+		display: none;
+	}
+}
+
+form[data-keyboard_friendly_form='1'] {
+	select:focus,
+	input:focus,
+	input[type='radio']:focus,
+	input[type='checkbox']:focus {
+		outline: 1px solid #0095ff;
+	}
+}
+
+// Color Picker field CSS
+.everest-forms {
+	.evf-field-color {
+		.evf-color-picker-bg {
+			width: 40px;
+			height: 33px;
+			float: left;
+			position: relative;
+			border-right: 1px solid #ccc;
+			left: 1px;
+
+			input {
+				border: 0;
+				opacity: 0;
+				width: 100%;
+				height: 100%;
+				display: block;
+				padding: 0;
+			}
+
+			&.no-color {
+				border: 1px solid #afafaf;
+				&::before {
+					content: '';
+					background-image: url('../img/no-color-selected-bg.png');
+					background-repeat: no-repeat;
+					background-position: center;
+					background-size: 100%;
+					position: absolute;
+					width: 44px;
+					height: 100%;
+					left: -3px;
+				}
+			}
+		}
+
+		.input-text {
+			width: calc(100% - 40px);
+			border-radius: 0;
+		}
+	}
+}
+// Reset Button CSS
+.everest-forms {
+	.evf-field-reset {
+		.everest-forms-reset-buttons {
+			text-align: right;
+			.evf-reset-button {
+				padding: 10px 15px;
+				background: #db5855;
+				border: 1px solid #db5855;
+				color: #fff;
+				cursor: pointer;
+				border-radius: 3px;
+				transition: all 0.3s ease-in-out;
+				font-size: 14px;
+				line-height: 22px;
+				letter-spacing: 0.3px;
+				&:hover {
+					background-color: #c82333;
+					border-color: #bd2130;
+				}
+			}
+		}
+	}
+}
+
+// EVF Progress Bar CSS in frontend
+.everest-forms {
+	.evf-field-container {
+		.evf-field-progress {
+			.evf-progress {
+				display: block;
+				width: 100%;
+				padding: 20px;
+
+				&.evf-progress-success {
+					background: lighten($green, 3%);
+					border-radius: 20px;
+					padding: 10px;
+					margin: 20px 0 10px;
+				}
+			}
+
+			progress.evf-progress-success ~ .evf-progress-percentage {
+				color: lighten($green, 3%);
+			}
+
+			.evf-progress-percentage {
+				position: relative;
+				font-weight: 500;
+				color: #0075ff;
+				top: -5px;
+			}
+
+			progress[value='0'] ~ .evf-progress-percentage {
+				color: #999;
+			}
+		}
+	}
+}
+
+.evf-coupon-error-message-container {
+	background: #f8fdf7;
+	border: 1px dashed #4cc741;
+	padding: 10px 14px;
+	border-radius: 4px;
+
+	.evf-applied-coupon {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+
+		&:not(:last-child) {
+			margin-bottom: 8px;
+		}
+	}
+
+	.evf-coupon-name {
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 1.3;
+		color: #111;
+	}
+
+	.evf-coupon-discount {
+		margin-left: auto;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 1.3;
+		color: #f25c4c;
+		white-space: nowrap;
+	}
+
+	.evf-remove-applied-coupon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 15px;
+		height: 15px;
+		cursor: pointer;
+		font-size: 13px;
+		font-weight: 600;
+		line-height: 1;
+		color: #6b6b6b;
+		border: 1px solid #6b6b6b;
+		border-radius: 50%;
+		background: transparent;
+		flex-shrink: 0;
+		transition: all 0.2s ease;
+
+		&:hover,
+		&:focus {
+			color: #e74c3c;
+			border-color: #e74c3c;
+			background: #fff5f5;
+		}
+	}
+}
+
+.evf-error-box {
+	color: #fa5252;
+	position: relative;
+	font-size: 14px;
+	font-weight: 400;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	.evf-error-text {
+		flex: 1;
+		margin-bottom: 10px;
+	}
+
+	.evf-error-close {
+		margin-left: 12px;
+		cursor: pointer;
+		font-size: 16px;
+		line-height: 1;
+		opacity: 0.7;
+		transition: opacity 0.2s ease;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	// optional animation
+	&.fade-in {
+		animation: evfFadeIn 0.2s ease-in-out;
+	}
+}
+
+// animation
+@keyframes evfFadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(-4px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.evf-payment_summary_component {
+	margin: 10px 0;
+	outline: none;
+
+	.evf_payment_summary {
+		background: transparent;
+		margin: 16px 0;
+	}
+
+	.evf-payment-summary-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 18px;
+
+		.evf-summary-title {
+			font-size: 14px;
+			font-weight: 600;
+			line-height: 1.2;
+			color: #4b4b4b;
+			margin: 0;
+		}
+	}
+
+	.evf_table_wrapper {
+		overflow-x: auto;
+	}
+
+	.evf_table {
+		width: 100%;
+		border-collapse: separate;
+		border-spacing: 0;
+		background: #fff;
+		border: 1px solid #e1e1e1;
+		border-radius: 4px;
+		overflow: hidden;
+
+		th,
+		td {
+			padding: 14px 14px;
+			font-size: 13px;
+			color: #444;
+			border-bottom: 1px solid #e1e1e1;
+			vertical-align: middle;
+		}
+
+		thead {
+			th {
+				background: #fff;
+				font-size: 14px;
+				font-weight: 600;
+				color: #4a4a4a;
+				text-align: left;
+				border-bottom: 1px solid #e1e1e1;
+			}
+		}
+
+		tbody {
+			td {
+				background: #fff;
+				font-weight: 400;
+				color: #555;
+			}
+
+			tr:last-child {
+				td {
+					border-bottom: 1px solid #e1e1e1;
+				}
+			}
+		}
+
+		tfoot {
+			th,
+			td {
+				background: #fff;
+				font-size: 15px;
+				border-bottom: none;
+			}
+
+			tr:not(:last-child) {
+				th,
+				td {
+					padding-top: 10px;
+					padding-bottom: 10px;
+				}
+			}
+
+			tr:last-child {
+				th,
+				td {
+					padding-top: 16px;
+					font-size: 22px;
+					font-weight: 700;
+					color: #333;
+				}
+			}
+
+			.item_right {
+				text-align: left;
+				font-weight: 500;
+				color: #444;
+				font-size: 15px !important;
+			}
+
+			.everest-forms-payment-summary-item-final-amount {
+				text-align: right;
+				font-size: 15px !important;
+			}
+		}
+
+		th:last-child,
+		td:last-child {
+			text-align: right;
+			white-space: nowrap;
+		}
+
+		th:nth-child(2),
+		td:nth-child(2),
+		th:nth-child(3),
+		td:nth-child(3) {
+			width: 120px;
+		}
+
+		.everest-forms-payment-summary-items {
+			.everest-forms-payment-summary-discount {
+				.item_right {
+					font-size: 14px;
+					font-weight: 500;
+				}
+
+				.evf-payment-summary-discount-amount {
+					color: #f25656;
+					font-size: 14px;
+					font-weight: 500;
+				}
+			}
+		}
+	}
+
+	.evf_payment_summary_fallback {
+		padding: 14px 16px;
+		font-size: 14px;
+		color: #222;
+		background: #fafafa;
+		border: 1px solid #e9e9e9;
+		border-radius: 4px;
+	}
+}
+.evf-field-payment-coupon:has(.evf-error-box) input {
+	border: 1px solid blue !important;
+}
+
+.evf-payment-gateway-selector-inputs {
+	--pgw-primary: #4f46e5;
+	--pgw-primary-glow: rgba(79, 70, 229, 0.12);
+	--pgw-border: #e5e7eb;
+	--pgw-border-strong: #d1d5db;
+	--pgw-surface: #ffffff;
+	--pgw-bg: #fafbfc;
+	--pgw-text: #0f172a;
+	--pgw-text-muted: #6b7280;
+	--pgw-radius: 10px;
+	--pgw-transition: 140ms ease;
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+.evf-pgw-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 12px;
+	margin-bottom: 8px;
+
+	@media (max-width: 600px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.evf-pgw-card {
+	position: relative;
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+	padding: 12px;
+	background: var(--pgw-surface, #fff);
+	border: 1.5px solid var(--pgw-border, #e5e7eb);
+	border-radius: var(--pgw-radius, 10px);
+	cursor: pointer;
+	transition: border-color var(--pgw-transition, 140ms ease),
+	            box-shadow var(--pgw-transition, 140ms ease),
+	            transform var(--pgw-transition, 140ms ease);
+	box-sizing: border-box;
+	user-select: none;
+
+	&:hover {
+		border-color: var(--pgw-border-strong, #d1d5db);
+		transform: translateY(-1px);
+	}
+
+	&:focus-within {
+		outline: none;
+	}
+
+	&.evf-pgw-card--selected {
+		border-color: var(--pgw-primary, #4f46e5);
+	}
+
+}
+
+.evf-field-payment-gateway-selector {
+	.evf-pgw-grid {
+		display: flex !important;
+		flex-wrap: wrap !important;
+		gap: 12px;
+		margin: 0;
+
+		.evf-pgw-card {
+			width: 28%;
+			border-radius: 4px;
+			margin: 0;
+			min-width: 130px;
+		}
+	}
+}
+
+.evf-pgw-logo-tile {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 12px;
+	box-sizing: border-box;
+}
+
+.evf-pgw-radio {
+	position: absolute;
+	opacity: 0;
+	width: 0;
+	height: 0;
+	pointer-events: none;
+}
+
+.evf-pgw-logo-img {
+	display: block;
+	width: 80px;
+	max-width: 100%;
+	object-fit: contain;
+}
+
+.evf-pgw-alt-panel {
+	margin-top: 8px;
+	padding: 14px 16px;
+	background: var(--pgw-bg, #fafbfc);
+	border: 1px dashed var(--pgw-border, #e5e7eb);
+	border-radius: var(--pgw-radius, 10px);
+	font-size: 13.5px;
+	color: var(--pgw-text-muted, #6b7280);
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	line-height: 1.5;
+
+	strong {
+		color: var(--pgw-text, #0f172a);
+		font-weight: 600;
+	}
+}
+
+.evf-pgw-alt-icon {
+	flex-shrink: 0;
+	color: var(--pgw-text-muted, #6b7280);
+}
+
+.evf-pgw-card-panel {
+	margin-top: 12px;
+	box-sizing: border-box;
+
+	&.evf-pgw-authorize-card {
+		border: 1px solid #d1d5db;
+		padding: 12px;
+	}
+}
+
+.evf-pgw-stripe-mount,
+.evf-pgw-square-mount {
+	min-height: 48px;
+	border-radius: 10px;
+	box-sizing: border-box;
+	transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+	&:focus-within {
+		border-color: #6366f1;
+		box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+	}
+}
+
+.evf-pgw-card-errors {
+	display: block;
+	margin-top: 10px;
+}
+
+.evf-pgw-authorize-card {
+	.evf-pgw-input,
+	select.evf-pgw-input {
+		width: 100%;
+		max-width: 100%;
+		box-sizing: border-box;
+		padding: 10px 12px;
+		border-radius: 4px;
+		border: 1px solid #d1d5db;
+		background: #fff;
+		font-size: 16px;
+		line-height: 1.35;
+		transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+		&:focus {
+			outline: none;
+			border-color: #6366f1;
+			box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+		}
+	}
+
+	input[type="text"]{
+		height: 41px !important;
+	}
+}
+
+.evf-pgw-authorize-inline-row {
+	display: flex !important;
+	flex-direction: row !important;
+	flex-wrap: nowrap;
+	align-items: flex-start;
+	gap: 12px;
+	margin-top: 4px;
+	width: 100%;
+	box-sizing: border-box;
+
+	.evf-pgw-authorize-col {
+		flex: 1 1 0;
+		min-width: 0;
+		max-width: 100%;
+	}
+}
+
+// Block editor: payment gateway card grid (also in evf-payment-gateway-selector-frontend.css).
+.wp-block-everest-forms-form-selector,
+.evf-gutenberg-form-selector {
+	.evf-field-payment-gateway-selector {
+		.evf-pgw-grid .evf-pgw-card input[type='radio'].evf-pgw-radio {
+			position: absolute;
+			opacity: 0;
+			width: 0;
+			height: 0;
+			margin: 0;
+			appearance: none;
+		}
+	}
+}
+
+@import 'evf-payment-subscription-plan-frontend';

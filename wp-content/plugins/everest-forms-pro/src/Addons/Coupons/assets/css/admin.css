@@ -1,0 +1,688 @@
+.wrap h1.wp-heading-inline {
+  margin-right: 1em;
+}
+
+.wp-header-end {
+  visibility: visible;
+  margin-top: 16px;
+  height: 1px;
+  background-color: rgba(204, 204, 204, 0.2);
+}
+
+a#everest-forms-coupons__heading {
+  text-decoration: none;
+  color: #64748b;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+}
+
+.everest-forms-coupon__submit {
+  margin: 16px 38px 0 0;
+}
+
+.evf-coupons-form {
+  display: flex;
+  flex-direction: column;
+}
+.evf-coupons-form .evf-coupon-header {
+  padding: 0 24px;
+}
+.evf-coupons-form .evf-field {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+.evf-coupons-form .evf-field input[type=radio] {
+  background-color: white !important;
+}
+.evf-coupons-form .evf-field input[type=radio]:focus {
+  outline: none;
+  box-shadow: none;
+}
+.evf-coupons-form .evf-field:last-child {
+  margin-bottom: 0;
+}
+.evf-coupons-form .evf-field > input {
+  width: 76%;
+  border-color: #e9e9e9;
+  background-color: #ffffff;
+}
+.evf-coupons-form .evf-field .evf-coupon-status-inactive {
+  margin-left: 1em;
+}
+.evf-coupons-form .evf-field .evf-field-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #383838;
+  max-width: 300px;
+  width: 100%;
+}
+.evf-coupons-form .evf-field .evf-field-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.evf-coupons-form .evf-field .evf-field-container > input {
+  border-color: #e1e1e1;
+  padding: 0 12px;
+  box-shadow: none;
+  color: #383838;
+}
+.evf-coupons-form .evf-field .evf-field-container > input:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #7e3bd0;
+}
+.evf-coupons-form .evf-field .select2-container {
+  width: 100% !important;
+  flex: 1;
+}
+.evf-coupons-form #publishing-action {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 16px;
+}
+
+.everest-forms-coupons {
+  display: flex;
+  justify-content: space-between;
+}
+.everest-forms-coupons .widefat.primary-input {
+  flex: 1;
+  margin-right: 16px;
+}
+.everest-forms-coupons .evf-coupon-apply {
+  padding: 0 16px;
+  margin-bottom: 5px;
+}
+
+.evf-field.everest-forms-invalid.evf-has-error {
+  align-items: normal;
+}
+.evf-field.everest-forms-invalid.evf-has-error .evf-field-label {
+  color: #e63946;
+}
+.evf-field.everest-forms-invalid.evf-has-error input {
+  border: 1px solid #e63946;
+  background-color: #fff7f7;
+}
+.evf-field.everest-forms-invalid.evf-has-error .evf-error {
+  margin-top: 18px;
+  color: #e63946;
+}
+
+.everest-forms-coupons__header {
+  display: flex;
+  padding: 0 24px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e2e8f0;
+  background: var(--white, #ffffff);
+  margin-bottom: 40px;
+  margin-top: -10px;
+}
+.everest-forms-coupons__header .everest-forms-coupons__left-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.everest-forms-coupons__header div#everest-forms-coupons__logo {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  height: 74px;
+}
+.everest-forms-coupons__header button#evf-coupon__screen-options {
+  color: #222222;
+  font-size: 14px;
+  line-height: 21px;
+  border-color: #eaeaea;
+  border-radius: 4px;
+  padding: 8px 16px;
+  background: #eaeaea;
+}
+.everest-forms-coupons__header button#show-settings-link {
+  display: none;
+}
+.everest-forms-coupons__header span#everest-forms-logo__separator {
+  padding: 0 20px;
+  color: #e2e8f0;
+  font-size: 40px;
+  font-weight: 100;
+}
+.everest-forms-coupons__header a#everest-forms-coupons__heading {
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #222222;
+}
+
+.evf-empty-list-table-container {
+  display: flex;
+  padding: 30px 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h3#everest-forms-coupons__empty {
+  color: var(--Grey-grey-500, #222);
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+p#everest-forms-coupons__empty-desc {
+  color: var(--Grey-grey-300, #6b6b6b);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.jconfirm-everest-forms-coupon__left .jconfirm-box-container {
+  display: flex;
+  padding: 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 16px;
+  align-self: stretch;
+}
+
+form.everest-forms-coupons__form {
+  display: flex;
+  text-align: left;
+  gap: 16px;
+  padding: 0 40px;
+  padding-inline: 0;
+  margin-bottom: 16px;
+}
+
+.everest-forms-coupon__submit {
+  margin: 0;
+  text-align: right;
+}
+
+.everest-forms-coupons__create-coupon {
+  width: 297px;
+  border-radius: 4px;
+  border: 1px solid #e9e9e9;
+  background: #ffffff;
+  padding: 14px 16px;
+}
+.everest-forms-coupons__create-coupon.everest-forms-coupon__active {
+  border-color: #7545bb;
+}
+
+span.coupon-option__text {
+  color: var(--Grey-grey-500, #222);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+p.everest-forms-coupon__description {
+  color: var(--Grey-grey-400, #383838);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  padding-top: 10px;
+}
+
+input#create_single_coupon,
+input#create_bulk_coupon {
+  margin-top: -2px;
+  margin-right: 8px;
+  vertical-align: middle;
+  border-color: #bababa;
+  background-color: white !important;
+}
+input#create_single_coupon:checked,
+input#create_bulk_coupon:checked {
+  border-color: #7545bb;
+}
+input#create_single_coupon:checked::before,
+input#create_bulk_coupon:checked::before {
+  background: #7545bb;
+}
+@media screen and (max-width: 782px) {
+  input#create_single_coupon:checked::before,
+  input#create_bulk_coupon:checked::before {
+    width: 0.5rem;
+    height: 0.5rem;
+    margin: 0.1875rem;
+  }
+}
+@media screen and (max-width: 782px) {
+  input#create_single_coupon,
+  input#create_bulk_coupon {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+input#create_single_coupon:focus,
+input#create_bulk_coupon:focus {
+  outline: none;
+  box-shadow: none;
+}
+input#create_single_coupon:checked::before,
+input#create_bulk_coupon:checked::before {
+  background-color: #7545bb;
+}
+input#create_single_coupon:checked,
+input#create_bulk_coupon:checked {
+  border-color: #7545bb;
+}
+
+a#coupon-back__icon {
+  background: #f4f4f4;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+}
+
+.everest-forms-coupons-create__header {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+#everest-forms-coupons-create__heading {
+  color: #222;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.evf-coupon-discount__type {
+  padding: 14px 16px;
+  border: 1px solid #e9e9e9;
+  border-radius: 4px;
+  max-width: 240px;
+  width: 100%;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.evf-coupon-discount__type:last-child {
+  margin-right: 0;
+}
+.evf-coupon-discount__desc {
+  color: #383838;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+input#evf-coupon-discount-type-fixed:checked::before,
+input#evf-coupon-discount-type-percent:checked::before,
+input#evf-coupon-status-active:checked::before,
+input#evf-coupon-status-inactive:checked::before,
+input.evf-coupon-stackable:checked::before {
+  background-color: #7547bb;
+}
+
+.everest-forms-coupon-discount-active {
+  border-color: #7545bb;
+}
+
+a.everest-forms-coupon__cancel.everest-forms-btn {
+  background: #ffffff;
+  border: 1px solid #bababa;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+  color: #6b6b6b;
+}
+
+input.everest-forms-coupons__save {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+input#evf-coupon-name,
+input#evf-coupon-code,
+input#evf-coupon-start-date,
+input#evf-coupon-end-date,
+input#evf-coupon-discount-amount {
+  height: 38px;
+}
+
+button#evf-coupon__screen-options {
+  color: #222222;
+  font-size: 14px;
+  line-height: 21px;
+  border-color: #eaeaea;
+  border-radius: 4px;
+  padding: 8px 16px;
+  background: #eaeaea;
+}
+
+.jconfirm.jconfirm-modern.jconfirm-everest-forms-coupon__left.jconfirm-open .jconfirm-box.jconfirm-hilight-shake {
+  padding: 40px !important;
+}
+
+.jconfirm-title-c.jconfirm-hand {
+  text-align: left !important;
+}
+
+.everest-forms-coupons-list-table__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+}
+.everest-forms-coupons-list-table__wrapper #everest-forms-coupon-list-table__nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 16px;
+  gap: 16px;
+}
+.everest-forms-coupons-list-table__wrapper #everest-forms-coupon-list-table__nav h3#everest-forms-coupons-list-table__heading {
+  color: #222222;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 33px;
+  margin: 0;
+}
+.everest-forms-coupons-list-table__wrapper #everest-forms-coupon-list-table__nav button#everest-forms-coupons__create-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px !important;
+  background: #7545bb;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px !important;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.everest-forms-coupons-list-table__wrapper #everest-forms-coupon-list-table__nav button#everest-forms-coupons__create-btn:hover {
+  background: #5e35a0;
+}
+.everest-forms-coupons-list-table__wrapper #everest-forms-coupon-list-table__nav button#everest-forms-coupons__create-btn span#everest-forms-coupons-create-plus {
+  font-size: 18px;
+  line-height: 1;
+  margin: 0;
+}
+.everest-forms-coupons-list-table__wrapper ul.subsubsub {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 0 0 12px 0;
+  padding: 0;
+  list-style: none;
+  flex-wrap: wrap;
+}
+.everest-forms-coupons-list-table__wrapper ul.subsubsub li {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #6b6b6b;
+  font-size: 13px;
+}
+.everest-forms-coupons-list-table__wrapper ul.subsubsub li:not(:last-child)::after {
+  content: "|";
+  color: #dcdcdc;
+  margin: 0 2px;
+}
+.everest-forms-coupons-list-table__wrapper ul.subsubsub li a {
+  color: #6b6b6b;
+  text-decoration: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+  transition: background 0.15s, color 0.15s;
+}
+.everest-forms-coupons-list-table__wrapper ul.subsubsub li a:hover {
+  color: #7545bb;
+  background: #f3eeff;
+}
+.everest-forms-coupons-list-table__wrapper ul.subsubsub li a.current {
+  color: #7545bb;
+  background: #f3eeff;
+  font-weight: 600;
+}
+.everest-forms-coupons-list-table__wrapper ul.subsubsub li a .count {
+  font-weight: 400;
+  color: inherit;
+}
+.everest-forms-coupons-list-table__wrapper p.coupon-search-box {
+  position: absolute;
+  margin: 0 0 14px 0;
+  width: 260px;
+  right: 20px;
+}
+.everest-forms-coupons-list-table__wrapper p.coupon-search-box input#search_input-search-input {
+  width: 100%;
+  height: 36px;
+  padding: 0 36px 0 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #222222;
+  background: #ffffff;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+.everest-forms-coupons-list-table__wrapper p.coupon-search-box input#search_input-search-input::placeholder {
+  color: #6b6b6b;
+}
+.everest-forms-coupons-list-table__wrapper p.coupon-search-box input#search_input-search-input:focus {
+  border-color: #7545bb;
+  box-shadow: 0 0 0 2px rgba(117, 69, 187, 0.12);
+}
+.everest-forms-coupons-list-table__wrapper p.coupon-search-box button#coupon-search__icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  border: none;
+  background: none;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  cursor: pointer;
+}
+.everest-forms-coupons-list-table__wrapper p.coupon-search-box button#coupon-search__icon svg path {
+  stroke: #6b6b6b;
+}
+.everest-forms-coupons-list-table__wrapper > hr {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #dcdcdc;
+  margin: 10px 0;
+  visibility: hidden;
+}
+.everest-forms-coupons-list-table__wrapper .coupon-pagination__wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-top: none;
+  padding-top: 0;
+}
+.everest-forms-coupons-list-table__wrapper .tablenav.top {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 0;
+  padding: 0;
+}
+.everest-forms-coupons-list-table__wrapper .tablenav.top .alignleft.actions.bulkactions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.everest-forms-coupons-list-table__wrapper .tablenav.top .alignleft.actions.bulkactions select#bulk-action-selector-top {
+  height: 32px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #383838;
+  padding: 0 28px 0 10px;
+  background: #ffffff;
+  cursor: pointer;
+}
+.everest-forms-coupons-list-table__wrapper .tablenav.top .alignleft.actions.bulkactions select#bulk-action-selector-top:focus {
+  border-color: #7545bb;
+  outline: none;
+}
+.everest-forms-coupons-list-table__wrapper .tablenav.top .alignleft.actions.bulkactions input#doaction {
+  height: 32px;
+  padding: 0 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #383838;
+  background: #ffffff;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+.everest-forms-coupons-list-table__wrapper .tablenav.top .alignleft.actions.bulkactions input#doaction:hover {
+  border-color: #7545bb;
+  color: #7545bb;
+}
+.everest-forms-coupons-list-table__wrapper .tablenav.top .tablenav-pages {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  color: #6b6b6b;
+  margin-left: auto;
+}
+.everest-forms-coupons-list-table__wrapper .tablenav.top .tablenav-pages .displaying-num {
+  margin-right: 6px;
+}
+.everest-forms-coupons-list-table__wrapper .tablenav.top .tablenav-pages .pagination-links {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.everest-forms-coupons-list-table__wrapper .tablenav.top .tablenav-pages .tablenav-pages-navspan,
+.everest-forms-coupons-list-table__wrapper .tablenav.top .tablenav-pages input.current-page {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 28px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #383838;
+  background: #ffffff;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0 4px;
+  box-sizing: border-box;
+}
+.everest-forms-coupons-list-table__wrapper .tablenav.top .tablenav-pages .tablenav-pages-navspan.disabled,
+.everest-forms-coupons-list-table__wrapper .tablenav.top .tablenav-pages input.current-page.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.everest-forms-coupons-list-table__wrapper .tablenav.top .tablenav-pages input.current-page {
+  width: 40px;
+  text-align: center;
+  border-color: #7545bb;
+}
+.everest-forms-coupons-list-table__wrapper .tablenav.top .tablenav-pages .paging-input {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  color: #6b6b6b;
+}
+.everest-forms-coupons-list-table__wrapper .tablenav-pages.one-page {
+  width: 100%;
+  text-align: right;
+}
+.everest-forms-coupons-list-table__wrapper .tablenav.bottom {
+  display: none;
+}
+.everest-forms-coupons-list-table__wrapper .evf-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+}
+.everest-forms-coupons-list-table__wrapper .evf-badge.evf-badge-success {
+  color: #16a34a;
+  background: #f0fdf4;
+}
+.everest-forms-coupons-list-table__wrapper .evf-badge.evf-badge-danger {
+  color: #dc2626;
+  background: #fef2f2;
+}
+.everest-forms-coupons-list-table__wrapper #everest-forms-coupons__pagination-bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin-top: 12px;
+  padding-top: 12px;
+}
+.everest-forms-coupons-list-table__wrapper #everest-forms-coupons__pagination-bottom .tablenav-pages {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-direction: row-reverse;
+}
+.everest-forms-coupons-list-table__wrapper #everest-forms-coupons__pagination-bottom .tablenav-pages .displaying-num {
+  font-size: 13px;
+  color: #6b6b6b;
+  margin-right: 8px;
+}
+.everest-forms-coupons-list-table__wrapper #everest-forms-coupons__pagination-bottom span.pagination-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+.everest-forms-coupons-list-table__wrapper #everest-forms-coupons__pagination-bottom .tablenav-pages-navspan {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 28px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #383838;
+  background: #ffffff;
+  cursor: pointer;
+  padding: 0 4px;
+}
+.everest-forms-coupons-list-table__wrapper #everest-forms-coupons__pagination-bottom .tablenav-pages-navspan.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.everest-forms-coupons-list-table__wrapper #everest-forms-coupons__pagination-bottom .paging-input {
+  font-size: 13px;
+  color: #6b6b6b;
+  padding: 0 4px;
+}

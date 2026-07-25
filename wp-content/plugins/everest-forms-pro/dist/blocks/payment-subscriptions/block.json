@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schemas.wp.org/block-json/1.1",
+  "apiVersion": 3,
+  "name": "everest-forms/payment-subscriptions",
+  "version": "1.0.0",
+  "title": "Payment History",
+  "category": "everest-forms",
+  "description": "Display the current user's payment history and subscriptions from Everest Forms entries.",
+  "keywords": [
+    "everest forms",
+    "payments",
+    "payment history",
+    "subscriptions",
+    "stripe"
+  ],
+  "textdomain": "everest-forms-pro",
+  "supports": {
+    "html": false,
+    "align": [ "wide", "full" ]
+  },
+  "attributes": {
+    "formId": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "editorScript": "everest-forms-pro-payment-subscriptions-block-editor",
+  "editorStyle": "everest-forms-pro-payment-subscriptions-block",
+  "style": "everest-forms-pro-payment-subscriptions-block"
+}

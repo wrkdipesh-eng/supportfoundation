@@ -1,0 +1,378 @@
+/**
+ * Frontend / editor styles: Payment History block.
+ */
+.evf-payment-subscriptions-block {
+  --evf-ps-border: #e1e1e1;
+  --evf-ps-header-bg: #fdf5f2;
+  --evf-ps-badge: #4caf50;
+  font-family: inherit;
+  color: #1d2327;
+  max-width: 100%;
+  overflow-x: auto;
+}
+.evf-payment-subscriptions-block--guest, .evf-payment-subscriptions-block__empty {
+  margin: 0;
+  padding: 12px 0;
+}
+.evf-payment-subscriptions-block__subscriptions {
+  margin-bottom: 8px;
+}
+.evf-payment-subscriptions-block__subscriptions-heading, .evf-payment-subscriptions-block__payments-heading {
+  margin: 0 0 12px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.evf-payment-subscriptions-block__payments {
+  margin-top: 8px;
+}
+.evf-payment-subscriptions-block .evf-ps-modal__backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  background: rgba(0, 0, 0, 0.45);
+}
+.evf-payment-subscriptions-block .evf-ps-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  pointer-events: none;
+}
+.evf-payment-subscriptions-block .evf-ps-modal[hidden] {
+  display: none;
+}
+.evf-payment-subscriptions-block .evf-ps-modal__inner {
+  pointer-events: auto;
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  max-height: min(90vh, 800px);
+  overflow: auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  border: 1px solid var(--evf-ps-border);
+  padding: 0;
+}
+
+.evf-subscription-card {
+  border: 1px solid var(--evf-ps-border);
+  border-radius: 6px;
+  margin-bottom: 28px;
+  overflow: hidden;
+  background: #fff;
+}
+.evf-subscription-card__header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 20px 16px;
+}
+.evf-subscription-card__title {
+  margin: 0 0 6px;
+  font-size: 17px;
+  font-weight: 700;
+}
+.evf-subscription-card__plan {
+  margin: 0 0 8px;
+  color: #6b6b6b;
+  font-size: 13px;
+}
+.evf-subscription-card__price {
+  margin: 12px 0 8px 0;
+  font-size: 17px;
+  font-weight: 400;
+}
+.evf-subscription-card__badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: #f1fff0;
+  border: 1px solid #4caf50;
+  color: #4caf50;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.evf-subscription-card__note {
+  margin: 10px 0 0;
+  font-size: 0.8rem;
+  color: #787c82;
+}
+.evf-subscription-card__aside {
+  text-align: right;
+  min-width: 200px;
+}
+.evf-subscription-card__started {
+  margin: 0 0 12px;
+  color: #6b6b6b;
+  font-size: 14px;
+}
+.evf-subscription-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+}
+.evf-subscription-card__btn {
+  display: inline-block;
+  color: #7545bb;
+  font-size: 13px;
+  font-family: inherit;
+  padding: 6px 12px;
+  border: 1px solid #7545bb;
+  border-radius: 4px;
+  color: #7545bb;
+  cursor: pointer;
+  background: transparent;
+}
+.evf-subscription-card__btn:hover {
+  color: #5317aa;
+  outline: none;
+  box-shadow: none;
+  text-decoration: underline;
+}
+.evf-subscription-card__btn:focus {
+  color: #5317aa;
+  outline: none;
+  box-shadow: none;
+  text-decoration: underline;
+}
+.evf-subscription-card__btn--disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+.evf-subscription-card__related {
+  padding: 16px 20px 20px;
+}
+.evf-subscription-card__related-title {
+  margin: 0 0 12px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+button.evf-subscription-card__btn {
+  -webkit-appearance: none;
+  appearance: none;
+  text-align: center;
+}
+
+.evf-payment-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  border: 1px solid var(--evf-ps-border);
+}
+.evf-payment-table thead th {
+  text-align: left;
+  padding: 14px;
+  font-weight: 600;
+  border-bottom: 1px solid #e1e1e1;
+}
+.evf-payment-table tbody td {
+  padding: 14px;
+  border-bottom: 1px solid var(--evf-ps-border);
+  vertical-align: top;
+}
+.evf-payment-table tbody tr:last-child td {
+  border-bottom: none;
+}
+.evf-payment-table--compact tbody td {
+  background: #fff;
+}
+.evf-payment-table__muted {
+  color: #787c82;
+}
+.evf-payment-table__view {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #7545bb;
+  cursor: pointer;
+  font: inherit;
+  text-decoration: underline;
+}
+.evf-payment-table__view:hover {
+  color: #5317aa;
+}
+
+/* Transaction detail modal */
+body.evf-ps-modal-open {
+  overflow: hidden;
+}
+
+.evf-ps-modal__title {
+  margin: 0;
+  padding: 16px 28px;
+  border-bottom: 1px solid var(--evf-ps-border);
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-align: center;
+  color: #2c3338;
+}
+
+.evf-ps-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  margin: 20px 24px 24px;
+  background: #fff;
+  border: 1px solid var(--evf-ps-border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.evf-ps-meta-grid__cell {
+  padding: 14px 16px;
+  border-right: none;
+  font-size: 0.875rem;
+}
+.evf-ps-meta-grid__cell:last-child {
+  border-right: none;
+}
+.evf-ps-meta-grid__cell strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.8rem;
+  color: #50575e;
+}
+
+.evf-ps-line-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.875rem;
+  margin: 0 24px 18px;
+  width: calc(100% - 48px);
+  border: 1px solid var(--evf-ps-border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.evf-ps-line-table th,
+.evf-ps-line-table td {
+  border: none;
+  border-bottom: 1px solid var(--evf-ps-border);
+  padding: 14px 16px;
+  text-align: left;
+  vertical-align: middle;
+}
+.evf-ps-line-table thead th {
+  background: #fff;
+  font-weight: 600;
+}
+.evf-ps-line-table__subtotal .evf-ps-line-table__label, .evf-ps-line-table__total .evf-ps-line-table__label {
+  text-align: left;
+  font-weight: 600;
+}
+.evf-ps-line-table tbody tr:last-child td {
+  border-bottom: none;
+}
+.evf-ps-line-table__total td {
+  font-weight: 700;
+}
+
+.evf-ps-customer {
+  padding: 0 28px 24px;
+}
+.evf-ps-customer__heading {
+  margin: 0 0 10px;
+  font-size: 1rem;
+}
+.evf-ps-customer__list {
+  margin: 0;
+  padding-left: 1.25rem;
+  font-size: 16px;
+}
+.evf-ps-customer__list li {
+  margin-bottom: 6px;
+}
+
+.evf-ps-modal__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #50575e;
+  border-radius: 4px;
+}
+.evf-ps-modal__close:hover {
+  background: #f0f0f1;
+  color: #1d2327;
+}
+
+.evf-ps-modal__loading,
+.evf-ps-modal__error {
+  margin: 0;
+  padding: 16px 0;
+  text-align: center;
+  color: #50575e;
+}
+
+.evf-ps-modal__error {
+  color: #b32d2e;
+}
+
+@media (max-width: 600px) {
+  .evf-payment-subscriptions-block .evf-ps-modal {
+    padding: 16px;
+  }
+  .evf-payment-subscriptions-block .evf-ps-modal__inner {
+    max-height: calc(100vh - 32px);
+  }
+  .evf-subscription-card__aside {
+    text-align: left;
+    width: 100%;
+  }
+  .evf-subscription-card__actions {
+    justify-content: flex-start;
+  }
+  .evf-ps-meta-grid {
+    margin: 16px 16px 24px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .evf-ps-meta-grid__cell:nth-child(2n) {
+    border-right: none;
+  }
+  .evf-ps-line-table {
+    display: block;
+    width: calc(100% - 32px);
+    min-width: 0;
+    margin: 0 16px 16px;
+    overflow-x: auto;
+  }
+  .evf-ps-line-table th,
+  .evf-ps-line-table td {
+    padding: 12px 14px;
+    white-space: nowrap;
+  }
+  .evf-ps-customer {
+    padding: 0 16px 20px;
+  }
+}
+@media (max-width: 480px) {
+  .evf-ps-modal__title {
+    padding: 14px 44px 14px 16px;
+    font-size: 1rem;
+  }
+  .evf-ps-meta-grid {
+    grid-template-columns: 1fr;
+  }
+  .evf-ps-meta-grid__cell {
+    border-right: none;
+    border-bottom: 1px solid var(--evf-ps-border);
+  }
+  .evf-ps-meta-grid__cell:last-child {
+    border-bottom: none;
+  }
+}

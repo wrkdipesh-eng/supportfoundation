@@ -1,0 +1,46 @@
+{
+  "type": "wordpress-plugin",
+  "require": {
+    "php": ">=5.6|>=7.0",
+    "composer/installers": "1.9.0",
+    "google/apiclient": "^2.16",
+    "kunalvarma05/dropbox-php-sdk": "0.4.2",
+    "box/spout": "3.1.0",
+    "square/square": "^37.1",
+    "mollie/mollie-api-php": "^2.0.0",
+    "nikic/php-parser": "^5.1",
+    "madorin/matex": "^1.0",
+    "mailerlite/mailerlite-api-v2-php-sdk": "^0.3.0",
+    "chillerlan/php-qrcode": "^5.0",
+    "facebook/graph-sdk": "^5.7"
+  },
+  "config": {
+    "platform": {
+      "php": "7.4"
+    },
+    "allow-plugins": {
+      "composer/installers": true,
+      "php-http/discovery": true
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "EverestForms\\Pro\\": "src/",
+      "EverestForms\\Pro\\Helper\\": "includes/Helper/"
+    }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "Google_Task_Composer::cleanup"
+    ],
+    "post-update-cmd": [
+      "Google_Task_Composer::cleanup"
+    ]
+  },
+  "extra": {
+    "google/apiclient-services": [
+      "Drive",
+      "Calendar"
+    ]
+  }
+}

@@ -1,0 +1,121 @@
+.everest-forms-social-connect-networks {
+	margin: 20px;
+}
+.everest-forms-social-connect-networks ul.evfur-network-lists {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.everest-forms-social-connect-networks ul.evfur-network-lists li.evfur-login-media {
+	display: inline-block;
+}
+.everest-forms-social-connect-networks ul.evfur-network-lists li.evfur-login-media a {
+	padding: 10px;
+	background-color: #475bb2;
+	color: #fff;
+	display: table;
+	text-decoration: none;
+	transition: background-color 0.35s;
+}
+.everest-forms-social-connect-networks ul.evfur-network-lists li.evfur-login-media a:hover {
+	background-color: #697ac3;
+}
+.everest-forms-social-connect-networks ul.evfur-network-lists li.evfur-login-media .evfur-login-text, .everest-forms-social-connect-networks ul.evfur-network-lists li.evfur-login-media .evfur-icon-block {
+	display: table-cell;
+	vertical-align: middle;
+}
+.everest-forms-social-connect-networks ul.evfur-network-lists li.evfur-login-media .evfur-login-text {
+	padding-left: 10px;
+}
+.everest-forms-social-connect-networks ul.evfur-network-lists li.evfur-login-media .evfur-icon-block {
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 24px;
+	height: 24px;
+	display: none;
+}
+.everest-forms-social-connect-networks ul.evfur-network-lists li.evfur-login-media .evfur-icon-block.evfur-login-with-facebook {
+	background-image: url('../../images/facebook.png');
+	display: table-cell;
+}
+.everest-forms-social-connect-networks ul.evfur-network-lists li.evfur-login-media .evfur-icon-block.evfur-login-with-twitter {
+	background-image: url('../../images/twitter.png');
+	display: table-cell;
+}
+.everest-forms-social-connect-networks ul.evfur-network-lists li.evfur-login-media .evfur-icon-block.evfur-login-with-google {
+	background-image: url('../../images/google.png');
+	display: table-cell;
+}
+.everest-forms-social-connect-networks ul.evfur-network-lists li.evfur-login-media .evfur-icon-block.evfur-login-with-linkedin {
+	background-image: url('../../images/linkedin.png');
+	display: table-cell;
+}
+.everest-forms-social-connect-networks ul.evfur-network-lists li.evfur-login-media .evfur-icon-block.evfur-login-with-instagram {
+	background-image: url('../../images/instagram.png');
+	display: table-cell;
+}
+.everest-forms-social-connect-networks ul.evfur-network-lists li.evfur-login-media.evfur-login-media--facebook a {
+	background-color: #486cb4;
+}
+.everest-forms-social-connect-networks ul.evfur-network-lists li.evfur-login-media.evfur-login-media--facebook a:hover {
+	background-color: #597abd;
+}
+.everest-forms-social-connect-networks ul.evfur-network-lists li.evfur-login-media.evfur-login-media--twitter a {
+	background-color: pink;
+}
+.everest-forms-social-connect-networks ul.evfur-network-lists li.evfur-login-media.evfur-login-media--twitter a:hover {
+	background-color: #ffdae0;
+}
+.everest-forms-social-connect-networks ul.evfur-network-lists li.evfur-login-media.evfur-login-media--google a {
+	background-color: #4285f4;
+}
+.everest-forms-social-connect-networks ul.evfur-network-lists li.evfur-login-media.evfur-login-media--google a:hover {
+	background-color: #72a4f6;
+}
+.everest-forms-social-connect-networks ul.evfur-network-lists li.evfur-login-media.evfur-login-media--instagram a {
+	background-color: green;
+}
+.everest-forms-social-connect-networks ul.evfur-network-lists li.evfur-login-media.evfur-login-media--instagram a:hover {
+	background-color: #009a00;
+}
+.everest-forms-social-connect-networks ul.evfur-network-lists li.evfur-login-media.evfur-login-media--linkedin a {
+	background-color: #126bc4;
+}
+.everest-forms-social-connect-networks ul.evfur-network-lists li.evfur-login-media.evfur-login-media--linkedin a:hover {
+	background-color: #1478db;
+}
+.everest-forms-social-connect-networks ul.evfur-network-lists.evfur_theme_1 li.evfur-login-media, .everest-forms-social-connect-networks ul.evfur-network-lists.evfur_theme_2 li.evfur-login-media, .everest-forms-social-connect-networks ul.evfur-network-lists.evfur_theme_3 li.evfur-login-media {
+	width: 40px;
+	height: 40px;
+	margin: 0 5px 0 0;
+}
+.everest-forms-social-connect-networks ul.evfur-network-lists.evfur_theme_1 li.evfur-login-media a {
+	border-radius: 50%;
+	height: 40px;
+	width: 40px;
+	padding: 0;
+}
+.everest-forms-social-connect-networks ul.evfur-network-lists.evfur_theme_3 li.evfur-login-media a {
+	border-radius: 3px;
+}
+.everest-forms-social-connect-networks ul.evfur-network-lists.evfur_theme_4 li.evfur-login-media {
+	margin: 0 10px 5px 0;
+	display: inline-block;
+}
+.everest-forms-social-connect-networks ul.evfur-network-lists.evfur_theme_4 li.evfur-login-media a {
+	display: block;
+	border-radius: 3px;
+}
+.everest-forms-social-connect-networks ul.evfur-network-lists.evfur_theme_4 li.evfur-login-media a .evfur-icon-block.evfur-login-with-facebook {
+	background-image: url('../../images/facebook-brand-white.png');
+}
+.everest-forms-social-connect-networks ul.evfur-network-lists.evfur_theme_4 li.evfur-login-media a .evfur-icon-block.evfur-login-with-google {
+	background-image: url('../../images/google-brand.png');
+	background-size: 100%;
+	border-radius: 2px;
+}
+.everest-forms-social-connect-networks ul.evfur-network-lists.evfur_theme_4 li.evfur-login-media a .evfur-icon-block.evfur-login-with-instagram {
+	background-image: url('../../images/instagram.png');
+	background-size: 100%;
+	border-radius: 2px;
+}

@@ -1,0 +1,82 @@
+.evf-calculation-buttons button {
+	padding: 2px 12px;
+	background-color: #fff;
+	margin: 0 2px;
+	border: 1px solid #fff;
+	font-size: 18px;
+	font-weight: 600;
+	text-align: center;
+	border-radius: 2px;
+}
+.evf-calculation-buttons button:hover {
+	border: 1px solid #3582c4;
+	background-color: #f5fbff;
+}
+.evf-toggle-smart-tag-display.smart-field-calculation {
+	top: 0 !important;
+}
+.evf-calculation-shortcut-container {
+    position: relative;
+    width: 31%;
+    padding: 6px;
+    background-color: #EEEEEE;
+    display: flex;
+    color: #404041;
+    align-items: center;
+    font-weight: 500;
+    cursor: pointer;
+    gap: 6px;
+	border-radius: 2px;
+	margin-bottom: 6px;
+}
+
+.evf-calculation-shortcut-list {
+	display: none;
+	position: absolute;
+	top: 30px;
+	z-index: 999;
+	width: 121px;
+	text-align: center;
+	overflow-y: auto;
+	position: absolute;
+	background: #fff;
+	border-radius: 4px;
+	box-shadow: 1px 3px 20px 0 rgba(35, 40, 45, 0.2);
+	min-height: 125px;
+	max-height: 236px;
+	border: 1px solid #dbdbdb;
+	width: 187px;
+}
+.evf-calculation-shortcut-list .evf-calculation-shortcut-item {
+	cursor: pointer;
+	margin-bottom: 0;
+	padding: 8px;
+	border-radius: 3px;
+	font-size: 14px;
+	transition: all 0.3s ease-in-out;
+}
+.evf-calculation-shortcut-list .evf-calculation-shortcut-item:hover {
+	background-color: #eaeaea;
+}
+.everest-forms-field-option-group-calculations .evf-smart-tag-lists {
+	z-index: 999 !important;
+	top: 25px !important;
+}
+.everest-forms-calculations-below-editor .everest-forms-pro-validate-formula-wrap {
+	display: flex;
+	align-items: center;
+}
+.everest-forms-calculations-below-editor .everest-forms-pro-validate-formula-wrap .everest-forms-pro-validate-formula {
+	border: none;
+	background: none;
+	padding-left: 0;
+	text-decoration: underline;
+	position: relative;
+	color: #036aab;
+	height: 32px;
+	font-size: 14px;
+	line-height: 14px;
+	padding: 0 10px;
+	border-radius: 4px;
+	cursor: pointer;
+}

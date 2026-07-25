@@ -1,0 +1,305 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "flexible-table-block/table",
+  "title": "Flexible Table",
+  "category": "text",
+  "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='black' viewBox='0 0 24 24'><polygon points='17.5 1 7.8 5.6 10.8 6 6.5 10 16.5 5.5 13.4 5 17.5 1'/><path d='M19,11H5c-1.1,0-2,.9-2,2v8c0,1.1.9,2,2,2h14c1.1,0,2-.9,2-2v-8c0-1.1-.9-2-2-2ZM11.5,16.5h-7v-3.5c0-.3.2-.5.5-.5h6.5v4ZM13,12.5h6c.3,0,.5.2.5.5v3.5h-6.5v-4ZM4.5,21v-3h7v3.5h-6.5c-.3,0-.5-.2-.5-.5ZM19,21.5h-6v-3.5h6.5v3c0,.3-.2.5-.5.5Z'/></svg>",
+  "keywords": [
+    "table",
+    "cell",
+    "data"
+  ],
+  "description": "Create a flexible configuration table.",
+  "textdomain": "flexible-table-block",
+  "attributes": {
+    "contentJustification": {
+      "type": "string"
+    },
+    "hasFixedLayout": {
+      "type": "boolean",
+      "default": true
+    },
+    "isScrollOnPc": {
+      "type": "boolean",
+      "default": false
+    },
+    "isScrollOnMobile": {
+      "type": "boolean",
+      "default": false
+    },
+    "isStackedOnMobile": {
+      "type": "boolean",
+      "default": false
+    },
+    "sticky": {
+      "type": "string"
+    },
+    "tableStyles": {
+      "type": "string",
+      "source": "attribute",
+      "selector": "table",
+      "attribute": "style"
+    },
+    "captionSide": {
+      "type": "string",
+      "default": "bottom"
+    },
+    "caption": {
+      "type": "string",
+      "source": "html",
+      "selector": "figcaption",
+      "role": "content"
+    },
+    "captionStyles": {
+      "type": "string",
+      "source": "attribute",
+      "selector": "figcaption",
+      "attribute": "style"
+    },
+    "head": {
+      "type": "array",
+      "default": [],
+      "source": "query",
+      "selector": "thead tr",
+      "query": {
+        "cells": {
+          "type": "array",
+          "default": [],
+          "source": "query",
+          "selector": "td,th",
+          "query": {
+            "content": {
+              "type": "string",
+              "source": "html",
+              "role": "content"
+            },
+            "styles": {
+              "type": "string",
+              "source": "attribute",
+              "attribute": "style"
+            },
+            "tag": {
+              "type": "string",
+              "default": "td",
+              "source": "tag"
+            },
+            "className": {
+              "type": "string",
+              "source": "attribute",
+              "attribute": "class"
+            },
+            "id": {
+              "type": "string",
+              "source": "attribute",
+              "attribute": "id"
+            },
+            "headers": {
+              "type": "string",
+              "source": "attribute",
+              "attribute": "headers"
+            },
+            "scope": {
+              "enum": [
+                "row",
+                "col",
+                "rowgroup",
+                "colgroup"
+              ],
+              "source": "attribute",
+              "attribute": "scope"
+            },
+            "rowSpan": {
+              "type": "string",
+              "source": "attribute",
+              "attribute": "rowspan"
+            },
+            "colSpan": {
+              "type": "string",
+              "source": "attribute",
+              "attribute": "colspan"
+            }
+          }
+        }
+      }
+    },
+    "body": {
+      "type": "array",
+      "default": [],
+      "source": "query",
+      "selector": "tbody tr",
+      "query": {
+        "cells": {
+          "type": "array",
+          "default": [],
+          "source": "query",
+          "selector": "td,th",
+          "query": {
+            "content": {
+              "type": "string",
+              "source": "html",
+              "role": "content"
+            },
+            "styles": {
+              "type": "string",
+              "source": "attribute",
+              "attribute": "style"
+            },
+            "tag": {
+              "type": "string",
+              "default": "td",
+              "source": "tag"
+            },
+            "className": {
+              "type": "string",
+              "source": "attribute",
+              "attribute": "class"
+            },
+            "id": {
+              "type": "string",
+              "source": "attribute",
+              "attribute": "id"
+            },
+            "headers": {
+              "type": "string",
+              "source": "attribute",
+              "attribute": "headers"
+            },
+            "scope": {
+              "enum": [
+                "row",
+                "col",
+                "rowgroup",
+                "colgroup"
+              ],
+              "source": "attribute",
+              "attribute": "scope"
+            },
+            "rowSpan": {
+              "type": "string",
+              "source": "attribute",
+              "attribute": "rowspan"
+            },
+            "colSpan": {
+              "type": "string",
+              "source": "attribute",
+              "attribute": "colspan"
+            }
+          }
+        }
+      }
+    },
+    "foot": {
+      "type": "array",
+      "default": [],
+      "source": "query",
+      "selector": "tfoot tr",
+      "query": {
+        "cells": {
+          "type": "array",
+          "default": [],
+          "source": "query",
+          "selector": "td,th",
+          "query": {
+            "content": {
+              "type": "string",
+              "source": "html",
+              "role": "content"
+            },
+            "styles": {
+              "type": "string",
+              "source": "attribute",
+              "attribute": "style"
+            },
+            "tag": {
+              "type": "string",
+              "default": "td",
+              "source": "tag"
+            },
+            "className": {
+              "type": "string",
+              "source": "attribute",
+              "attribute": "class"
+            },
+            "id": {
+              "type": "string",
+              "source": "attribute",
+              "attribute": "id"
+            },
+            "headers": {
+              "type": "string",
+              "source": "attribute",
+              "attribute": "headers"
+            },
+            "scope": {
+              "enum": [
+                "row",
+                "col",
+                "rowgroup",
+                "colgroup"
+              ],
+              "source": "attribute",
+              "attribute": "scope"
+            },
+            "rowSpan": {
+              "type": "string",
+              "source": "attribute",
+              "attribute": "rowspan"
+            },
+            "colSpan": {
+              "type": "string",
+              "source": "attribute",
+              "attribute": "colspan"
+            }
+          }
+        }
+      }
+    }
+  },
+  "supports": {
+    "anchor": true,
+    "align": [
+      "left",
+      "right",
+      "wide",
+      "full"
+    ],
+    "color": {
+      "__experimentalSkipSerialization": [
+        "text",
+        "background",
+        "gradients"
+      ],
+      "gradients": true,
+      "link": true
+    },
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true,
+      "__experimentalFontFamily": true,
+      "__experimentalTextTransform": true,
+      "__experimentalFontStyle": true,
+      "__experimentalFontWeight": true,
+      "__experimentalLetterSpacing": true,
+      "__experimentalDefaultControls": {
+        "fontSize": true
+      }
+    },
+    "spacing": {
+      "margin": true,
+      "__experimentalDefaultControls": {
+        "margin": false
+      }
+    },
+    "__experimentalSelector": ".wp-block-flexible-table-block-table > table"
+  },
+  "styles": [
+    {
+      "name": "stripes",
+      "label": "Stripes"
+    }
+  ],
+  "editorScript": "flexible-table-block-editor",
+  "editorStyle": "flexible-table-block-editor",
+  "style": "flexible-table-block"
+}

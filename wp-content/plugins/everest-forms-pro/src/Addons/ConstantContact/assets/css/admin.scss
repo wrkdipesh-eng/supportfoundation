@@ -1,0 +1,56 @@
+/* Form Field Integration */
+
+.evf-provider-connection {
+    .everest-forms-source-account-add {
+        .constant-contact-connection-form {
+            display: flex;
+            flex-direction: column;
+
+            strong {
+                display: inline-block;
+                min-width: 240px;
+            }
+
+            input {
+                font-weight: 400;
+            }
+
+            .everest-forms-hidden {
+                display: none !important;
+            }
+        }
+
+        .everest-forms-hidden {
+            display: none;
+        }
+    }
+
+    .evf-provider-accounts {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Global Settings Integration */
+
+.evf-account-connect {
+    .constant-contact-connection-form {
+        display: flex;
+        flex-direction: column;
+
+        strong {
+            display: inline-block;
+            min-width: 240px;
+        }
+
+        select {
+            font-weight: 400;
+            width: calc(33% - 20px) !important;
+            margin: 15px 0;
+        }
+    }
+
+    .everest-forms-btn {
+        margin-top: 24px;
+    }
+}

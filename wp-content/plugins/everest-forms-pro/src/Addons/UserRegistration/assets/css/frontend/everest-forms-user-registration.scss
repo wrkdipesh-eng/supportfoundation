@@ -1,0 +1,175 @@
+.everest-forms-social-connect-networks {
+	margin: 20px;
+
+	ul.evfur-network-lists {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+
+		li.evfur-login-media {
+			display: inline-block;
+
+			a {
+				padding: 10px;
+				background-color: #475bb2;
+				color: #fff;
+				display: table;
+				text-decoration: none;
+				transition: background-color 0.35s;
+
+				&:hover {
+					background-color: lighten( #576abc, 5% );
+				}
+			}
+			.evfur-login-text,
+			.evfur-icon-block {
+				display: table-cell;
+				vertical-align: middle;
+			}
+
+			.evfur-login-text {
+				padding-left: 10px;
+			}
+
+			.evfur-icon-block {
+				background-repeat: no-repeat;
+				background-position: center;
+				width: 24px;
+				height: 24px;
+				display: none;
+
+				&.evfur-login-with-facebook {
+					background-image: url('../../images/facebook.png');
+					display: table-cell;
+				}
+
+				&.evfur-login-with-twitter {
+					background-image: url('../../images/twitter.png');
+					display: table-cell;
+				}
+
+				&.evfur-login-with-google {
+					background-image: url('../../images/google.png');
+					display: table-cell;
+				}
+
+				&.evfur-login-with-linkedin {
+					background-image: url('../../images/linkedin.png');
+					display: table-cell;
+				}
+				&.evfur-login-with-instagram {
+					background-image: url('../../images/instagram.png');
+					display: table-cell;
+				}
+			}
+
+			&.evfur-login-media--facebook {
+				a {
+					background-color: #486CB4;
+
+					&:hover {
+						background-color: lighten( #486CB4, 5%);
+					}
+				}
+			}
+
+			&.evfur-login-media--twitter {
+				a {
+					background-color: pink;
+
+					&:hover {
+						background-color: lighten( pink, 5%);
+					}
+				}
+			}
+
+			&.evfur-login-media--google {
+				a {
+					background-color: #4285f4;
+
+					&:hover {
+						background-color: lighten( #5a95f5, 5%);
+					}
+				}
+			}
+			&.evfur-login-media--instagram {
+				a {
+					background-color: green;
+
+					&:hover {
+						background-color: lighten( green, 5%);
+					}
+				}
+			}
+			&.evfur-login-media--linkedin {
+				a {
+					background-color: #126BC4;
+
+					&:hover {
+						background-color: lighten( #126BC4, 5%);
+					}
+				}
+			}
+		}
+
+
+		&.evfur_theme_1,
+		&.evfur_theme_2,
+		&.evfur_theme_3 {
+			li.evfur-login-media {
+				width: 40px;
+				height: 40px;
+				margin: 0 5px 0 0;
+			}
+		}
+
+		&.evfur_theme_1 {
+			li.evfur-login-media {
+				a {
+					border-radius: 50%;
+					height: 40px;
+					width: 40px;
+					padding: 0;
+				}
+			}
+		}
+
+		&.evfur_theme_3 {
+			li.evfur-login-media {
+				a {
+					border-radius: 3px;
+				}
+			}
+		}
+
+		// style 4 with text
+		&.evfur_theme_4 {
+			li.evfur-login-media {
+				margin: 0 10px 5px 0;
+				display: inline-block;
+
+				a {
+					display: block;
+					border-radius: 3px;
+
+					.evfur-icon-block {
+						&.evfur-login-with-facebook {
+							background-image: url('../../images/facebook-brand-white.png');
+						}
+						&.evfur-login-with-google {
+							background-image: url('../../images/google-brand.png');
+							background-size: 100%;
+							border-radius: 2px;
+						}
+
+						&.evfur-login-with-instagram {
+							background-image: url('../../images/instagram.png');
+							background-size: 100%;
+							border-radius: 2px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,23 @@
+@import '../../../everest-forms/assets/css/variables/variables';
+
+.evf-alert-danger {
+	background-color: lighten($red, 30%);
+	border: 1px solid lighten($red, 25%);
+	color: $red;
+	display: table;
+	min-width: 64%;
+	padding: 10px;
+	margin: 10px 0 15px !important;
+	border-radius: 4px;
+	vertical-align: middle;
+	line-height: inherit;
+
+	&::before {
+		color: $red;
+		content: '\f348';
+		font-family: dashicons;
+		font-size: 22px;
+		vertical-align: middle;
+		margin-right: 10px;
+	}
+}
