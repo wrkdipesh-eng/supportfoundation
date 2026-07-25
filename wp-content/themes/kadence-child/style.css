@@ -905,7 +905,7 @@ Text Domain: kadence-child
     justify-content: space-between !important;
 }
 
-/* Logo Alignment & Removal of Overlapping Badge under Logo */
+/* Logo Alignment, Scroll Shrink Effect & Removal of Duplicate Sticky Logo */
 .site-branding {
     display: flex !important;
     align-items: center !important;
@@ -916,12 +916,23 @@ Text Domain: kadence-child
 .site-branding a.brand img.custom-logo {
     max-height: 48px !important;
     width: auto !important;
-    transition: transform 0.3s ease !important;
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s ease !important;
     display: block !important;
 }
 
 .site-branding a.brand:hover img.custom-logo {
     transform: scale(1.02) !important;
+}
+
+/* Smooth Logo Shrink on Scroll */
+#masthead.sf-header-scrolled .site-branding a.brand img.custom-logo {
+    max-height: 36px !important;
+}
+
+/* CRITICAL: Hide duplicate Kadence sticky logo image completely */
+.site-branding img.kadence-sticky-logo,
+img.kadence-sticky-logo {
+    display: none !important;
 }
 
 /* Hide any stray floating badge under the main header logo */
@@ -955,19 +966,35 @@ Text Domain: kadence-child
     background: rgba(4, 159, 130, 0.06) !important;
 }
 
-/* Action Button ("Staff Login") */
+/* Header Right Section & Action Button ("Staff Login") Placement */
+.site-header-main-section-right {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    margin-left: auto !important;
+}
+
+.header-button-wrap {
+    margin-left: 1.25rem !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
 #main-header .header-button,
 .mobile-header-button-wrap .mobile-header-button {
     background: linear-gradient(135deg, #049f82 0%, #7a00df 100%) !important;
     border: none !important;
     border-radius: 99px !important;
-    padding: 0.7rem 1.6rem !important;
+    padding: 0.65rem 1.4rem !important;
     font-family: 'Outfit', sans-serif !important;
     font-weight: 700 !important;
-    font-size: 0.9rem !important;
+    font-size: 0.875rem !important;
     color: #ffffff !important;
     box-shadow: 0 4px 14px rgba(4, 159, 130, 0.25) !important;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    white-space: nowrap !important;
 }
 
 #main-header .header-button:hover,
