@@ -926,7 +926,11 @@ Text Domain: kadence-child
 
 /* Smooth Logo Shrink on Scroll */
 #masthead.sf-header-scrolled .site-branding a.brand img.custom-logo {
-    max-height: 36px !important;
+    max-height: 42px !important;
+}
+
+#masthead.sf-header-scrolled .site-main-header-inner-wrap {
+    min-height: 64px !important;
 }
 
 /* CRITICAL: Hide duplicate Kadence sticky logo image completely */
