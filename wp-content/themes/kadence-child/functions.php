@@ -156,6 +156,42 @@ function sf_add_top_header_badge() {
             handleScroll();
         }
 
+        // 5. Hero Background Image Slider Auto-Loop
+        var slides = document.querySelectorAll(".sf-slide");
+        var dots   = document.querySelectorAll(".sf-dot");
+        if (slides.length > 1) {
+            var current = 0;
+            var total   = slides.length;
+            var sliderTimer = null;
+
+            function goToSlide(index) {
+                slides[current].classList.remove("sf-slide--active");
+                if (dots[current]) dots[current].classList.remove("sf-dot--active");
+                
+                current = (index + total) % total;
+                
+                slides[current].classList.add("sf-slide--active");
+                if (dots[current]) dots[current].classList.add("sf-dot--active");
+            }
+
+            function startAutoPlay() {
+                if (sliderTimer) clearInterval(sliderTimer);
+                sliderTimer = setInterval(function() {
+                    goToSlide(current + 1);
+                }, 5000); // 5 seconds per slide
+            }
+
+            startAutoPlay();
+
+            // Dot navigation clicks
+            dots.forEach(function(dot, i) {
+                dot.addEventListener("click", function() {
+                    goToSlide(i);
+                    startAutoPlay();
+                });
+            });
+        }
+
         // Lock logo size firmly across all logo images and Kadence CSS variables
         var lockAllLogos = function() {
             if (masthead) {
