@@ -164,15 +164,38 @@ Text Domain: kadence-child
 /* ============================================
    Hero Section + Background Slider
    ============================================ */
+
+/* Kill any white gap Kadence inserts between header and hero */
+.sf-homepage {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* Hide Kadence page-title / inner-content wrapper that causes white strip */
+.home .page-hero,
+.home .entry-header,
+.home .page-header,
+.home .kadence-inner-column-inner > .wp-block-kadence-rowlayout:empty,
+.sf-homepage + .page-hero,
+#primary.sf-homepage > .page-hero,
+.sf-hero-section ~ .page-hero {
+    display: none !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
 .sf-hero-section {
     background: #0e1a14;
-    padding: 10rem 1.5rem 5rem 1.5rem;
+    padding: 9rem 1.5rem 5rem 1.5rem;
     border-bottom: none;
     position: relative;
     overflow: hidden;
     min-height: 700px;
     display: flex;
     align-items: center;
+    margin-top: 0 !important;
 }
 
 /* --- Slider container (absolute, full-cover) --- */
@@ -1199,19 +1222,25 @@ Text Domain: kadence-child
     transform: scale(1.02) !important;
 }
 
-/* Smooth Logo — LOCK size on scroll, no shrinking */
+/* Logo — ABSOLUTE LOCK: never shrink on scroll */
+#masthead .site-branding img,
+#masthead .site-branding a.brand img,
+#masthead .site-branding a.brand img.custom-logo,
 #masthead.sf-header-scrolled .site-branding a.brand img.custom-logo,
+.kadence-sticky-header .site-branding img,
+.kadence-sticky-header.item-is-fixed .site-branding img,
+.kadence-sticky-header.item-is-fixed .site-branding a.brand img,
 .kadence-sticky-header.item-is-fixed .site-branding a.brand img.custom-logo,
 .kadence-sticky-header.item-is-fixed:not(.item-at-start) .site-branding a.brand img,
-.kadence-sticky-header.item-is-fixed .site-branding img,
-.kadence-scroll-shrink .site-branding img,
-#masthead .site-branding img {
+.kadence-scroll-shrink .site-branding img {
     display: block !important;
-    max-height: 48px !important;
-    min-height: 40px !important;
-    height: 48px !important;
+    max-height: 52px !important;
+    min-height: 44px !important;
+    height: 52px !important;
     width: auto !important;
+    transform: none !important;
     transition: none !important;
+    opacity: 1 !important;
 }
 
 #masthead.sf-header-scrolled .site-main-header-inner-wrap,
