@@ -973,27 +973,99 @@ Text Domain: kadence-child
     flex-wrap: nowrap !important;
 }
 
-.site-header-top-section-left,
-.site-header-top-section-right {
+/* Keep left hidden — ticker + right corner only */
+.site-header-top-section-left {
     display: none !important;
+}
+
+/* Show right section — phone + socials at right corner */
+.site-header-top-section-right {
+    display: flex !important;
+    align-items: center !important;
+    flex-shrink: 0 !important;
+    height: 36px !important;
+    padding-right: 1.25rem !important;
+    gap: 0.5rem !important;
 }
 
 .site-header-top-section-center {
     display: flex !important;
     align-items: center !important;
-    justify-content: center !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    flex: 1 1 100% !important;
-    gap: 0 !important;
-    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
     overflow: hidden !important;
     height: 36px !important;
 }
 
-/* Hide phone/social widgets in top bar — ticker takes full width */
+/* Hide phone/social widgets in top bar center — ticker takes that space */
 .site-header-top-section-center > .site-header-item:not(:has(.sf-trust-ticker-wrap)) {
     display: none !important;
+}
+
+/* ---- Right section: social icon buttons ---- */
+.site-header-top-section-right .social-button,
+.site-header-top-section-right .header-social-wrap .social-button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 26px !important;
+    height: 26px !important;
+    border-radius: 50% !important;
+    background: rgba(255,255,255,0.08) !important;
+    color: rgba(255,255,255,0.75) !important;
+    font-size: 0.78rem !important;
+    transition: background 0.2s ease, color 0.2s ease !important;
+    text-decoration: none !important;
+}
+
+.site-header-top-section-right .social-button:hover,
+.site-header-top-section-right .header-social-wrap .social-button:hover {
+    background: #049f82 !important;
+    color: #ffffff !important;
+}
+
+.site-header-top-section-right .social-button svg,
+.site-header-top-section-right .header-social-wrap .social-button svg {
+    width: 13px !important;
+    height: 13px !important;
+    fill: currentColor !important;
+}
+
+/* ---- Right section: phone / HTML text ---- */
+.site-header-top-section-right .header-html,
+.site-header-top-section-right .header-html p {
+    font-family: 'Outfit', sans-serif !important;
+    font-size: 0.78rem !important;
+    font-weight: 700 !important;
+    color: rgba(255,255,255,0.82) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+}
+
+.site-header-top-section-right .header-html a,
+.site-header-top-section-right .header-html strong {
+    color: #2dd4bf !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    letter-spacing: 0.02em !important;
+    transition: color 0.2s ease !important;
+}
+
+.site-header-top-section-right .header-html a:hover {
+    color: #ffffff !important;
+}
+
+/* Divider between ticker and right section */
+.site-header-top-section-right::before {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 18px;
+    background: rgba(255,255,255,0.12);
+    margin-right: 0.75rem;
+    flex-shrink: 0;
 }
 
 /* Top Utility Bar - NDIS Micro Pill Badge: HIDDEN (replaced by ticker) */
