@@ -768,3 +768,191 @@ Text Domain: kadence-child
         gap: 1.5rem;
     }
 }
+
+/* ==========================================================================
+   Premium Header & Footer Styling Overrides
+   ========================================================================== */
+
+/* 1. Header Styles */
+.site-branding a.brand img.custom-logo {
+    max-height: 46px !important;
+    width: auto !important;
+    transition: transform 0.3s ease;
+}
+
+.site-branding a.brand:hover img.custom-logo {
+    transform: scale(1.02);
+}
+
+.main-navigation .primary-menu-container > ul > li.menu-item > a {
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 0.95rem !important;
+    letter-spacing: 0.01em !important;
+    transition: color 0.3s ease !important;
+}
+
+.main-navigation .primary-menu-container > ul > li.menu-item > a:hover,
+.main-navigation .primary-menu-container > ul > li.menu-item.current-menu-item > a {
+    color: #049f82 !important;
+}
+
+/* Staff Login Premium Button */
+#main-header .header-button,
+.mobile-header-button-wrap .mobile-header-button {
+    background: linear-gradient(135deg, #049f82 0%, #7a00df 100%) !important;
+    border: none !important;
+    border-radius: 99px !important;
+    padding: 0.7rem 1.6rem !important;
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(4, 159, 130, 0.25) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    text-transform: none !important;
+}
+
+#main-header .header-button:hover,
+.mobile-header-button-wrap .mobile-header-button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 18px rgba(122, 0, 223, 0.35) !important;
+    background: linear-gradient(135deg, #03846c 0%, #6600bc 100%) !important;
+}
+
+/* 2. Footer Styles */
+#colophon {
+    background: #111613 !important;
+    color: #a4aca7 !important;
+    padding-top: 5rem !important;
+    padding-bottom: 0 !important;
+    border-top: 4px solid #049f82;
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Footer Headings */
+#colophon .widget-title,
+#colophon h2.wp-block-heading {
+    font-family: 'Outfit', sans-serif !important;
+    color: #ffffff !important;
+    font-size: 1.15rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.05em !important;
+    margin-bottom: 2rem !important;
+    text-transform: uppercase !important;
+    border-bottom: 2px solid rgba(4, 159, 130, 0.3);
+    padding-bottom: 0.5rem !important;
+    display: inline-block !important;
+}
+
+#colophon a {
+    color: #cbd2ce !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+}
+
+#colophon a:hover {
+    color: #049f82 !important;
+}
+
+#colophon p,
+#colophon li {
+    font-size: 0.9rem !important;
+    line-height: 1.65 !important;
+}
+
+#colophon ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+#colophon ul li {
+    margin-bottom: 0.85rem !important;
+}
+
+/* Quick Links Indicators */
+#colophon .widget_nav_menu ul li a {
+    display: inline-flex !important;
+    align-items: center !important;
+    transition: all 0.3s ease !important;
+}
+
+#colophon .widget_nav_menu ul li a::before {
+    content: "→" !important;
+    margin-right: 0.6rem !important;
+    color: #7a00df !important;
+    font-weight: bold !important;
+    transition: transform 0.3s ease, color 0.3s ease !important;
+}
+
+#colophon .widget_nav_menu ul li a:hover {
+    color: #049f82 !important;
+    transform: translateX(4px) !important;
+}
+
+#colophon .widget_nav_menu ul li a:hover::before {
+    color: #049f82 !important;
+}
+
+/* Liaison Office Locations widget formatting */
+#block-64 p {
+    margin-bottom: 1.25rem !important;
+}
+
+#block-64 p strong {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    display: block !important;
+    margin-bottom: 0.25rem !important;
+    font-family: 'Outfit', sans-serif !important;
+    font-size: 0.95rem !important;
+}
+
+#block-64 p em {
+    color: #049f82 !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+}
+
+/* Column 1 Logo & Text spacing */
+.kb-image_4a265f-61,
+.kb-image_4a265f-61 img {
+    max-width: 100% !important;
+    width: auto !important;
+    height: auto !important;
+    margin-bottom: 1rem !important;
+    display: block !important;
+}
+
+.kt-adv-heading_effcc5-a0 {
+    color: #a4aca7 !important;
+    font-size: 0.9rem !important;
+    line-height: 1.65 !important;
+    margin-top: 1.25rem !important;
+}
+
+/* 3. Bottom Copyright Bar Styles */
+.site-bottom-footer-wrap {
+    background: #0b0e0c !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+    padding: 1.75rem 0 !important;
+    margin-top: 4rem !important;
+}
+
+.site-bottom-footer-wrap p {
+    font-size: 0.85rem !important;
+    color: #757d78 !important;
+    margin: 0 !important;
+}
+
+.site-bottom-footer-wrap a {
+    color: #049f82 !important;
+    font-weight: 600 !important;
+}
+
+.site-bottom-footer-wrap a:hover {
+    color: #7a00df !important;
+    text-decoration: underline !important;
+}
+
