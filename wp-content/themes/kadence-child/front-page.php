@@ -45,33 +45,55 @@ get_header();
             </div>
             <div class="sf-hero-visual">
                 <div class="sf-card-stack">
-                    <div class="sf-stack-card">
+
+                    <!-- Card 1: QUICK -->
+                    <div class="sf-stack-card sf-stack-card--quick">
                         <div class="sf-card-icon">
-                            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 0 0-10 10c0 5.25 7 10 10 10s10-4.75 10-10A10 10 0 0 0 12 2z"></path><path d="M12 6v6l4 2"></path></svg>
+                            <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
                         </div>
-                        <div>
-                            <h3 class="sf-card-title">24/7 Crisis Support</h3>
-                            <p class="sf-card-desc">Rapid placement and shelter for domestic violence & crisis referrals.</p>
+                        <div class="sf-card-body">
+                            <div class="sf-card-label">3Q Promise #1</div>
+                            <h3 class="sf-card-title">Quick Response</h3>
+                            <p class="sf-card-desc">Crisis calls answered in minutes — not days. Our on-call team is ready 24/7 for immediate placement &amp; shelter.</p>
+                            <div class="sf-card-proof">
+                                <svg viewBox="0 0 24 24" width="13" height="13" stroke="currentColor" stroke-width="2.5" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                Emergency response around the clock
+                            </div>
                         </div>
                     </div>
-                    <div class="sf-stack-card">
+
+                    <!-- Card 2: QUALITY -->
+                    <div class="sf-stack-card sf-stack-card--quality">
                         <div class="sf-card-icon">
-                            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                            <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
                         </div>
-                        <div>
-                            <h3 class="sf-card-title">No Out-of-Pocket Costs</h3>
-                            <p class="sf-card-desc">All referral coordination, GP and crisis services have $0 client cost.</p>
+                        <div class="sf-card-body">
+                            <div class="sf-card-label">3Q Promise #2</div>
+                            <h3 class="sf-card-title">Quality You Can Trust</h3>
+                            <p class="sf-card-desc">AASW &amp; ACWA certified professionals. Every coordinator is trained, checked, and accountable to the highest ethical standards.</p>
+                            <div class="sf-card-proof">
+                                <svg viewBox="0 0 24 24" width="13" height="13" stroke="currentColor" stroke-width="2.5" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                NDIS Quality &amp; Safeguards compliant
+                            </div>
                         </div>
                     </div>
-                    <div class="sf-stack-card">
+
+                    <!-- Card 3: QUANTITY -->
+                    <div class="sf-stack-card sf-stack-card--quantity">
                         <div class="sf-card-icon">
-                            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                            <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                         </div>
-                        <div>
-                            <h3 class="sf-card-title">AASW & ACWA Ethical Compliance</h3>
-                            <p class="sf-card-desc">Professional welfare workers upholding dignity, rights, and autonomy.</p>
+                        <div class="sf-card-body">
+                            <div class="sf-card-label">3Q Promise #3</div>
+                            <h3 class="sf-card-title">Quantity That Matters</h3>
+                            <p class="sf-card-desc">Serving participants across 5 states with $0 out-of-pocket costs — so more people get the support they deserve, not just those who can afford it.</p>
+                            <div class="sf-card-proof">
+                                <svg viewBox="0 0 24 24" width="13" height="13" stroke="currentColor" stroke-width="2.5" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                NSW · VIC · ACT · SA · TAS
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>

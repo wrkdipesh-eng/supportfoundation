@@ -272,76 +272,138 @@ Text Domain: kadence-child
     position: relative;
 }
 
+/* ================================================
+   3Q Hero Cards — Sales-Forward Design
+   ================================================ */
 .sf-stack-card {
     background: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.06);
-    backdrop-filter: blur(12px);
-    border-radius: 14px;
-    padding: 1.5rem;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    border-radius: 16px;
+    padding: 1.4rem 1.5rem 1.4rem 1.75rem;
+    box-shadow: 0 8px 28px -8px rgba(0, 0, 0, 0.07);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     align-items: flex-start;
-    gap: 1.25rem;
+    gap: 1.2rem;
+    position: relative;
+    overflow: hidden;
 }
 
-.sf-stack-card:nth-child(1) {
+/* Subtle shimmer overlay on hover */
+.sf-stack-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0) 60%, rgba(255,255,255,0.6));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    border-radius: 16px;
+}
+.sf-stack-card:hover::after { opacity: 1; }
+
+/* --- Quick: Purple left border --- */
+.sf-stack-card--quick {
     transform: translateX(-10px);
     animation: float 6s ease-in-out infinite;
     border-left: 4px solid #7a00df;
 }
 
-.sf-stack-card:nth-child(2) {
+/* --- Quality: Green left border --- */
+.sf-stack-card--quality {
     transform: translateX(10px);
     animation: float 6s ease-in-out infinite 2s;
     border-left: 4px solid #049f82;
 }
 
-.sf-stack-card:nth-child(3) {
+/* --- Quantity: Purple left border --- */
+.sf-stack-card--quantity {
     transform: translateX(-5px);
     animation: float 6s ease-in-out infinite 4s;
     border-left: 4px solid #7a00df;
 }
 
 .sf-stack-card:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 20px 35px -10px rgba(4, 159, 130, 0.15);
-    background: #ffffff;
+    transform: translateY(-6px) scale(1.015) !important;
+    box-shadow: 0 24px 40px -12px rgba(4, 159, 130, 0.18);
 }
 
+/* Icon containers per card type */
 .sf-card-icon {
-    width: 46px;
-    height: 46px;
-    border-radius: 10px;
-    background-color: rgba(122, 0, 223, 0.08);
-    color: #7a00df;
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    transition: transform 0.3s ease;
 }
+.sf-stack-card:hover .sf-card-icon { transform: scale(1.1) rotate(-3deg); }
 
-.sf-stack-card:nth-child(2) .sf-card-icon {
-    background-color: rgba(4, 159, 130, 0.08);
+.sf-stack-card--quick .sf-card-icon,
+.sf-stack-card--quantity .sf-card-icon {
+    background: linear-gradient(135deg, rgba(122, 0, 223, 0.1), rgba(122, 0, 223, 0.18));
+    color: #7a00df;
+}
+.sf-stack-card--quality .sf-card-icon {
+    background: linear-gradient(135deg, rgba(4, 159, 130, 0.1), rgba(4, 159, 130, 0.18));
     color: #049f82;
 }
 
-.sf-stack-card:nth-child(3) .sf-card-icon {
-    background-color: rgba(122, 0, 223, 0.08);
-    color: #7a00df;
+/* Card content body */
+.sf-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    flex: 1;
 }
+
+/* Small label above the title */
+.sf-card-label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #7a00df;
+    margin-bottom: 0.1rem;
+}
+.sf-stack-card--quality .sf-card-label { color: #049f82; }
 
 .sf-card-title {
     font-family: var(--font-title);
-    font-size: 1.125rem;
-    font-weight: 700;
-    margin-bottom: 0.25rem;
-    color: var(--dark);
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin: 0 0 0.3rem 0;
+    color: #0e1a14;
+    line-height: 1.2;
 }
 
 .sf-card-desc {
-    font-size: 0.875rem;
-    color: var(--gray);
+    font-size: 0.85rem;
+    color: #4b5563;
+    line-height: 1.55;
+    margin: 0 0 0.5rem 0;
+}
+
+/* Proof/Trust micro-line at the bottom of each card */
+.sf-card-proof {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #7a00df;
+    background: rgba(122, 0, 223, 0.07);
+    padding: 0.25rem 0.65rem;
+    border-radius: 99px;
+    width: fit-content;
+    margin-top: 0.2rem;
+}
+.sf-stack-card--quality .sf-card-proof {
+    color: #049f82;
+    background: rgba(4, 159, 130, 0.07);
 }
 
 /* Stats Section */
@@ -828,34 +890,61 @@ Text Domain: kadence-child
     gap: 1rem !important;
 }
 
-/* Top Utility Bar - NDIS Micro Pill Badge */
+/* Top Utility Bar - NDIS Micro Pill Badge: HIDDEN (replaced by ticker) */
 .sf-top-nav-badge {
-    display: inline-flex !important;
-    align-items: center !important;
-    gap: 0.4rem !important;
-    padding: 0.3rem 0.9rem !important;
-    background: rgba(4, 159, 130, 0.18) !important;
-    color: #2dd4bf !important;
-    border: 1px solid rgba(45, 212, 191, 0.3) !important;
-    border-radius: 99px !important;
-    font-family: 'Outfit', sans-serif !important;
-    font-weight: 600 !important;
-    font-size: 0.775rem !important;
-    letter-spacing: 0.02em !important;
-    box-shadow: 0 0 12px rgba(45, 212, 191, 0.15) !important;
+    display: none !important;
 }
 
-.sf-top-nav-badge .sf-badge-dot {
-    width: 6px;
-    height: 6px;
-    background-color: #2dd4bf;
-    border-radius: 50%;
-    box-shadow: 0 0 8px #2dd4bf;
-    display: inline-block;
+/* ================================================
+   Animated Trust Ticker — fills top bar
+   ================================================ */
+.sf-trust-ticker-wrap {
+    overflow: hidden;
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
 }
 
-.sf-top-nav-badge svg {
-    color: #2dd4bf !important;
+.sf-trust-ticker {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    white-space: nowrap;
+    animation: sf-ticker-scroll 30s linear infinite;
+}
+
+.sf-trust-ticker:hover { animation-play-state: paused; }
+
+@keyframes sf-ticker-scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.sf-ticker-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0 1.5rem;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.82);
+    letter-spacing: 0.03em;
+}
+
+.sf-ticker-item svg {
+    flex-shrink: 0;
+    opacity: 0.9;
+}
+
+.sf-ticker-sep {
+    color: rgba(45, 212, 191, 0.4);
+    font-size: 1rem;
+    line-height: 1;
+    padding: 0 0.5rem;
 }
 
 /* Top Utility Bar - Phone & Socials */
