@@ -36,7 +36,7 @@ get_header();
                     Registered NDIS Service Provider
                 </span>
                 <h1 class="sf-hero-title">
-                    Empowering Lives,<br>Restoring <span>Autonomy</span>
+                    Quality Support<br><span>By Your Reach</span>
                 </h1>
                 <p class="sf-hero-description">
                     As a <strong>Registered NDIS Service Provider in Australia</strong>, we connect participants with holistic, person-centered support. From case management and support coordination to emergency crisis housing, our trusted <strong>NDIS Service Provider</strong> team ensures your voice and choices lead the way.
@@ -71,7 +71,7 @@ get_header();
                         <div class="sf-card-body">
                             <div class="sf-card-label">3Q Promise #1</div>
                             <h3 class="sf-card-title">Quick Response</h3>
-                            <p class="sf-card-desc">Crisis calls answered in minutes — not days. Our on-call team is ready 24/7 for immediate placement &amp; shelter.</p>
+                            <p class="sf-card-desc">Crisis calls answered in minutes — not days. Our on-call team is ready 24/7 for assistance.</p>
                             <div class="sf-card-proof">
                                 <svg viewBox="0 0 24 24" width="13" height="13" stroke="currentColor" stroke-width="2.5" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg>
                                 Emergency response around the clock
@@ -87,7 +87,7 @@ get_header();
                         <div class="sf-card-body">
                             <div class="sf-card-label">3Q Promise #2</div>
                             <h3 class="sf-card-title">Quality You Can Trust</h3>
-                            <p class="sf-card-desc">AASW &amp; ACWA certified professionals. Every coordinator is trained, checked, and accountable to the highest ethical standards.</p>
+                            <p class="sf-card-desc">Every support worker and coordinator are trained, checked, and accountable to the highest standard. Our professionals are registered with AASW, ACWA, ACA and others.</p>
                             <div class="sf-card-proof">
                                 <svg viewBox="0 0 24 24" width="13" height="13" stroke="currentColor" stroke-width="2.5" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg>
                                 NDIS Quality &amp; Safeguards compliant
@@ -103,7 +103,7 @@ get_header();
                         <div class="sf-card-body">
                             <div class="sf-card-label">3Q Promise #3</div>
                             <h3 class="sf-card-title">Quantity That Matters</h3>
-                            <p class="sf-card-desc">Serving participants across 5 states with $0 out-of-pocket costs — so more people get the support they deserve, not just those who can afford it.</p>
+                            <p class="sf-card-desc">Buy more supports with less funding. Our prices are competitive so that we can provide more hours to our participants from their plan.</p>
                             <div class="sf-card-proof">
                                 <svg viewBox="0 0 24 24" width="13" height="13" stroke="currentColor" stroke-width="2.5" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg>
                                 NSW · VIC · ACT · SA · TAS
@@ -125,9 +125,9 @@ get_header();
                 <div class="sf-stat-desc">Emergency housing & security</div>
             </div>
             <div class="sf-stat-card">
-                <div class="sf-stat-number">$0</div>
-                <div class="sf-stat-label">Out-of-Pocket Costs</div>
-                <div class="sf-stat-desc">For standard coordination & GP links</div>
+                <div class="sf-stat-number">Max</div>
+                <div class="sf-stat-label">Plan Efficiency</div>
+                <div class="sf-stat-desc">Buy more supports with less funding</div>
             </div>
             <div class="sf-stat-card">
                 <div class="sf-stat-number">5</div>
@@ -161,7 +161,7 @@ get_header();
                     <ul class="sf-service-features">
                         <li>GP & specialist links</li>
                         <li>Mainstream care integration</li>
-                        <li>Zero out-of-pocket setup</li>
+                        <li>Buy more supports per budget</li>
                     </ul>
                 </div>
                 
@@ -250,7 +250,7 @@ get_header();
                 <div class="sf-location-card">
                     <span class="sf-location-badge">NSW</span>
                     <h4 class="sf-location-title">New South Wales</h4>
-                    <p class="sf-location-info">Sydney, Roselands (Head Office), Austral, Merrylands, Wentworthville, Belmore, Brighton Le Sands.</p>
+                    <p class="sf-location-info">Sydney, Belmore (Head Office: 28 Cleary Ave), Austral, Merrylands, Wentworthville, Roselands, Brighton Le Sands.</p>
                 </div>
                 <div class="sf-location-card">
                     <span class="sf-location-badge">VIC</span>
@@ -370,7 +370,7 @@ get_header();
                     <summary style="font-weight: 600; font-size: 1.05rem; color: #1a1a2e; list-style: none; display: flex; justify-content: space-between; align-items: center;">What areas in Australia does Support Foundation cover?
                         <span style="font-size: 1.3rem; transition: transform .2s;">+</span>
                     </summary>
-                    <p style="margin-top: 0.75rem; color: #555; line-height: 1.7;">Support Foundation operates as an <strong>NDIS Service Provider in Australia</strong> across five states and territories: New South Wales (Sydney, Roselands, Merrylands), Victoria (Melbourne, Jacana), Australian Capital Territory (Canberra), South Australia (Adelaide), and Tasmania (Hobart). Our head office is at Roselands, NSW 2196.</p>
+                    <p style="margin-top: 0.75rem; color: #555; line-height: 1.7;">Support Foundation operates as an <strong>NDIS Service Provider in Australia</strong> across five states and territories: New South Wales (Sydney, Belmore, Merrylands), Victoria (Melbourne, Jacana), Australian Capital Territory (Canberra), South Australia (Adelaide), and Tasmania (Hobart). Our head office is at 28 Cleary Avenue, Belmore NSW 2196.</p>
                 </details>
                 <details style="background: white; border-radius: 12px; padding: 1.25rem 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,.08); cursor: pointer;">
                     <summary style="font-weight: 600; font-size: 1.05rem; color: #1a1a2e; list-style: none; display: flex; justify-content: space-between; align-items: center;">How do I make a referral to Support Foundation?
@@ -382,7 +382,7 @@ get_header();
                     <summary style="font-weight: 600; font-size: 1.05rem; color: #1a1a2e; list-style: none; display: flex; justify-content: space-between; align-items: center;">Is Support Foundation available 24/7 for crisis support?
                         <span style="font-size: 1.3rem; transition: transform .2s;">+</span>
                     </summary>
-                    <p style="margin-top: 0.75rem; color: #555; line-height: 1.7;">Yes. As a <strong>Registered NDIS Service Provider in Australia</strong>, our crisis support line operates 24 hours a day, 7 days a week, 365 days a year. Emergency accommodation placement and crisis response are available around the clock. Regular office hours are Monday–Friday, 9am–5pm AEDT.</p>
+                    <p style="margin-top: 0.75rem; color: #555; line-height: 1.7;">Yes. As a <strong>Registered NDIS Service Provider in Australia</strong>, our team operates 24 hours a day, 7 days a week, 365 days a year. Emergency accommodation placement and support response are available around the clock.</p>
                 </details>
                 <details style="background: white; border-radius: 12px; padding: 1.25rem 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,.08); cursor: pointer;">
                     <summary style="font-weight: 600; font-size: 1.05rem; color: #1a1a2e; list-style: none; display: flex; justify-content: space-between; align-items: center;">What is the NDIS provider registration number for Support Foundation?

@@ -109,7 +109,7 @@ function sf_add_top_header_badge() {
                 var tickerItems = [
                     { icon: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline>', color: "#2dd4bf", text: "Registered NDIS & DVA Provider \u00b7 #4050064716" },
                     { icon: '<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>', color: "#a78bfa", text: "24/7 Crisis Support & Emergency Placement" },
-                    { icon: '<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline>', color: "#34d399", text: "$0 Out-of-Pocket Costs for All NDIS Participants" },
+                    { icon: '<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline>', color: "#34d399", text: "Buy More Supports with Less Funding — Maximize Your NDIS Plan" },
                     { icon: '<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path>', color: "#a78bfa", text: "Serving NSW \u00b7 VIC \u00b7 ACT \u00b7 SA \u00b7 TAS" },
                     { icon: '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line>', color: "#2dd4bf", text: "AASW & ACWA Ethical Compliance Guaranteed" }
                 ];
@@ -256,8 +256,8 @@ function sf_custom_footer() {
                     Registered NDIS Provider&nbsp;&nbsp;·&nbsp;&nbsp;NDIS #4050064716&nbsp;&nbsp;·&nbsp;&nbsp;DVA Approved Provider
                 </div>
                 <div class="sf-footer-band-right">
-                    <span>24/7 Crisis Line:</span>
-                    <a href="tel:1800000000">1800 000 000</a>
+                    <span>Call Us At:</span>
+                    <a href="tel:0283861433">02 8386 1433</a>
                 </div>
             </div>
         </div>
@@ -280,8 +280,8 @@ function sf_custom_footer() {
                             }
                             ?>
                         </div>
-                        <p class="sf-footer-tagline">Empowering Lives,<br><strong>Restoring Autonomy.</strong></p>
-                        <p class="sf-footer-about">Person-centered NDIS &amp; DVA support services across Australia. Rapid crisis response, $0 out-of-pocket coordination, and ethical welfare practice you can trust.</p>
+                        <p class="sf-footer-tagline">Quality Support<br><strong>By Your Reach</strong></p>
+                        <p class="sf-footer-about">Person-centered NDIS &amp; DVA support services across Australia. Rapid crisis response, plan funding optimization to buy more supports, and ethical welfare practice you can trust.</p>
                         <div class="sf-footer-3q">
                             <span class="sf-3q-chip sf-3q-quick">⚡ Quick</span>
                             <span class="sf-3q-chip sf-3q-quality">🛡 Quality</span>
@@ -321,11 +321,11 @@ function sf_custom_footer() {
                         <ul class="sf-footer-contact-list">
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                                <span>Roselands NSW 2196<br><small>Head Office (Sydney)</small></span>
+                                <span>28 Cleary Avenue, Belmore NSW 2196<br><small>Head Office (Sydney)</small></span>
                             </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                                <a href="tel:1800000000">1800 000 000</a>
+                                <a href="tel:0283861433">02 8386 1433</a>
                             </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
@@ -333,7 +333,7 @@ function sf_custom_footer() {
                             </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                                <span>Mon–Fri: 9am–5pm AEDT<br><small>Crisis line: 24 / 7</small></span>
+                                <span>Available 24/7<br><small>Call Us At: 02 8386 1433</small></span>
                             </li>
                         </ul>
 
@@ -419,7 +419,7 @@ function sf_seo_meta_engine() {
 
     <!-- GEO-TARGETING META TAGS -->
     <meta name="geo.region" content="AU-NSW">
-    <meta name="geo.placename" content="Roselands, Sydney, NSW, Australia">
+    <meta name="geo.placename" content="Belmore, Sydney, NSW, Australia">
     <meta name="geo.position" content="-33.9318;151.0825">
     <meta name="ICBM" content="-33.9318, 151.0825">
     <meta name="DC.title" content="<?php echo esc_attr($page_title); ?>">
@@ -504,8 +504,8 @@ function sf_structured_data_engine() {
           "paymentAccepted": "NDIS Plan Managed, Self-Managed, Agency Managed",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Roselands",
-            "addressLocality": "Sydney",
+            "streetAddress": "28 Cleary Avenue",
+            "addressLocality": "Belmore",
             "addressRegion": "NSW",
             "postalCode": "2196",
             "addressCountry": {
@@ -515,10 +515,10 @@ function sf_structured_data_engine() {
           },
           "geo": {
             "@type": "GeoCoordinates",
-            "latitude": -33.9318,
-            "longitude": 151.0825
+            "latitude": -33.9189,
+            "longitude": 151.0886
           },
-          "hasMap": "https://www.google.com/maps?q=Roselands+NSW+2196+Australia",
+          "hasMap": "https://www.google.com/maps?q=28+Cleary+Avenue+Belmore+NSW+2196+Australia",
           "areaServed": [
             { "@type": "State", "name": "New South Wales", "sameAs": "https://en.wikipedia.org/wiki/New_South_Wales" },
             { "@type": "State", "name": "Victoria", "sameAs": "https://en.wikipedia.org/wiki/Victoria_(state)" },
@@ -536,7 +536,7 @@ function sf_structured_data_engine() {
             },
             {
               "@type": "OpeningHoursSpecification",
-              "description": "24/7 Crisis Line",
+              "description": "Call Us At",
               "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
               "opens": "00:00",
               "closes": "23:59"
@@ -671,7 +671,7 @@ function sf_structured_data_engine() {
           "name": "What areas does Support Foundation cover?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Support Foundation operates across five Australian states and territories: New South Wales (NSW), Victoria (VIC), Australian Capital Territory (ACT), South Australia (SA), and Tasmania (TAS). Head office is in Roselands, Sydney NSW 2196."
+            "text": "Support Foundation operates across five Australian states and territories: New South Wales (NSW), Victoria (VIC), Australian Capital Territory (ACT), South Australia (SA), and Tasmania (TAS). Head office is at 28 Cleary Avenue, Belmore NSW 2196."
           }
         },
         {
@@ -687,7 +687,7 @@ function sf_structured_data_engine() {
           "name": "Is Support Foundation available 24/7?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Support Foundation's crisis support line operates 24 hours a day, 7 days a week, 365 days a year. Regular office hours are Monday to Friday, 9am to 5pm AEDT. Emergency accommodation placement and crisis response are available around the clock."
+            "text": "Yes. Support Foundation operates 24 hours a day, 7 days a week, 365 days a year. Emergency accommodation placement and support response are available around the clock."
           }
         },
         {
