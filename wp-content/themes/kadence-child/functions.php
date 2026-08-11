@@ -15,11 +15,27 @@ add_action( 'wp_enqueue_scripts', 'child_enqueue_styles' );
  */
 add_action('init', 'sf_auto_fix_404_permalinks', 99);
 function sf_auto_fix_404_permalinks() {
-    if (get_option('sf_permalinks_fix_v3') !== 'done') {
+    if (get_option('sf_permalinks_fix_v4') !== 'done') {
         global $wp_rewrite;
         $wp_rewrite->set_permalink_structure('/%postname%/');
+        
+        // Auto-create Blog page if it does not exist
+        $blog_page = get_page_by_path('blog');
+        if (!$blog_page) {
+            $page_id = wp_insert_post(array(
+                'post_title'     => 'Blog',
+                'post_name'      => 'blog',
+                'post_status'    => 'publish',
+                'post_type'      => 'page',
+                'comment_status' => 'closed'
+            ));
+            if ($page_id && !is_wp_error($page_id)) {
+                update_post_meta($page_id, '_wp_page_template', 'template-blog.php');
+            }
+        }
+
         flush_rewrite_rules(true);
-        update_option('sf_permalinks_fix_v3', 'done');
+        update_option('sf_permalinks_fix_v4', 'done');
     }
 }
 
@@ -869,9 +885,11 @@ function sf_hreflang_tags() {
 /* --- 8. SEO BLOG: Template Routing & Title Tag --- */
 add_filter('template_include', 'sf_blog_template_routing', 99);
 function sf_blog_template_routing($template) {
-    if (is_page('blog') || is_post_type_archive('post') || is_home()) {
+    $request_uri = isset($_SERVER['REQUEST_URI']) ? trim($_SERVER['REQUEST_URI'], '/') : '';
+    if (is_page('blog') || is_post_type_archive('post') || is_home() || $request_uri === 'blog' || strpos($request_uri, 'blog') === 0) {
         $blog_template = get_stylesheet_directory() . '/template-blog.php';
         if (file_exists($blog_template)) {
+            status_header(200);
             return $blog_template;
         }
     }
