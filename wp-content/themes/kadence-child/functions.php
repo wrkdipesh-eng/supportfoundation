@@ -857,3 +857,24 @@ function sf_hreflang_tags() {
     <?php
 }
 
+/* --- 8. SEO BLOG: Template Routing & Title Tag --- */
+add_filter('template_include', 'sf_blog_template_routing', 99);
+function sf_blog_template_routing($template) {
+    if (is_page('blog') || is_post_type_archive('post') || is_home()) {
+        $blog_template = get_stylesheet_directory() . '/template-blog.php';
+        if (file_exists($blog_template)) {
+            return $blog_template;
+        }
+    }
+    return $template;
+}
+
+add_filter('pre_get_document_title', 'sf_blog_seo_title_tag', 100);
+function sf_blog_seo_title_tag($title) {
+    if (is_page('blog') || is_home()) {
+        return 'NDIS Guide & Blog — Registered NDIS Service Provider in Australia | Support Foundation';
+    }
+    return $title;
+}
+
+
