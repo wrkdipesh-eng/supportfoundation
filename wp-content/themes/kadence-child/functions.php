@@ -637,6 +637,45 @@ function sf_structured_data_engine() {
           "serviceType": "Capacity Building",
           "description": "Skills development, social participation, employment readiness, and community access programs to build independence and confidence.",
           "areaServed": "AU"
+        },
+        {
+          "@type": "JobPosting",
+          "@id": "<?php echo esc_url($site_url); ?>#job-application",
+          "title": "NDIS Disability Support Worker & Healthcare Caregiver",
+          "description": "Support Foundation Australia is hiring NDIS Disability Support Workers, Support Coordinators, and Healthcare Caregivers across NSW, VIC, ACT, SA, and TAS. Apply online via our Job Application Form.",
+          "identifier": {
+            "@type": "PropertyValue",
+            "name": "Support Foundation Australia",
+            "value": "SF-NDIS-JOBS-2026"
+          },
+          "datePosted": "2026-08-11",
+          "validThrough": "2027-12-31",
+          "employmentType": ["FULL_TIME", "PART_TIME", "CASUAL"],
+          "hiringOrganization": { "@id": "<?php echo esc_url($site_url); ?>#organization" },
+          "jobLocation": [
+            {
+              "@type": "Place",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Belmore",
+                "addressRegion": "NSW",
+                "postalCode": "2196",
+                "addressCountry": "AU"
+              }
+            }
+          ],
+          "baseSalary": {
+            "@type": "MonetaryAmount",
+            "currency": "AUD",
+            "value": {
+              "@type": "QuantitativeValue",
+              "unitText": "HOUR",
+              "minValue": 34,
+              "maxValue": 55
+            }
+          },
+          "directApply": true,
+          "url": "https://forms.zohopublic.com/virtualoffice15585/form/ServiceAgreement/formperma/hSFh-yUR-CRf3xaROJUA4fFm3jYvNk5g1gPmRsdpd6I"
         }
       ]
     }
