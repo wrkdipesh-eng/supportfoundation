@@ -402,10 +402,19 @@ function sf_seo_meta_engine() {
     $current_url = is_front_page() ? $site_url : get_permalink();
     $page_title  = is_front_page()
         ? 'Support Foundation — Registered NDIS Service Provider in Australia | 24/7 Crisis Support'
-        : wp_get_document_title();
+        : ((is_page('blog') || is_home())
+            ? 'NDIS Guide & Blog — Registered NDIS Service Provider in Australia | Support Foundation'
+            : ((is_page('career') || is_page('careers'))
+                ? 'NDIS Support Worker & Healthcare Careers — Support Foundation Australia'
+                : wp_get_document_title()));
+
     $meta_desc   = is_front_page()
         ? 'Support Foundation is a Registered NDIS Service Provider in Australia (#4050064716). As a trusted NDIS Service Provider in Australia, we offer 24/7 crisis support, support coordination, emergency accommodation & personal care across NSW, VIC, ACT, SA & TAS. Call 02-8386-1433.'
-        : (get_the_excerpt() ? get_the_excerpt() : 'Support Foundation — Registered NDIS Service Provider in Australia offering disability support, crisis accommodation & support coordination.');
+        : ((is_page('blog') || is_home())
+            ? 'Comprehensive NDIS knowledge base & blog covering Registered NDIS Service Provider guides, 24/7 crisis support, support coordination, emergency housing & disability care across Australia.'
+            : ((is_page('career') || is_page('careers'))
+                ? 'Apply online for NDIS disability support worker jobs, support coordinator careers, and healthcare caregiver roles across NSW, VIC, ACT, SA, and TAS. Competitive pay $34-$55/hr.'
+                : (get_the_excerpt() ? get_the_excerpt() : 'Support Foundation — Registered NDIS Service Provider in Australia offering disability support, crisis accommodation & support coordination.')));
     $logo_url    = 'https://www.supportfoundation.com.au/wp-content/uploads/2024/02/cropped-support-foundation-logo.png';
     $keywords    = 'Registered NDIS Service Provider, NDIS Service Provider in Australia, Registered NDIS Service Provider in Australia, NDIS provider Sydney, NDIS support coordination, crisis accommodation Australia, DVA service provider, emergency housing NDIS, personal care NDIS, NDIS provider NSW, Support Foundation Australia, disability support services Australia';
     ?>
