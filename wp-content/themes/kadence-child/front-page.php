@@ -334,11 +334,11 @@ get_header();
 
                 <!-- Card 2 -->
                 <div class="sf-cta-card">
-                    <span class="sf-cta-card-badge">Service Agreements</span>
-                    <h3 class="sf-cta-card-title">Service Agreement Form</h3>
-                    <p class="sf-cta-card-desc">For established NDIS participants ready to formalize support services, verify package details, and establish ongoing care agreements.</p>
+                    <span class="sf-cta-card-badge">Job Application</span>
+                    <h3 class="sf-cta-card-title">Job Application Form</h3>
+                    <p class="sf-cta-card-desc">For job seekers and prospective healthcare workers looking to join our team, submit your application details, and explore career opportunities.</p>
                     <a href="https://forms.zohopublic.com/virtualoffice15585/form/ServiceAgreement/formperma/hSFh-yUR-CRf3xaROJUA4fFm3jYvNk5g1gPmRsdpd6I" target="_blank" class="sf-btn sf-btn-secondary">
-                        Open Agreement Form
+                        Open Application Form
                         <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 8px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                     </a>
                 </div>

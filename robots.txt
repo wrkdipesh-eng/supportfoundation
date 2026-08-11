@@ -33,6 +33,7 @@ User-agent: Applebot-Extended
 Allow: /
 
 # XML Sitemaps
+Sitemap: https://www.supportfoundation.com.au/sitemap.xml
 Sitemap: https://www.supportfoundation.com.au/sitemap_index.xml
 Sitemap: https://www.supportfoundation.com.au/wp-sitemap.xml
 
