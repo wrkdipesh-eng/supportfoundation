@@ -15,12 +15,15 @@ add_action( 'wp_enqueue_scripts', 'child_enqueue_styles' );
  */
 add_action('init', 'sf_auto_fix_404_permalinks', 99);
 function sf_auto_fix_404_permalinks() {
-    if (get_option('sf_permalinks_fix_v4') !== 'done') {
+    if (get_option('sf_permalinks_fix_v5') !== 'done') {
         global $wp_rewrite;
         $wp_rewrite->set_permalink_structure('/%postname%/');
         
         // Auto-create Blog page if it does not exist
-        $blog_page = get_page_by_path('blog');
+        $blog_page = null;
+        if (function_exists('get_page_by_path')) {
+            $blog_page = get_page_by_path('blog', OBJECT, 'page');
+        }
         if (!$blog_page) {
             $page_id = wp_insert_post(array(
                 'post_title'     => 'Blog',
@@ -35,7 +38,7 @@ function sf_auto_fix_404_permalinks() {
         }
 
         flush_rewrite_rules(true);
-        update_option('sf_permalinks_fix_v4', 'done');
+        update_option('sf_permalinks_fix_v5', 'done');
     }
 }
 
