@@ -19,28 +19,28 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 	
 	<!-- High-Intent Rank #1 SEO Meta Tags -->
-	<meta name="description" content="ReactCorp is an NDIS Registered Provider in Roselands, Sydney NSW (Canterbury Bankstown). Offering Support Coordination (Level 1, 2, 3), SIL Accommodation (0115), Personal Care & 24/7 Crisis Support. Call 0422 069 482.">
-	<meta name="keywords" content="NDIS provider Roselands NSW, Support coordination Roselands Sydney, SIL accommodation Roselands Canterbury, NDIS registered provider Canterbury Bankstown, 24/7 emergency NDIS intake Sydney, NDIS support coordination Level 1 2 3 Sydney, Supported Independent Living SIL Sydney, NDIS price guide compliant provider Sydney, NDIS 0132 Support Coordination Sydney, NDIS 0115 SIL accommodation Sydney">
+	<meta name="description" content="ReactCorp is an NDIS Registered Provider in North Kellyville, Sydney NSW. Offering Support Coordination (Level 1, 2, 3), SIL Accommodation (0115), Personal Care & 24/7 Crisis Support. Call 0422 069 482.">
+	<meta name="keywords" content="NDIS provider North Kellyville NSW, Support coordination North Kellyville Sydney, SIL accommodation North Kellyville, NDIS registered provider Sydney, 24/7 emergency NDIS intake Sydney, NDIS support coordination Level 1 2 3 Sydney, Supported Independent Living SIL Sydney, NDIS price guide compliant provider Sydney, NDIS 0132 Support Coordination Sydney, NDIS 0115 SIL accommodation Sydney">
 	<meta name="author" content="ReactCorp Disability Services">
 	
 	<!-- Open Graph / Social Media Meta -->
 	<meta property="og:locale" content="en_AU">
 	<meta property="og:type" content="website">
-	<meta property="og:title" content="NDIS Registered Provider Roselands Sydney | ReactCorp Disability Services">
-	<meta property="og:description" content="Official NDIS Registered Provider in Roselands, Canterbury-Bankstown Sydney. Support Coordination (0132), SIL Accommodation (0115), Personal Care & 24/7 Crisis Support.">
+	<meta property="og:title" content="NDIS Registered Provider North Kellyville Sydney | ReactCorp Disability Services">
+	<meta property="og:description" content="Official NDIS Registered Provider in North Kellyville, Sydney. Support Coordination (0132), SIL Accommodation (0115), Personal Care & 24/7 Crisis Support.">
 	<meta property="og:url" content="https://reactcorpdisability.com.au/">
 	<meta property="og:site_name" content="ReactCorp Disability Services">
 	<meta property="og:image" content="<?php echo get_site_url(); ?>/wp-content/uploads/2026/03/cropped-logo-1.jpeg">
 	
 	<!-- Twitter Card Meta -->
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:title" content="NDIS Registered Provider Roselands Sydney | ReactCorp Disability Services">
-	<meta name="twitter:description" content="NDIS Registered Provider delivering 24/7 Crisis Response, Support Coordination, SIL Accommodation, and Personal Care in Roselands & Sydney NSW.">
+	<meta name="twitter:title" content="NDIS Registered Provider North Kellyville Sydney | ReactCorp Disability Services">
+	<meta name="twitter:description" content="NDIS Registered Provider delivering 24/7 Crisis Response, Support Coordination, SIL Accommodation, and Personal Care in North Kellyville & Sydney NSW.">
 	<meta name="twitter:image" content="<?php echo get_site_url(); ?>/wp-content/uploads/2026/03/cropped-logo-1.jpeg">
 
 	<!-- Geo & Local SEO Tags -->
 	<meta name="geo.region" content="AU-NSW">
-	<meta name="geo.placename" content="Roselands, Sydney">
+	<meta name="geo.placename" content="North Kellyville, Sydney">
 	<meta name="geo.position" content="-33.9261;151.0714">
 	<meta name="ICBM" content="-33.9261, 151.0714">
 
@@ -57,7 +57,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	  "@context": "https://schema.org",
 	  "@type": "MedicalBusiness",
 	  "name": "ReactCorp Disability Services",
-	  "alternateName": "ReactCorp NDIS Provider Roselands",
+	  "alternateName": "ReactCorp NDIS Provider North Kellyville",
 	  "image": "<?php echo get_site_url(); ?>/wp-content/uploads/2026/03/cropped-logo-1.jpeg",
 	  "@id": "https://reactcorpdisability.com.au/#organization",
 	  "url": "https://reactcorpdisability.com.au/",
@@ -94,7 +94,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	  "areaServed": [
 	    {
 	      "@type": "City",
-	      "name": "Roselands"
+	      "name": "North Kellyville"
 	    },
 	    {
 	      "@type": "AdministrativeArea",
@@ -110,9 +110,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	    }
 	  ],
 	  "knowsAbout": [
-	    "NDIS Provider Roselands NSW",
-	    "Support Coordination Roselands Sydney",
-	    "SIL Accommodation Roselands Canterbury",
+	    "NDIS Provider North Kellyville NSW",
+	    "Support Coordination North Kellyville Sydney",
+	    "SIL Accommodation North Kellyville",
 	    "NDIS Support Coordination Level 1 2 3 Sydney",
 	    "Supported Independent Living SIL Sydney",
 	    "NDIS Price Guide Compliant Provider Sydney",

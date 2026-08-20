@@ -390,7 +390,7 @@ body {
             <!-- Hero Content -->
             <div>
                 <h1 class="rc-hero-title" style="color:#ffffff !important;">
-                    NDIS Registered Provider<br><span style="color:#f0abfc !important;">Roselands & Sydney NSW.</span>
+                    NDIS Registered Provider<br><span style="color:#f0abfc !important;">North Kellyville & Sydney NSW.</span>
                 </h1>
                 <p class="rc-hero-sub" style="color:#f1f5f9 !important;">
                     At <strong>ReactCorp</strong>, your goals become our mission. Located at 20 Barabati Road, North Kellyville, we deliver reliable, flexible, and person-centred NDIS support coordination, SIL accommodation, and 24/7 crisis support across Sydney & NSW.
@@ -509,7 +509,7 @@ body {
         <div class="rc-container">
             <div class="rc-section-header">
                 <span class="rc-section-tag">Our Scope of Registration</span>
-                <h2 class="rc-section-title">NDIS Registered Services in Roselands & Sydney</h2>
+                <h2 class="rc-section-title">NDIS Registered Services in North Kellyville & Sydney</h2>
                 <p class="rc-section-desc">ReactCorp is officially registered for the following 12 support categories across Canterbury-Bankstown & NSW:</p>
             </div>
 
@@ -570,7 +570,7 @@ body {
             <!-- Call to Action Banner -->
             <div id="contact" style="background:linear-gradient(135deg, #80387d 0%, #581c87 100%); border-radius:24px; padding:3.5rem 2.5rem; color:#ffffff; text-align:center; margin-top:4rem;">
                 <h2 style="font-family:'Space Grotesk',sans-serif; font-size:2.2rem; font-weight:700; margin-bottom:1rem; color:#ffffff !important;">Contact ReactCorp 24/7 Intake Team</h2>
-                <p style="font-size:1.1rem; color:#f0abfc !important; max-width:620px; margin:0 auto 2rem auto;">Our intake team in Roselands Sydney is available 24/7 to assist participants, families, and support coordinators.</p>
+                <p style="font-size:1.1rem; color:#f0abfc !important; max-width:620px; margin:0 auto 2rem auto;">Our intake team in North Kellyville Sydney is available 24/7 to assist participants, families, and support coordinators.</p>
                 <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
                     <a href="tel:0422069482" class="rc-btn-primary">
                         📞 Call 0422 069 482

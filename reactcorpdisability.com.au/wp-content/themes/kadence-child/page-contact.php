@@ -252,7 +252,7 @@ body {
             <span class="rc-hero-tag" style="color:#f0abfc !important;">24/7 Emergency NDIS Intake Sydney</span>
             <h1 class="rc-hero-h1" style="color:#ffffff !important;">Contact ReactCorp Disability Services</h1>
             <p class="rc-hero-p" style="color:#f1f5f9 !important;">
-                Our NDIS intake coordinators and support managers in Roselands Sydney are available around the clock to answer your inquiries, process referrals, and help you get started with your NDIS plan.
+                Our NDIS intake coordinators and support managers in North Kellyville Sydney are available around the clock to answer your inquiries, process referrals, and help you get started with your NDIS plan.
             </p>
         </div>
     </section>
@@ -309,7 +309,7 @@ body {
                 <!-- Right: Quick Contact / Inquiry Form Box -->
                 <div class="rc-contact-form-box">
                     <h2 class="rc-form-title">Send Us a Message</h2>
-                    <p class="rc-form-sub">Fill out the quick form below and our Roselands intake team will respond to you within 24 hours.</p>
+                    <p class="rc-form-sub">Fill out the quick form below and our North Kellyville intake team will respond to you within 24 hours.</p>
 
                     <form action="#" method="POST" onsubmit="alert('Thank you! Your message has been sent successfully.'); return false;">
                         <div class="rc-form-group">
