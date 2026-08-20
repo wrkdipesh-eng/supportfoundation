@@ -29,7 +29,7 @@ add_action('wp_enqueue_scripts', 'rc_enqueue_child_assets', 20);
 // 2. Automatically flush WordPress rewrite rules on deploy
 add_action('init', 'rc_auto_fix_404_permalinks', 99);
 function rc_auto_fix_404_permalinks() {
-    if (get_option('rc_permalinks_fix_v5') !== 'done') {
+    if (get_option('rc_permalinks_fix_v6') !== 'done') {
         global $wp_rewrite;
         $wp_rewrite->set_permalink_structure('/%postname%/');
         
@@ -52,7 +52,7 @@ function rc_auto_fix_404_permalinks() {
         }
 
         flush_rewrite_rules(true);
-        update_option('rc_permalinks_fix_v5', 'done');
+        update_option('rc_permalinks_fix_v6', 'done');
     }
 }
 
