@@ -3,3 +3,5 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/m4t1bd9tvbjg/public_html
     - /bin/cp -R * $DEPLOYPATH
+    - mkdir -p /home/m4t1bd9tvbjg/reactcorpdisability.com.au
+    - /bin/cp -R reactcorpdisability.com.au/* /home/m4t1bd9tvbjg/reactcorpdisability.com.au/ || true
