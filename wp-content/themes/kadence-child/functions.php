@@ -340,7 +340,7 @@ function sf_custom_footer() {
                         <ul class="sf-footer-contact-list">
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                                <span>28 Cleary Avenue, Belmore NSW 2196<br><small>Head Office (Sydney)</small></span>
+                                <span>20 Barabati Road, North Kellyville NSW 2155<br><small>Head Office (Sydney)</small></span>
                             </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
@@ -447,7 +447,7 @@ function sf_seo_meta_engine() {
 
     <!-- GEO-TARGETING META TAGS -->
     <meta name="geo.region" content="AU-NSW">
-    <meta name="geo.placename" content="Belmore, Sydney, NSW, Australia">
+    <meta name="geo.placename" content="North Kellyville, Sydney, NSW, Australia">
     <meta name="geo.position" content="-33.9318;151.0825">
     <meta name="ICBM" content="-33.9318, 151.0825">
     <meta name="DC.title" content="<?php echo esc_attr($page_title); ?>">
@@ -532,10 +532,10 @@ function sf_structured_data_engine() {
           "paymentAccepted": "NDIS Plan Managed, Self-Managed, Agency Managed",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "28 Cleary Avenue",
-            "addressLocality": "Belmore",
+            "streetAddress": "20 Barabati Road",
+            "addressLocality": "North Kellyville",
             "addressRegion": "NSW",
-            "postalCode": "2196",
+            "postalCode": "2155",
             "addressCountry": {
               "@type": "Country",
               "name": "AU"
@@ -546,7 +546,7 @@ function sf_structured_data_engine() {
             "latitude": -33.9189,
             "longitude": 151.0886
           },
-          "hasMap": "https://www.google.com/maps?q=28+Cleary+Avenue+Belmore+NSW+2196+Australia",
+          "hasMap": "https://www.google.com/maps?q=20+Barabati+Road+North+Kellyville+NSW+2155+Australia",
           "areaServed": [
             { "@type": "State", "name": "New South Wales", "sameAs": "https://en.wikipedia.org/wiki/New_South_Wales" },
             { "@type": "State", "name": "Victoria", "sameAs": "https://en.wikipedia.org/wiki/Victoria_(state)" },
@@ -685,9 +685,9 @@ function sf_structured_data_engine() {
               "@type": "Place",
               "address": {
                 "@type": "PostalAddress",
-                "addressLocality": "Belmore",
+                "addressLocality": "North Kellyville",
                 "addressRegion": "NSW",
-                "postalCode": "2196",
+                "postalCode": "2155",
                 "addressCountry": "AU"
               }
             }
@@ -738,7 +738,7 @@ function sf_structured_data_engine() {
           "name": "What areas does Support Foundation cover?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Support Foundation operates across five Australian states and territories: New South Wales (NSW), Victoria (VIC), Australian Capital Territory (ACT), South Australia (SA), and Tasmania (TAS). Head office is at 28 Cleary Avenue, Belmore NSW 2196."
+            "text": "Support Foundation operates across five Australian states and territories: New South Wales (NSW), Victoria (VIC), Australian Capital Territory (ACT), South Australia (SA), and Tasmania (TAS). Head office is at 20 Barabati Road, North Kellyville NSW 2155."
           }
         },
         {

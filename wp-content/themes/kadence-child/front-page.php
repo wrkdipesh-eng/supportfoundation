@@ -250,7 +250,7 @@ get_header();
                 <div class="sf-location-card">
                     <span class="sf-location-badge">NSW</span>
                     <h4 class="sf-location-title">New South Wales</h4>
-                    <p class="sf-location-info">Sydney, Belmore (Head Office: 28 Cleary Ave), Austral, Merrylands, Wentworthville, Roselands, Brighton Le Sands.</p>
+                    <p class="sf-location-info">Sydney, North Kellyville (Head Office: 20 Barabati Rd), Austral, Merrylands, Wentworthville, Roselands, Brighton Le Sands.</p>
                 </div>
                 <div class="sf-location-card">
                     <span class="sf-location-badge">VIC</span>
@@ -370,7 +370,7 @@ get_header();
                     <summary style="font-weight: 600; font-size: 1.05rem; color: #1a1a2e; list-style: none; display: flex; justify-content: space-between; align-items: center;">What areas in Australia does Support Foundation cover?
                         <span style="font-size: 1.3rem; transition: transform .2s;">+</span>
                     </summary>
-                    <p style="margin-top: 0.75rem; color: #555; line-height: 1.7;">Support Foundation operates as an <strong>NDIS Service Provider in Australia</strong> across five states and territories: New South Wales (Sydney, Belmore, Merrylands), Victoria (Melbourne, Jacana), Australian Capital Territory (Canberra), South Australia (Adelaide), and Tasmania (Hobart). Our head office is at 28 Cleary Avenue, Belmore NSW 2196.</p>
+                    <p style="margin-top: 0.75rem; color: #555; line-height: 1.7;">Support Foundation operates as an <strong>NDIS Service Provider in Australia</strong> across five states and territories: New South Wales (Sydney, North Kellyville, Merrylands), Victoria (Melbourne, Jacana), Australian Capital Territory (Canberra), South Australia (Adelaide), and Tasmania (Hobart). Our head office is at 20 Barabati Road, North Kellyville NSW 2155.</p>
                 </details>
                 <details style="background: white; border-radius: 12px; padding: 1.25rem 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,.08); cursor: pointer;">
                     <summary style="font-weight: 600; font-size: 1.05rem; color: #1a1a2e; list-style: none; display: flex; justify-content: space-between; align-items: center;">How do I make a referral to Support Foundation?
