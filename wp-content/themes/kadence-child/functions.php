@@ -15,7 +15,7 @@ add_action( 'wp_enqueue_scripts', 'child_enqueue_styles' );
  */
 add_action('init', 'sf_auto_fix_404_permalinks', 99);
 function sf_auto_fix_404_permalinks() {
-    if (get_option('sf_permalinks_fix_v5') !== 'done') {
+    if (get_option('sf_permalinks_fix_v7') !== 'done') {
         global $wp_rewrite;
         $wp_rewrite->set_permalink_structure('/%postname%/');
         
@@ -38,7 +38,7 @@ function sf_auto_fix_404_permalinks() {
         }
 
         flush_rewrite_rules(true);
-        update_option('sf_permalinks_fix_v5', 'done');
+        update_option('sf_permalinks_fix_v7', 'done');
     }
 }
 
@@ -80,6 +80,17 @@ function sf_add_top_header_badge() {
                 navContainer.appendChild(headerButton);
             }
         }
+
+        // 2b. Ensure NDIS Blog link is present in main navigation menu
+        var primaryMenus = document.querySelectorAll(".primary-menu-container ul.navigation, #primary-menu, nav.main-navigation ul");
+        primaryMenus.forEach(function(menu) {
+            if (menu && !menu.querySelector("a[href*='/blog/']")) {
+                var li = document.createElement("li");
+                li.className = "menu-item menu-item-type-custom menu-item-object-custom sf-blog-nav-item";
+                li.innerHTML = '<a href="/blog/"><span class="nav-drop-title">NDIS Blog</span></a>';
+                menu.appendChild(li);
+            }
+        });
 
         // 3. Top Bar — Animated Trust Ticker & Contact Info (Guaranteed Injection)
         var masthead = document.querySelector("#masthead");
@@ -315,6 +326,7 @@ function sf_custom_footer() {
                             <li><a href="/">Home</a></li>
                             <li><a href="/about-support-foundation/">About Us</a></li>
                             <li><a href="/#services">Our Services</a></li>
+                            <li><a href="/blog/">NDIS Blog &amp; Guides</a></li>
                             <li><a href="/#locations">Coverage Areas</a></li>
                             <li><a href="/#referrals">Make a Referral</a></li>
                             <li><a href="/contact-us-support-foundation/">Contact Us</a></li>
