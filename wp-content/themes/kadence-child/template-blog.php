@@ -193,6 +193,13 @@ get_header();
     line-height: 1.3;
     margin-bottom: 1.25rem;
 }
+.sf-pillar-subtitle-tag {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #047857;
+    margin-bottom: 1.25rem;
+    display: block;
+}
 .sf-pillar-content {
     font-size: 1.05rem;
     line-height: 1.85;
@@ -246,6 +253,16 @@ get_header();
     color: #334155;
     margin-bottom: 0;
     line-height: 1.7;
+}
+
+/* HIGHLIGHT BOX */
+.sf-highlight-card {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-left: 5px solid #10b981;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin: 1.75rem 0;
 }
 
 /* INTERNAL LINK ANCHOR STYLES */
@@ -378,19 +395,20 @@ get_header();
             Registered NDIS Provider #4050064716
         </span>
         <h1 class="sf-blog-hero-title">NDIS Knowledge Center & Care Guides</h1>
-        <p class="sf-blog-hero-subtitle">Expert articles on Registered NDIS Provider standards, 24/7 Crisis Support, Level 2/3 Support Coordination, Emergency Housing, Nursing Care, and Healthcare Careers across Australia.</p>
+        <p class="sf-blog-hero-subtitle">Expert articles on Mandatory SIL Registration, Practice Standards, 24/7 Crisis Support, Support Coordination, Emergency Housing, Nursing Care, and Healthcare Careers across Australia.</p>
         
         <!-- LIVE SEARCH BAR -->
         <div class="sf-search-box-wrap">
             <svg class="sf-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            <input type="text" id="sf-blog-search" class="sf-search-input" placeholder="Search NDIS topics (e.g., Crisis, Support Coordination, Housing, Nursing)..." onkeyup="sfFilterArticles()">
+            <input type="text" id="sf-blog-search" class="sf-search-input" placeholder="Search NDIS topics (e.g., SIL Registration, Crisis, Support Coordination, Housing)..." onkeyup="sfFilterArticles()">
         </div>
 
         <!-- CATEGORY PILLS -->
         <div class="sf-filter-pills">
             <button class="sf-pill-btn active" onclick="sfFilterCategory('all', this)">All Articles</button>
+            <button class="sf-pill-btn" onclick="sfFilterCategory('sil-housing', this)">SIL & Housing</button>
             <button class="sf-pill-btn" onclick="sfFilterCategory('compliance', this)">NDIS Compliance</button>
-            <button class="sf-pill-btn" onclick="sfFilterCategory('crisis', this)">Crisis & Housing</button>
+            <button class="sf-pill-btn" onclick="sfFilterCategory('crisis', this)">Crisis & STA</button>
             <button class="sf-pill-btn" onclick="sfFilterCategory('coordination', this)">Support Coordination</button>
             <button class="sf-pill-btn" onclick="sfFilterCategory('nursing', this)">Nursing Care</button>
             <button class="sf-pill-btn" onclick="sfFilterCategory('careers', this)">Careers</button>
@@ -407,6 +425,114 @@ get_header();
             <h3 style="font-size: 1.35rem; color: #0f172a; margin-bottom: 0.5rem;">No matching articles found</h3>
             <p>Try searching for a different NDIS topic or select "All Articles" above.</p>
         </div>
+
+        <!-- FEATURED PILLAR: MANDATORY SIL REGISTRATION COMMITMENT -->
+        <article class="sf-article-pillar" id="pillar-sil" data-category="sil-housing" itemscope itemtype="https://schema.org/Article">
+            <div class="sf-article-header-meta">
+                <span class="sf-pillar-tag">🏡 Mandatory SIL Registration 2026</span>
+                <span class="sf-reading-time">⏱️ 8 min read</span>
+            </div>
+            <h2 class="sf-pillar-title" itemprop="headline">Support Foundation’s Commitment to Mandatory SIL Registration & NDIS Practice Standards</h2>
+            <span class="sf-pillar-subtitle-tag">Strengthening Quick, Quality, Quantity and Independence in Supported Independent Living</span>
+            
+            <div class="sf-pillar-content" itemprop="articleBody">
+                <p>At <strong>Support Foundation</strong>, we believe that every person with disability has the right to live with dignity, safety, independence and genuine choice and control over their own life. Supported Independent Living (SIL) is far more than providing assistance with daily activities — a participant's SIL home is their home first. It is a place where they should feel safe, respected, listened to and empowered to make decisions about how they live.</p>
+                
+                <p>The introduction of <strong>mandatory NDIS registration for SIL providers from 1 July 2026</strong>, together with the new SIL-specific NDIS Practice Standards, represents an important change for the disability sector. The new standards place a strong focus on participant rights, safety, quality of support, safeguarding and good practice within the home. Support Foundation is fully committed to meeting these requirements and embedding the principles behind the standards into our everyday SIL operations.</p>
+
+                <!-- HIGHLIGHT CARD -->
+                <div class="sf-highlight-card">
+                    <strong style="color: #065f46; font-size: 1.1rem; display: block; margin-bottom: 0.5rem;">Our Core Approach to Mandatory Registration</strong>
+                    Support Foundation is taking a structured approach to mandatory SIL registration and quality improvement. Our focus is not simply on obtaining registration or preparing for an audit — we want to ensure that our policies, workforce, governance and day-to-day practices genuinely reflect the rights and needs of the people we support.
+                </div>
+
+                <h3>The Four SIL-Specific NDIS Practice Standards</h3>
+                <p>The NDIS Commission describes these standards as setting clear expectations for SIL providers, supporting consistent service delivery, quality and safety for participants and accountability across the sector. The four standards guiding our approach are:</p>
+
+                <h4>1. Supported Decision-Making (Your Life. Your Choices. Your Voice.)</h4>
+                <p>We believe that people with disability should be supported to make their own decisions, rather than having decisions made for them simply because they require support. The Supported Decision-Making Standard requires providers to support participants to understand and exercise their rights when making decisions about their home, daily life, relationships, routines, supports and community participation.</p>
+                
+                <p>Our SIL services focus on:</p>
+                <ul>
+                    <li>Providing information in a way each participant can understand.</li>
+                    <li>Using the participant's preferred language, communication method and communication tools.</li>
+                    <li>Giving participants sufficient time to consider their options.</li>
+                    <li>Identifying when decision-making support may be required and asking participants how they want to be supported.</li>
+                    <li>Respecting each participant's will and preferences while supporting informed choices and the dignity of risk.</li>
+                    <li>Supporting participants to understand the benefits and risks of different choices, considering cultural values and beliefs.</li>
+                    <li>Providing appropriate training and refresher training for workers in supported decision-making.</li>
+                </ul>
+
+                <!-- FEATURED SNIPPET Q&A BOX -->
+                <div class="sf-paa-box">
+                    <div class="sf-paa-question">💡 Q: What does Supported Decision-Making mean in a SIL home?</div>
+                    <div class="sf-paa-answer">A: Supported decision-making means supporting a participant to make their own decision — not replacing their decision with the preference of a worker, provider, family member or other supporter. The NDIS Commission specifically emphasizes accessible information and decision-making support in the home and community.</div>
+                </div>
+
+                <h4>2. Safeguarding (Everyone Deserves to Feel Safe at Home)</h4>
+                <p>A participant's home must be a place where they feel safe, respected and protected from violence, abuse, neglect, exploitation, bullying and other forms of harm. Support Foundation continues strengthening our safeguarding systems to ensure risks are identified early and responded to appropriately.</p>
+                
+                <p>Our safeguarding approach includes:</p>
+                <ul>
+                    <li>Proactive identification and assessment of risks within the home, with active participant involvement in discussions.</li>
+                    <li>Appropriate incident reporting and management, responding promptly to concerns about harm, bullying or conflict.</li>
+                    <li>Supporting respectful relationships between people living in shared accommodation while maintaining participants' access to family, friends and community.</li>
+                    <li>Building stable, consistent worker relationships applying trauma-informed and person-centred approaches.</li>
+                    <li>Training workers in de-escalation, positive behaviour support, and strict compliance with the NDIS Code of Conduct.</li>
+                    <li>Balancing dignity of risk with safety — supporting participants to understand risks and make informed decisions while appropriate safeguards are in place.</li>
+                </ul>
+
+                <h4>3. Practice Governance (Quality Support Starts with a Capable Workforce)</h4>
+                <p>Good governance means more than having policies sitting in a folder. At Support Foundation, our policies, training, supervision and leadership systems translate into observable good practice in the participant's home. Workers understand that a SIL property is the participant's home, not simply a workplace.</p>
+                
+                <p>We continuously strengthen our workforce through:</p>
+                <ul>
+                    <li>Appropriate induction, onboarding, participant-specific training, and competency assessments.</li>
+                    <li>Ongoing supervision, mentoring, cultural safety training, person-centred practice, and active support.</li>
+                    <li><strong>Participant Involvement in Co-Tenants:</strong> Shared living works best when people feel comfortable with the people they live alongside. Support Foundation involves existing participants in decisions affecting their home environment, including consultation when considering new co-tenants.</li>
+                    <li>Tailored emergency arrangements appropriate for everyone living in shared accommodation.</li>
+                </ul>
+
+                <h4>4. Agreements About Tenancy, Housing and Support Arrangements</h4>
+                <p>One of the vital principles of the new SIL standards is the clear distinction between tenancy or housing arrangements and SIL support arrangements. Where Support Foundation provides both tenancy and SIL support, we ensure these arrangements are appropriately documented and clearly distinguished.</p>
+
+                <!-- FEATURED SNIPPET Q&A BOX -->
+                <div class="sf-paa-box">
+                    <div class="sf-paa-question">💡 Q: Can I lose my home if I change my SIL provider?</div>
+                    <div class="sf-paa-answer">A: No. Under the NDIS Practice Standards, tenancy and SIL support arrangements are legally separate. A participant should never feel that they will automatically lose their home simply because they choose to change their SIL provider.</div>
+                </div>
+
+                <p>Participants are supported to understand:</p>
+                <ul>
+                    <li>Their tenancy rights and responsibilities versus their SIL service agreement.</li>
+                    <li>How concerns about their home or co-tenant conflicts are addressed.</li>
+                    <li>How vacancies and new co-tenants are considered.</li>
+                    <li>Exit, notice, and visitor arrangements, and their absolute right to change their SIL provider or access independent advocacy.</li>
+                </ul>
+
+                <h3>Building a Stronger SIL Workforce</h3>
+                <p>The quality of SIL ultimately depends on the people providing the support. Support Foundation is committed to ensuring workers have the skills, knowledge, training and supervision necessary to provide safe and person-centred support across six core areas:</p>
+                <ul>
+                    <li><strong>Person-centred practice:</strong> Understanding each participant as an individual and tailoring support accordingly.</li>
+                    <li><strong>Trauma-informed practice:</strong> Understanding how past experiences affect a person's behavior, communication and support needs.</li>
+                    <li><strong>Active support:</strong> Supporting participants to participate in everyday activities and build independence rather than doing everything for them.</li>
+                    <li><strong>Supported decision-making:</strong> Helping participants make their own decisions and express their will and preferences.</li>
+                    <li><strong>Positive behaviour support:</strong> Using evidence-informed approaches to understand and respond to behaviours of concern while respecting participant rights.</li>
+                    <li><strong>Safeguarding and de-escalation:</strong> Ensuring workers can identify risks and respond appropriately to conflict, harm and safety concerns.</li>
+                </ul>
+
+                <h3>Continuous Improvement: Registration Is Only the Beginning</h3>
+                <p>For Support Foundation, mandatory registration is not simply an audit requirement — it is an ongoing opportunity to continuously evaluate our care quality. We continually ask ourselves: Are our participants genuinely making decisions about their lives? Do participants feel safe in their homes? Are our workers supported? Can participants raise concerns without fear?</p>
+                
+                <p>Our commitment is straightforward: we will continue supporting choice and control, promoting safety, strengthening our workforce, respecting the home, protecting rights, promoting independence, and listening to participant feedback to continuously improve our services.</p>
+                
+                <p>For more information or to inquire about our Supported Independent Living (SIL) vacancies across NSW, VIC, ACT, SA, and TAS, visit our <a href="https://www.supportfoundation.com.au/#services" class="sf-internal-link">NDIS Services Page</a> or contact us on <a href="tel:0283861433" class="sf-internal-link">02 8386 1433</a>.</p>
+            </div>
+            <div class="sf-author-footer">
+                <div class="sf-author-avatar">SF</div>
+                <div>Written by <strong>Support Foundation Executive & Clinical Governance Board</strong> · Registered NDIS Provider #4050064716</div>
+            </div>
+        </article>
 
         <!-- PILLAR 1 -->
         <article class="sf-article-pillar" id="pillar-1" data-category="compliance" itemscope itemtype="https://schema.org/Article">
@@ -614,9 +740,10 @@ get_header();
             <div class="sf-sidebar-box">
                 <h3 class="sf-sidebar-heading">
                     Pillar Articles
-                    <span id="sf-article-count" style="font-size:0.8rem; background:#d1fae5; color:#065f46; padding:2px 8px; border-radius:12px;">10 Articles</span>
+                    <span id="sf-article-count" style="font-size:0.8rem; background:#d1fae5; color:#065f46; padding:2px 8px; border-radius:12px;">11 Articles</span>
                 </h3>
                 <ul class="sf-toc-link-list">
+                    <li><a href="#pillar-sil">🌟 SIL Registration Commitment</a></li>
                     <li><a href="#pillar-1">1. Registered NDIS Provider Guide</a></li>
                     <li><a href="#pillar-2">2. Support Coordination Sydney</a></li>
                     <li><a href="#pillar-3">3. 24/7 Crisis Support NDIS</a></li>
