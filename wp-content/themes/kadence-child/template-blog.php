@@ -186,15 +186,17 @@ $dynamic_posts_query = new WP_Query(array(
     max-width: 680px;
     margin: 0 auto 2rem;
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .sf-search-input-field {
     width: 100%;
-    padding: 16px 24px 16px 54px;
+    padding: 16px 24px 16px 64px !important;
     font-size: 1.05rem;
     border-radius: 50px;
-    border: 2px solid rgba(255, 255, 255, 0.35);
-    background: rgba(255, 255, 255, 0.98);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    background: #ffffff;
     color: var(--sf-slate-900);
     box-shadow: 0 12px 35px -5px rgba(0, 0, 0, 0.25);
     outline: none;
@@ -210,11 +212,14 @@ $dynamic_posts_query = new WP_Query(array(
 
 .sf-search-icon-svg {
     position: absolute;
-    left: 20px;
+    left: 24px;
     top: 50%;
     transform: translateY(-50%);
     color: var(--sf-emerald);
     pointer-events: none;
+    z-index: 10;
+    width: 22px;
+    height: 22px;
 }
 
 /* Category Filter Pills */
@@ -1047,9 +1052,9 @@ $dynamic_posts_query = new WP_Query(array(
                 
                 <!-- Pillar: Complete Participant Guide to SIL -->
                 <article class="sf-blog-card sf-filterable-item" data-category="sil-housing" data-search-text="complete participant guide to supported independent living sil costs roster of care eligibility co-tenant matching sda ilo rights">
-                    <div class="sf-card-thumbnail-wrap">
-                        <div class="sf-card-illustration-overlay">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    <div class="sf-card-thumbnail-wrap" style="background: linear-gradient(135deg, #022c22, #047857);">
+                        <div class="sf-card-illustration-overlay" title="Supported Independent Living SIL Guide" aria-label="Supported Independent Living SIL Guide">
+                            <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" role="img" aria-label="Supported Independent Living SIL Guide"><title>Supported Independent Living SIL Guide</title><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
                         </div>
                     </div>
                     <div class="sf-card-body">
@@ -1068,14 +1073,14 @@ $dynamic_posts_query = new WP_Query(array(
 
                 <!-- Pillar 1: Registered Provider Guide -->
                 <article class="sf-blog-card sf-filterable-item" data-category="compliance" data-search-text="choosing a registered ndis service provider in australia compliance quality safeguards commission agency managed">
-                    <div class="sf-card-thumbnail-wrap">
-                        <div class="sf-card-illustration-overlay">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    <div class="sf-card-thumbnail-wrap" style="background: linear-gradient(135deg, #0f172a, #1e3a8a);">
+                        <div class="sf-card-illustration-overlay" title="Registered NDIS Service Provider Australia" aria-label="Registered NDIS Service Provider Australia">
+                            <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" role="img" aria-label="Registered NDIS Service Provider Australia"><title>Registered NDIS Service Provider Australia</title><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
                         </div>
                     </div>
                     <div class="sf-card-body">
                         <div class="sf-card-category-row">
-                            <span class="sf-card-tag">🛡️ NDIS Compliance</span>
+                            <span class="sf-card-tag" style="background:#eff6ff; color:#1e40af;">🛡️ NDIS Compliance</span>
                             <span class="sf-card-date">Essential Guide</span>
                         </div>
                         <h3 class="sf-card-title">Complete Guide to Choosing a Registered NDIS Service Provider in Australia</h3>
@@ -1089,14 +1094,14 @@ $dynamic_posts_query = new WP_Query(array(
 
                 <!-- Pillar 2: Support Coordination -->
                 <article class="sf-blog-card sf-filterable-item" data-category="coordination" data-search-text="level 2 level 3 specialist ndis support coordination sydney nsw social work funding optimization">
-                    <div class="sf-card-thumbnail-wrap">
-                        <div class="sf-card-illustration-overlay">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+                    <div class="sf-card-thumbnail-wrap" style="background: linear-gradient(135deg, #3b0764, #7c3aed);">
+                        <div class="sf-card-illustration-overlay" title="Specialist Support Coordination Sydney NSW" aria-label="Specialist Support Coordination Sydney NSW">
+                            <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" role="img" aria-label="Specialist Support Coordination Sydney NSW"><title>Specialist Support Coordination Sydney NSW</title><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
                         </div>
                     </div>
                     <div class="sf-card-body">
                         <div class="sf-card-category-row">
-                            <span class="sf-card-tag">🧭 Support Coordination</span>
+                            <span class="sf-card-tag" style="background:#f5f3ff; color:#6d28d9;">🧭 Support Coordination</span>
                             <span class="sf-card-date">Care Planning</span>
                         </div>
                         <h3 class="sf-card-title">Level 2 & Level 3 Specialist NDIS Support Coordination Sydney & NSW</h3>
@@ -1110,14 +1115,14 @@ $dynamic_posts_query = new WP_Query(array(
 
                 <!-- Pillar 3: 24/7 Crisis Support -->
                 <article class="sf-blog-card sf-filterable-item" data-category="crisis" data-search-text="24/7 crisis support ndis emergency hotline urgent respite immediate intervention australia">
-                    <div class="sf-card-thumbnail-wrap">
-                        <div class="sf-card-illustration-overlay">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                    <div class="sf-card-thumbnail-wrap" style="background: linear-gradient(135deg, #450a0a, #dc2626);">
+                        <div class="sf-card-illustration-overlay" title="24/7 Emergency Crisis Support NDIS" aria-label="24/7 Emergency Crisis Support NDIS">
+                            <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" role="img" aria-label="24/7 Emergency Crisis Support NDIS"><title>24/7 Emergency Crisis Support NDIS</title><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
                         </div>
                     </div>
                     <div class="sf-card-body">
                         <div class="sf-card-category-row">
-                            <span class="sf-card-tag">🚨 24/7 Crisis Support</span>
+                            <span class="sf-card-tag" style="background:#fef2f2; color:#b91c1c;">🚨 24/7 Crisis Support</span>
                             <span class="sf-card-date">Rapid Response</span>
                         </div>
                         <h3 class="sf-card-title">24/7 Crisis Support NDIS Services for Immediate Urgent Care</h3>
@@ -1131,14 +1136,14 @@ $dynamic_posts_query = new WP_Query(array(
 
                 <!-- Pillar 4: Emergency Housing -->
                 <article class="sf-blog-card sf-filterable-item" data-category="crisis" data-search-text="rapid emergency housing ndis provider immediate sta accommodation crisis respite">
-                    <div class="sf-card-thumbnail-wrap">
-                        <div class="sf-card-illustration-overlay">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    <div class="sf-card-thumbnail-wrap" style="background: linear-gradient(135deg, #134e4a, #0d9488);">
+                        <div class="sf-card-illustration-overlay" title="NDIS Emergency Housing and STA Placement" aria-label="NDIS Emergency Housing and STA Placement">
+                            <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" role="img" aria-label="NDIS Emergency Housing and STA Placement"><title>NDIS Emergency Housing and STA Placement</title><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><line x1="12" y1="11" x2="12" y2="17"></line><line x1="9" y1="14" x2="15" y2="14"></line></svg>
                         </div>
                     </div>
                     <div class="sf-card-body">
                         <div class="sf-card-category-row">
-                            <span class="sf-card-tag">🏠 Emergency Housing</span>
+                            <span class="sf-card-tag" style="background:#f0fdfa; color:#0f766e;">🏠 Emergency Housing</span>
                             <span class="sf-card-date">Immediate Placement</span>
                         </div>
                         <h3 class="sf-card-title">Rapid Emergency Housing NDIS Provider & Immediate Accommodation</h3>
@@ -1152,14 +1157,14 @@ $dynamic_posts_query = new WP_Query(array(
 
                 <!-- Pillar 5: STA & Respite -->
                 <article class="sf-blog-card sf-filterable-item" data-category="sil-housing" data-search-text="short term accommodation sta ndis respite care 14 days living skills">
-                    <div class="sf-card-thumbnail-wrap">
-                        <div class="sf-card-illustration-overlay">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4v16"></path><path d="M2 8h18a2 2 0 0 1 2 2v10"></path><path d="M2 17h20"></path><path d="M6 8v9"></path></svg>
+                    <div class="sf-card-thumbnail-wrap" style="background: linear-gradient(135deg, #451a03, #d97706);">
+                        <div class="sf-card-illustration-overlay" title="NDIS Short Term Accommodation STA Respite" aria-label="NDIS Short Term Accommodation STA Respite">
+                            <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" role="img" aria-label="NDIS Short Term Accommodation STA Respite"><title>NDIS Short Term Accommodation STA Respite</title><path d="M2 4v16"></path><path d="M2 8h18a2 2 0 0 1 2 2v10"></path><path d="M2 17h20"></path><path d="M6 8v9"></path></svg>
                         </div>
                     </div>
                     <div class="sf-card-body">
                         <div class="sf-card-category-row">
-                            <span class="sf-card-tag">🛌 Short Term Respite</span>
+                            <span class="sf-card-tag" style="background:#fffbeb; color:#b45309;">🛌 Short Term Respite</span>
                             <span class="sf-card-date">Capacity Building</span>
                         </div>
                         <h3 class="sf-card-title">Short Term Accommodation STA NDIS & Respite Care Explained</h3>
@@ -1173,14 +1178,14 @@ $dynamic_posts_query = new WP_Query(array(
 
                 <!-- Pillar 6: Domestic Violence Support -->
                 <article class="sf-blog-card sf-filterable-item" data-category="crisis" data-search-text="trauma informed domestic violence support ndis safety planning relocation advocacy">
-                    <div class="sf-card-thumbnail-wrap">
-                        <div class="sf-card-illustration-overlay">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+                    <div class="sf-card-thumbnail-wrap" style="background: linear-gradient(135deg, #4c0519, #e11d48);">
+                        <div class="sf-card-illustration-overlay" title="Trauma Informed Domestic Violence Support NDIS" aria-label="Trauma Informed Domestic Violence Support NDIS">
+                            <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" role="img" aria-label="Trauma Informed Domestic Violence Support NDIS"><title>Trauma Informed Domestic Violence Support NDIS</title><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M12 8v4"></path><path d="M12 16h.01"></path></svg>
                         </div>
                     </div>
                     <div class="sf-card-body">
                         <div class="sf-card-category-row">
-                            <span class="sf-card-tag">🛡️ Trauma & DV Support</span>
+                            <span class="sf-card-tag" style="background:#fff1f2; color:#be123c;">🛡️ Trauma & DV Support</span>
                             <span class="sf-card-date">Confidential Care</span>
                         </div>
                         <h3 class="sf-card-title">Trauma-Informed Domestic Violence Support NDIS Safety Planning</h3>
@@ -1194,14 +1199,14 @@ $dynamic_posts_query = new WP_Query(array(
 
                 <!-- Pillar 7: Personal Care Nursing -->
                 <article class="sf-blog-card sf-filterable-item" data-category="nursing" data-search-text="in home personal care nursing ndis complex daily living medication hygiene bowel care">
-                    <div class="sf-card-thumbnail-wrap">
-                        <div class="sf-card-illustration-overlay">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                    <div class="sf-card-thumbnail-wrap" style="background: linear-gradient(135deg, #164e63, #0891b2);">
+                        <div class="sf-card-illustration-overlay" title="In Home Personal Care and Nursing NDIS" aria-label="In Home Personal Care and Nursing NDIS">
+                            <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" role="img" aria-label="In Home Personal Care and Nursing NDIS"><title>In Home Personal Care and Nursing NDIS</title><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
                         </div>
                     </div>
                     <div class="sf-card-body">
                         <div class="sf-card-category-row">
-                            <span class="sf-card-tag">🩺 Personal & Nursing</span>
+                            <span class="sf-card-tag" style="background:#ecfeff; color:#0e7490;">🩺 Personal & Nursing</span>
                             <span class="sf-card-date">Clinical Care</span>
                         </div>
                         <h3 class="sf-card-title">In-Home Personal Care Nursing NDIS & Complex Daily Living Support</h3>
@@ -1215,14 +1220,14 @@ $dynamic_posts_query = new WP_Query(array(
 
                 <!-- Pillar 8: Psychosocial Recovery -->
                 <article class="sf-blog-card sf-filterable-item" data-category="nursing" data-search-text="psychosocial recovery coaching ndis mental health capacity building resilience">
-                    <div class="sf-card-thumbnail-wrap">
-                        <div class="sf-card-illustration-overlay">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                    <div class="sf-card-thumbnail-wrap" style="background: linear-gradient(135deg, #2e1065, #7c3aed);">
+                        <div class="sf-card-illustration-overlay" title="Psychosocial Recovery Coaching Mental Health NDIS" aria-label="Psychosocial Recovery Coaching Mental Health NDIS">
+                            <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" role="img" aria-label="Psychosocial Recovery Coaching Mental Health NDIS"><title>Psychosocial Recovery Coaching Mental Health NDIS</title><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
                         </div>
                     </div>
                     <div class="sf-card-body">
                         <div class="sf-card-category-row">
-                            <span class="sf-card-tag">🧠 Mental Health</span>
+                            <span class="sf-card-tag" style="background:#f5f3ff; color:#6d28d9;">🧠 Mental Health</span>
                             <span class="sf-card-date">Recovery Coaching</span>
                         </div>
                         <h3 class="sf-card-title">Psychosocial Recovery Coaching NDIS & Mental Health Support</h3>
@@ -1236,14 +1241,14 @@ $dynamic_posts_query = new WP_Query(array(
 
                 <!-- Pillar 9: Careers & Support Worker Jobs -->
                 <article class="sf-blog-card sf-filterable-item" data-category="careers" data-search-text="apply online disability support worker jobs sydney nsw careers recruitment hourly rates">
-                    <div class="sf-card-thumbnail-wrap">
-                        <div class="sf-card-illustration-overlay">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                    <div class="sf-card-thumbnail-wrap" style="background: linear-gradient(135deg, #0f172a, #334155);">
+                        <div class="sf-card-illustration-overlay" title="Disability Support Worker Careers Sydney NSW" aria-label="Disability Support Worker Careers Sydney NSW">
+                            <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" role="img" aria-label="Disability Support Worker Careers Sydney NSW"><title>Disability Support Worker Careers Sydney NSW</title><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
                         </div>
                     </div>
                     <div class="sf-card-body">
                         <div class="sf-card-category-row">
-                            <span class="sf-card-tag">💼 Careers</span>
+                            <span class="sf-card-tag" style="background:#f1f5f9; color:#334155;">💼 Careers</span>
                             <span class="sf-card-date">Now Hiring</span>
                         </div>
                         <h3 class="sf-card-title">Apply Online for Disability Support Worker Jobs Sydney & Healthcare Careers</h3>
