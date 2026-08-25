@@ -15,11 +15,11 @@ add_action( 'wp_enqueue_scripts', 'child_enqueue_styles' );
  */
 add_action('init', 'sf_auto_fix_404_permalinks', 99);
 function sf_auto_fix_404_permalinks() {
-    if (get_option('sf_permalinks_fix_v7') !== 'done') {
+    if (get_option('sf_permalinks_fix_v8') !== 'done') {
         global $wp_rewrite;
         $wp_rewrite->set_permalink_structure('/%postname%/');
         
-        // Auto-create Blog page if it does not exist
+        // Auto-create Blog page if it does not exist or assign template
         $blog_page = null;
         if (function_exists('get_page_by_path')) {
             $blog_page = get_page_by_path('blog', OBJECT, 'page');
@@ -35,10 +35,12 @@ function sf_auto_fix_404_permalinks() {
             if ($page_id && !is_wp_error($page_id)) {
                 update_post_meta($page_id, '_wp_page_template', 'template-blog.php');
             }
+        } else {
+            update_post_meta($blog_page->ID, '_wp_page_template', 'template-blog.php');
         }
 
         flush_rewrite_rules(true);
-        update_option('sf_permalinks_fix_v7', 'done');
+        update_option('sf_permalinks_fix_v8', 'done');
     }
 }
 
@@ -900,8 +902,16 @@ function sf_hreflang_tags() {
 /* --- 8. SEO BLOG: Template Routing & Title Tag --- */
 add_filter('template_include', 'sf_blog_template_routing', 99);
 function sf_blog_template_routing($template) {
-    $request_uri = isset($_SERVER['REQUEST_URI']) ? trim($_SERVER['REQUEST_URI'], '/') : '';
-    if (is_page('blog') || is_post_type_archive('post') || is_home() || $request_uri === 'blog' || strpos($request_uri, 'blog') === 0) {
+    if (is_single()) {
+        $single_template = get_stylesheet_directory() . '/single.php';
+        if (file_exists($single_template)) {
+            return $single_template;
+        }
+        return $template;
+    }
+    
+    $request_uri = isset($_SERVER['REQUEST_URI']) ? trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/') : '';
+    if (is_page('blog') || is_post_type_archive('post') || is_home() || $request_uri === 'blog' || preg_match('#^blog(/page/\d+)?/?$#', $request_uri)) {
         $blog_template = get_stylesheet_directory() . '/template-blog.php';
         if (file_exists($blog_template)) {
             status_header(200);
