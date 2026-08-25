@@ -1424,6 +1424,43 @@ $dynamic_posts_query = new WP_Query(array(
                 <div class="sf-paa-answer">A: No. Under the NDIS Practice Standards, tenancy and SIL support arrangements are legally separate. A participant should never feel that they will automatically lose their home simply because they choose to change their SIL provider.</div>
             </div>
 
+            <h3>Building a Stronger SIL Workforce</h3>
+            <p>The quality of SIL ultimately depends on the people providing the support. Support Foundation is committed to ensuring that workers have the skills, knowledge, training and supervision necessary to provide safe and person-centred support.</p>
+            <p>Our workforce development approach focuses on:</p>
+            <ul>
+                <li><strong>Person-centred practice:</strong> Understanding each participant as an individual and tailoring support accordingly.</li>
+                <li><strong>Trauma-informed practice:</strong> Understanding how past experiences may affect a person's behaviour, communication and support needs.</li>
+                <li><strong>Active support:</strong> Supporting participants to participate in everyday activities and build independence rather than doing everything for them.</li>
+                <li><strong>Supported decision-making:</strong> Helping participants make their own decisions and express their will and preferences.</li>
+                <li><strong>Positive behaviour support:</strong> Using evidence-informed approaches to understand and respond to behaviours of concern while respecting participant rights.</li>
+                <li><strong>Safeguarding and de-escalation:</strong> Ensuring workers can identify risks and respond appropriately to conflict, harm and safety concerns.</li>
+            </ul>
+
+            <h3>Continuous Improvement: Registration Is Only the Beginning</h3>
+            <p>For Support Foundation, mandatory registration is not simply an audit requirement. It is an opportunity to continually evaluate our care quality:</p>
+            <ul>
+                <li>Are our participants genuinely making decisions about their lives?</li>
+                <li>Do participants feel safe in their homes?</li>
+                <li>Do our workers have the skills they need?</li>
+                <li>Are our services consistent across different workers and shifts?</li>
+                <li>Do participants understand their rights?</li>
+                <li>Are participants involved in decisions about their home and who they live with?</li>
+                <li>Can participants raise concerns without fear?</li>
+                <li>Are our tenancy and service arrangements fair, transparent and clearly understood?</li>
+            </ul>
+
+            <h3>Our Commitment to People We Support</h3>
+            <p>At Support Foundation, our commitment is straightforward. We will continue working towards meeting all applicable mandatory SIL registration requirements and embedding the four SIL Practice Standards into our organisation. We will continue to:</p>
+            <ul>
+                <li><strong>Support choice and control:</strong> Helping participants make genuine decisions about their lives, home and supports.</li>
+                <li><strong>Promote safety:</strong> Maintaining strong safeguarding systems and responding to concerns appropriately.</li>
+                <li><strong>Strengthen our workforce:</strong> Ensuring workers are appropriately trained, supported and competent.</li>
+                <li><strong>Respect the home:</strong> Recognising that every SIL property is first and foremost the participant's home.</li>
+                <li><strong>Protect rights:</strong> Supporting dignity, privacy, independence, relationships and the right to make informed choices.</li>
+                <li><strong>Promote independence:</strong> Using active support and person-centred approaches to help participants build skills and achieve their goals.</li>
+                <li><strong>Listen and improve:</strong> Using participant feedback, incidents, complaints, supervision and quality reviews to continuously improve our services.</li>
+            </ul>
+
             <div style="margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--sf-slate-200); display: flex; gap: 12px; flex-wrap: wrap;">
                 <a href="https://zfrmz.com/sIh6uDqI2c9PaujmOoTR" target="_blank" rel="noopener noreferrer" class="sf-btn-primary">Inquire About SIL Vacancies</a>
                 <a href="tel:0283861433" class="sf-btn-primary" style="background: var(--sf-slate-900);">Call Team (02 8386 1433)</a>
