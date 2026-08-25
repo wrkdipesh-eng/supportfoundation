@@ -442,15 +442,37 @@ function sf_add_top_header_badge() {
             }
         }
 
-        // 2b. Ensure "Updates & Blog" link is present in main navigation menu & mobile drawer
+        // 2b. Ensure "Updates & Blog" link is present as a TOP-LEVEL item in main navigation menu & mobile drawer
         var allNavMenus = document.querySelectorAll(".primary-menu-container > ul, #primary-menu, nav.main-navigation > ul, .header-menu-container > ul, .mobile-navigation ul, #mobile-menu");
         var isBlogPage = window.location.pathname.indexOf("/blog") !== -1;
+
         allNavMenus.forEach(function(menu) {
-            if (menu && !menu.querySelector("a[href*='/blog']")) {
+            var hasTopLevelBlog = false;
+            var directLis = Array.from(menu.children);
+            
+            directLis.forEach(function(item) {
+                var directLink = item.querySelector(":scope > a");
+                if (directLink && directLink.getAttribute("href") && directLink.getAttribute("href").indexOf("/blog") !== -1) {
+                    hasTopLevelBlog = true;
+                    directLink.innerHTML = '<span class="nav-drop-title">Updates & Blog</span>';
+                }
+            });
+
+            if (!hasTopLevelBlog) {
                 var li = document.createElement("li");
                 li.className = "menu-item menu-item-type-custom menu-item-object-custom sf-blog-nav-item" + (isBlogPage ? " current-menu-item" : "");
                 li.innerHTML = '<a href="/blog/"><span class="nav-drop-title">Updates & Blog</span></a>';
-                menu.appendChild(li);
+                
+                // Insert right before "Get In Touch" dropdown if found, else append
+                var getInTouchItem = directLis.find(function(el) {
+                    return el.textContent && el.textContent.indexOf("Get In Touch") !== -1;
+                });
+
+                if (getInTouchItem) {
+                    menu.insertBefore(li, getInTouchItem);
+                } else {
+                    menu.appendChild(li);
+                }
             }
         });
 
@@ -1289,14 +1311,57 @@ function sf_blog_seo_title_tag($title) {
     return $title;
 }
 
-/* --- 9. NAVIGATION: Ensure "Updates & Blog" is in all WP Menus --- */
-add_filter('wp_nav_menu_items', 'sf_add_updates_nav_menu_link', 10, 2);
+/* --- 9. NAVIGATION: Ensure "Updates & Blog" is a guaranteed TOP-LEVEL item in all WP Menus --- */
+add_filter('wp_nav_menu_items', 'sf_add_updates_nav_menu_link', 99, 2);
 function sf_add_updates_nav_menu_link($items, $args) {
-    if (strpos($items, '/blog') === false) {
+    if (strpos($items, 'Updates & Blog') === false && strpos($items, 'Updates &amp; Blog') === false) {
         $is_active = (is_page('blog') || (isset($_SERVER['REQUEST_URI']) && strpos($_SERVER['REQUEST_URI'], '/blog') !== false)) ? ' current-menu-item' : '';
-        $items .= '<li class="menu-item menu-item-type-custom' . $is_active . '"><a href="' . esc_url(home_url('/blog/')) . '"><span class="nav-drop-title">Updates & Blog</span></a></li>';
+        $new_item = '<li class="menu-item menu-item-type-custom sf-blog-nav-item' . $is_active . '"><a href="' . esc_url(home_url('/blog/')) . '"><span class="nav-drop-title-wrap"><span class="nav-drop-title">Updates &amp; Blog</span></span></a></li>';
+        
+        // Try inserting before "Get In Touch"
+        if (stripos($items, 'Get In Touch') !== false) {
+            $pattern = '/(<li\s+[^>]*id=["\']menu-item-[^>]*>(?:\s*<a[^>]*>(?:(?!<\/li>).)*?Get In Touch))/is';
+            if (preg_match($pattern, $items)) {
+                $items = preg_replace($pattern, $new_item . '$1', $items, 1);
+            } else {
+                $items .= $new_item;
+            }
+        } else {
+            $items .= $new_item;
+        }
     }
     return $items;
+}
+
+// Programmatically ensure top-level nav menu in WordPress database
+add_action('init', 'sf_add_blog_to_wp_nav_menu', 99);
+function sf_add_blog_to_wp_nav_menu() {
+    if (get_option('sf_nav_menu_blog_synced_v3') !== 'done') {
+        $menus = wp_get_nav_menus();
+        if (!empty($menus)) {
+            foreach ($menus as $menu) {
+                $items = wp_get_nav_menu_items($menu->term_id);
+                $has_top_blog = false;
+                if (!empty($items)) {
+                    foreach ($items as $item) {
+                        if ($item->menu_item_parent == 0 && (strpos($item->url, '/blog') !== false || $item->title === 'Updates & Blog' || $item->title === 'Blog')) {
+                            $has_top_blog = true;
+                            break;
+                        }
+                    }
+                }
+                if (!$has_top_blog) {
+                    wp_update_nav_menu_item($menu->term_id, 0, array(
+                        'menu-item-title'  => 'Updates & Blog',
+                        'menu-item-url'    => home_url('/blog/'),
+                        'menu-item-type'   => 'custom',
+                        'menu-item-status' => 'publish'
+                    ));
+                }
+            }
+        }
+        update_option('sf_nav_menu_blog_synced_v3', 'done');
+    }
 }
 
 
