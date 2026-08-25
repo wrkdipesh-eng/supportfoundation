@@ -442,13 +442,14 @@ function sf_add_top_header_badge() {
             }
         }
 
-        // 2b. Ensure NDIS Blog link is present in main navigation menu
-        var primaryMenus = document.querySelectorAll(".primary-menu-container ul.navigation, #primary-menu, nav.main-navigation ul");
-        primaryMenus.forEach(function(menu) {
-            if (menu && !menu.querySelector("a[href*='/blog/']")) {
+        // 2b. Ensure "Updates & Blog" link is present in main navigation menu & mobile drawer
+        var allNavMenus = document.querySelectorAll(".primary-menu-container > ul, #primary-menu, nav.main-navigation > ul, .header-menu-container > ul, .mobile-navigation ul, #mobile-menu");
+        var isBlogPage = window.location.pathname.indexOf("/blog") !== -1;
+        allNavMenus.forEach(function(menu) {
+            if (menu && !menu.querySelector("a[href*='/blog']")) {
                 var li = document.createElement("li");
-                li.className = "menu-item menu-item-type-custom menu-item-object-custom sf-blog-nav-item";
-                li.innerHTML = '<a href="/blog/"><span class="nav-drop-title">NDIS Blog</span></a>';
+                li.className = "menu-item menu-item-type-custom menu-item-object-custom sf-blog-nav-item" + (isBlogPage ? " current-menu-item" : "");
+                li.innerHTML = '<a href="/blog/"><span class="nav-drop-title">Updates & Blog</span></a>';
                 menu.appendChild(li);
             }
         });
@@ -1286,6 +1287,16 @@ function sf_blog_seo_title_tag($title) {
         return 'NDIS Guide & Blog — Registered NDIS Service Provider in Australia | Support Foundation';
     }
     return $title;
+}
+
+/* --- 9. NAVIGATION: Ensure "Updates & Blog" is in all WP Menus --- */
+add_filter('wp_nav_menu_items', 'sf_add_updates_nav_menu_link', 10, 2);
+function sf_add_updates_nav_menu_link($items, $args) {
+    if (strpos($items, '/blog') === false) {
+        $is_active = (is_page('blog') || (isset($_SERVER['REQUEST_URI']) && strpos($_SERVER['REQUEST_URI'], '/blog') !== false)) ? ' current-menu-item' : '';
+        $items .= '<li class="menu-item menu-item-type-custom' . $is_active . '"><a href="' . esc_url(home_url('/blog/')) . '"><span class="nav-drop-title">Updates & Blog</span></a></li>';
+    }
+    return $items;
 }
 
 
