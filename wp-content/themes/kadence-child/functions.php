@@ -220,9 +220,10 @@ function sf_auto_fix_404_permalinks() {
     <li><strong>Listen and improve:</strong> Using participant feedback, incidents, complaints, supervision and quality reviews to continuously improve our services.</li>
 </ul>';
 
+        $cat_id = wp_create_category('SIL & Supported Housing');
+
         if (!$existing_post) {
-            $cat_id = wp_create_category('SIL & Supported Housing');
-            $post_id = wp_insert_post(array(
+            wp_insert_post(array(
                 'post_title'    => 'Support Foundation’s Commitment to Continue SIL Registration',
                 'post_name'     => $sil_post_slug,
                 'post_content'  => $sil_html_content,
@@ -241,8 +242,164 @@ function sf_auto_fix_404_permalinks() {
             ));
         }
 
+        // Auto-publish Article 2: The Complete Participant Guide to Supported Independent Living (SIL)
+        $article2_slug = 'complete-participant-guide-to-supported-independent-living-sil';
+        $existing_art2 = null;
+        if (function_exists('get_page_by_path')) {
+            $existing_art2 = get_page_by_path($article2_slug, OBJECT, 'post');
+        }
+
+        $art2_html_content = '<p class="lead"><strong>Everything NDIS participants, carers, and families need to know about navigating Home & Living funding, understanding living expenses vs support costs, co-tenant matching, and choosing a trusted registered provider.</strong></p>
+
+<p>Moving into your own home or transitioning into supported accommodation is one of the most empowering milestones in an NDIS participant\'s journey. However, navigating <strong>Supported Independent Living (SIL)</strong>, Understanding the difference between housing types, calculating out-of-pocket costs, and deciphering the NDIA\'s "Roster of Care" can feel overwhelming for participants and their families.</p>
+
+<p>At <strong>Support Foundation</strong> (Registered NDIS Provider #4050064716), we believe in radical transparency, dignity of risk, and empowering participants with clear, practical knowledge. This comprehensive guide breaks down everything you need to know before applying for or moving into a SIL home.</p>
+
+<div class="sf-highlight-card" style="background:#ecfdf5; border-left:4px solid #10b981; padding:1.5rem; border-radius:8px; margin:1.75rem 0;">
+    <h3 style="color:#065f46; margin-top:0;">💡 Key Takeaway in Brief</h3>
+    <p style="margin-bottom:0;">SIL funding pays for the <strong>support workers</strong> who assist you with daily living activities (showering, medication, cooking, community outings) 24 hours a day, 7 days a week. It does <em>not</em> pay for your rent, food, or electricity bills, which are covered by your ordinary living allowance (e.g. Disability Support Pension and Commonwealth Rent Assistance).</p>
+</div>
+
+<hr style="margin:2.5rem 0; border:0; border-top:1px solid #e2e8f0;">
+
+<h2>1. Understanding the Differences: SIL vs SDA vs ILO</h2>
+<p>Many participants confuse the various "Home and Living" funding categories within the NDIS. Here is how they differ:</p>
+
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0; font-size:0.95rem;">
+    <thead>
+        <tr style="background:#f1f5f9; text-align:left;">
+            <th style="padding:12px; border:1px solid #cbd5e1;">Funding Type</th>
+            <th style="padding:12px; border:1px solid #cbd5e1;">What It Pays For</th>
+            <th style="padding:12px; border:1px solid #cbd5e1;">Who It Is For</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="padding:12px; border:1px solid #cbd5e1;"><strong>SIL (Supported Independent Living)</strong></td>
+            <td style="padding:12px; border:1px solid #cbd5e1;">The <strong>care & support staff</strong> in the home (day shifts, active night, sleepover care).</td>
+            <td style="padding:12px; border:1px solid #cbd5e1;">Participants with high or complex daily support needs needing 24/7 care.</td>
+        </tr>
+        <tr style="background:#f8fafc;">
+            <td style="padding:12px; border:1px solid #cbd5e1;"><strong>SDA (Specialist Disability Accommodation)</strong></td>
+            <td style="padding:12px; border:1px solid #cbd5e1;">The <strong>physical building & bricks</strong> (wheelchair accessible, high physical support, robust home design).</td>
+            <td style="padding:12px; border:1px solid #cbd5e1;">Participants with extreme functional impairment or very high physical support needs.</td>
+        </tr>
+        <tr>
+            <td style="padding:12px; border:1px solid #cbd5e1;"><strong>ILO (Individualised Living Options)</strong></td>
+            <td style="padding:12px; border:1px solid #cbd5e1;">Flexible living arrangements (e.g., host families, flatmates, living alone with drop-in support).</td>
+            <td style="padding:12px; border:1px solid #cbd5e1;">Participants seeking an alternative to shared group homes.</td>
+        </tr>
+    </tbody>
+</table>
+
+<p><em>Note: You can receive SIL funding in a standard rental property, a family home, or within an SDA-approved purpose-built disability home.</em></p>
+
+<hr style="margin:2.5rem 0; border:0; border-top:1px solid #e2e8f0;">
+
+<h2>2. What Does SIL Funding Pay For vs What Do You Pay?</h2>
+<p>One of the most frequent questions families ask is: <em>"What will I have to pay out of my own pocket?"</em></p>
+
+<h3>✅ Covered by Your NDIS SIL Funding:</h3>
+<ul>
+    <li><strong>24/7 Support Worker Care:</strong> Dedicated support staff assisting with personal hygiene, dressing, and mobility.</li>
+    <li><strong>Medication Management:</strong> Administering and prompting prescribed medications.</li>
+    <li><strong>Meal Planning & Cooking:</strong> Preparing nutritious meals or assisting you in developing your own culinary skills.</li>
+    <li><strong>Household Assistance:</strong> Laundry, cleaning, domestic chores, and routine maintenance.</li>
+    <li><strong>Behavioral Support Implementation:</strong> Positive Behavior Support (PBS) strategies delivered by trained staff.</li>
+    <li><strong>Overnight Care:</strong> Active night staff or sleepover support ensuring safety while you rest.</li>
+    <li><strong>Community Access:</strong> Transport and staff accompaniment to medical appointments, shopping, and recreation.</li>
+</ul>
+
+<h3>❌ Paid by the Participant (Out-of-Pocket Living Costs):</h3>
+<ul>
+    <li><strong>Rent or Accommodation Contribution:</strong> Typically 25% of your basic Disability Support Pension (DSP) plus 100% of your Commonwealth Rent Assistance (CRA).</li>
+    <li><strong>Board & Groceries:</strong> Shared grocery kitty for fresh food, pantry supplies, and communal household goods.</li>
+    <li><strong>Utilities:</strong> Your shared portion of electricity, water, gas, and high-speed Wi-Fi.</li>
+    <li><strong>Personal Discretionary Expenses:</strong> Clothes, personal mobile phone, holidays, takeout meals, and entertainment.</li>
+</ul>
+
+<div class="sf-paa-box" style="background:#f0f9ff; border-left:4px solid #0284c7; padding:1.5rem; border-radius:8px; margin:1.75rem 0;">
+    <h4 style="color:#0369a1; margin-top:0;">💡 Q: Will I have enough money left from my Disability Support Pension (DSP)?</h4>
+    <p style="margin-bottom:0;">A: Yes. Australian NDIS and DSS guidelines ensure reasonable rent and board contributions leave participants with sufficient discretionary disposable income each fortnight for personal leisure, clothing, and savings.</p>
+</div>
+
+<hr style="margin:2.5rem 0; border:0; border-top:1px solid #e2e8f0;">
+
+<h2>3. What is a "Roster of Care" (RoC) and Why Does It Matter?</h2>
+<p>When applying for SIL funding with the NDIA, your support coordinator and SIL provider will create a <strong>Roster of Care (RoC)</strong>.</p>
+<p>The Roster of Care is an exact, hour-by-hour weekly timetable detailing:</p>
+<ol>
+    <li><strong>When you need support:</strong> Morning routines, afternoon social activities, dinner prep, and bedtime.</li>
+    <li><strong>The Staffing Ratio:</strong> Whether support is shared (e.g. 1 worker to 2 or 3 participants) or individual 1:1 support for complex tasks.</li>
+    <li><strong>Overnight Model:</strong> Whether you require <em>Active Overnight</em> (awake staff monitoring throughout the night) or <em>Sleepover Overnight</em> (staff sleeping in the on-site staff room available for emergencies).</li>
+</ol>
+<p>The NDIA reviews this document alongside your <strong>Functional Capacity Assessment (FCA)</strong> to decide your annual SIL dollar allocation.</p>
+
+<hr style="margin:2.5rem 0; border:0; border-top:1px solid #e2e8f0;">
+
+<h2>4. How Co-Tenant Matching Works at Support Foundation</h2>
+<p>Living with others should be a joyful, supportive experience — not a source of stress. Support Foundation uses a meticulous <strong>Participant-Centered Compatibility Process</strong> before any new housemate moves into a shared home:</p>
+<ul>
+    <li><strong>Lifestyle & Schedule Alignment:</strong> Matching early risers with morning schedules, and social participants with friendly, interactive peers.</li>
+    <li><strong>Age & Interest Matching:</strong> Connecting housemates who share common hobbies, cultural backgrounds, or communication styles.</li>
+    <li><strong>Meet-and-Greets & Trial Dinners:</strong> Opportunities for potential housemates and their families to meet in a relaxed setting over afternoon tea.</li>
+    <li><strong>Respite / Trial Stays:</strong> Spending a weekend in the home through Short-Term Accommodation (STA) before committing to a permanent lease.</li>
+    <li><strong>Existing Tenant Voice:</strong> Under the 2026 NDIS Practice Standards, current tenants are consulted and participate in discussions regarding prospective housemates.</li>
+</ul>
+
+<hr style="margin:2.5rem 0; border:0; border-top:1px solid #e2e8f0;">
+
+<h2>5. Your Rights: Separate Tenancy from Service Agreements</h2>
+<p>A crucial safeguard under the new NDIS legislation is the <strong>strict legal separation of your housing tenancy agreement from your SIL service agreement</strong>.</p>
+<blockquote style="font-size:1.1rem; color:#047857; font-weight:600; margin:1.5rem 0; background:#f8fafc; padding:1.25rem; border-left:4px solid #10b981; border-radius:4px;">
+    "You have the right to change your disability support provider at any time without fear of losing your home or being evicted."
+</blockquote>
+<p>Support Foundation provides transparent, plain-English agreements outlining your tenancy rights, privacy protections, feedback and complaints mechanisms, and emergency support policies.</p>
+
+<hr style="margin:2.5rem 0; border:0; border-top:1px solid #e2e8f0;">
+
+<h2>6. Step-by-Step Roadmap: How to Move Into a SIL Home</h2>
+<ol style="line-height:1.8; margin-left:1.5rem;">
+    <li><strong>Step 1: Functional Capacity Assessment (FCA)</strong> — An Occupational Therapist assesses your daily living skills and recommends 24/7 supported living.</li>
+    <li><strong>Step 2: Home & Living Decision</strong> — Submit a Home and Living Supporting Evidence Form to the NDIA requesting SIL approval.</li>
+    <li><strong>Step 3: Tour Potential Properties</strong> — Meet with the Support Foundation team to view available homes in your preferred location.</li>
+    <li><strong>Step 4: Trial Stay (STA Respite)</strong> — Test the waters with a short stay to get to know the staff and housemates.</li>
+    <li><strong>Step 5: Roster of Care Submission</strong> — Support Foundation drafts and submits your tailored Roster of Care to the NDIA.</li>
+    <li><strong>Step 6: Move-In & Welcome!</strong> — Sign your clear agreements, decorate your private bedroom, and begin your journey to greater independence!</li>
+</ol>
+
+<hr style="margin:2.5rem 0; border:0; border-top:1px solid #e2e8f0;">
+
+<h2>Looking for Immediate SIL Vacancies or Support?</h2>
+<p>Support Foundation has modern, fully accessible SIL vacancies across New South Wales, Victoria, ACT, South Australia, and Tasmania. Our dedicated intake team is ready to guide you through every step of the NDIS approval process.</p>
+
+<div style="margin-top:2rem; display:flex; gap:12px; flex-wrap:wrap;">
+    <a href="https://zfrmz.com/sIh6uDqI2c9PaujmOoTR" target="_blank" rel="noopener noreferrer" style="background:#047857; color:#fff; padding:12px 24px; border-radius:8px; text-decoration:none; font-weight:700; display:inline-block;">Inquire About SIL Vacancies</a>
+    <a href="tel:0283861433" style="background:#0f172a; color:#fff; padding:12px 24px; border-radius:8px; text-decoration:none; font-weight:700; display:inline-block;">Speak with an Intake Specialist (02 8386 1433)</a>
+</div>';
+
+        if (!$existing_art2) {
+            wp_insert_post(array(
+                'post_title'    => 'The Complete Participant Guide to Supported Independent Living (SIL) Under the NDIS',
+                'post_name'     => $article2_slug,
+                'post_content'  => $art2_html_content,
+                'post_excerpt'  => 'Everything NDIS participants and families need to know about SIL funding, living costs vs support costs, Roster of Care, co-tenant matching, and participant rights.',
+                'post_status'   => 'publish',
+                'post_type'     => 'post',
+                'post_category' => array($cat_id)
+            ));
+        } else {
+            wp_update_post(array(
+                'ID'           => $existing_art2->ID,
+                'post_title'   => 'The Complete Participant Guide to Supported Independent Living (SIL) Under the NDIS',
+                'post_content' => $art2_html_content,
+                'post_excerpt' => 'Everything NDIS participants and families need to know about SIL funding, living costs vs support costs, Roster of Care, co-tenant matching, and participant rights.',
+                'post_status'  => 'publish'
+            ));
+        }
+
         flush_rewrite_rules(true);
-        update_option('sf_permalinks_fix_v9', 'done');
+        update_option('sf_permalinks_fix_v10', 'done');
     }
 }
 

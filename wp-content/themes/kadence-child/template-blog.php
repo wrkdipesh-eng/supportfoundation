@@ -1045,6 +1045,27 @@ $dynamic_posts_query = new WP_Query(array(
 
                 <!-- 2. PILLAR GUIDE CARDS (BUILT-IN HIGH-CONVERTING NDIS ARTICLES) -->
                 
+                <!-- Pillar: Complete Participant Guide to SIL -->
+                <article class="sf-blog-card sf-filterable-item" data-category="sil-housing" data-search-text="complete participant guide to supported independent living sil costs roster of care eligibility co-tenant matching sda ilo rights">
+                    <div class="sf-card-thumbnail-wrap">
+                        <div class="sf-card-illustration-overlay">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                        </div>
+                    </div>
+                    <div class="sf-card-body">
+                        <div class="sf-card-category-row">
+                            <span class="sf-card-tag">🏡 SIL & Housing</span>
+                            <span class="sf-card-date">Participant Guide</span>
+                        </div>
+                        <h3 class="sf-card-title">The Complete Participant Guide to Supported Independent Living (SIL) Under the NDIS</h3>
+                        <p class="sf-card-excerpt">Understand what SIL funding covers vs out-of-pocket costs, how the Roster of Care works, co-tenant matching, and your tenancy rights.</p>
+                        <div class="sf-card-footer">
+                            <span class="sf-read-time-badge">⏱️ 7 min read</span>
+                            <button class="sf-card-read-link" onclick="sfOpenModal('modal-sil-guide')">Read Guide →</button>
+                        </div>
+                    </div>
+                </article>
+
                 <!-- Pillar 1: Registered Provider Guide -->
                 <article class="sf-blog-card sf-filterable-item" data-category="compliance" data-search-text="choosing a registered ndis service provider in australia compliance quality safeguards commission agency managed">
                     <div class="sf-card-thumbnail-wrap">
@@ -1600,6 +1621,50 @@ $dynamic_posts_query = new WP_Query(array(
             <span class="sf-card-tag" style="margin-bottom: 1rem; display: inline-block;">💼 Healthcare Careers</span>
             <h2>Apply Online for Disability Support Worker Jobs Sydney & Healthcare Careers</h2>
             <p>Looking for <strong>Disability Support Worker Jobs Sydney & NSW</strong>? Support Foundation is actively hiring compassionate support workers, nurses, and coordinators with competitive hourly pay rates ($34–$55/hr). Submit your application directly via our <a href="https://forms.zohopublic.com/virtualoffice15585/form/ServiceAgreement/formperma/hSFh-yUR-CRf3xaROJUA4fFm3jYvNk5g1gPmRsdpd6I" target="_blank" rel="noopener noreferrer" class="sf-internal-link">Job Application Form</a>.</p>
+        </div>
+    </div>
+</div>
+
+<!-- 11. Complete Participant Guide to SIL Modal -->
+<div id="modal-sil-guide" class="sf-reader-modal-overlay" onclick="sfCloseModalOnBg(event, 'modal-sil-guide')">
+    <div class="sf-reader-modal-container">
+        <button class="sf-modal-close-btn" onclick="sfCloseModal('modal-sil-guide')" aria-label="Close article">✕</button>
+        <div class="sf-modal-article-body">
+            <span class="sf-card-tag" style="margin-bottom: 1rem; display: inline-block;">🏡 SIL & Supported Housing</span>
+            <h2>The Complete Participant Guide to Supported Independent Living (SIL) Under the NDIS</h2>
+            <p style="font-size: 1.15rem; color: var(--sf-emerald); font-weight: 600;">Everything NDIS participants, carers, and families need to know about navigating Home & Living funding, understanding living expenses vs support costs, co-tenant matching, and choosing a trusted registered provider.</p>
+            
+            <p>Moving into your own home or transitioning into supported accommodation is one of the most empowering milestones in an NDIS participant's journey. However, navigating <strong>Supported Independent Living (SIL)</strong>, understanding the difference between housing types, calculating out-of-pocket costs, and deciphering the NDIA's "Roster of Care" can feel overwhelming for participants and their families.</p>
+
+            <div class="sf-highlight-card">
+                <strong style="color: var(--sf-emerald-dark); font-size: 1.1rem; display: block; margin-bottom: 0.5rem;">💡 Key Takeaway in Brief</strong>
+                SIL funding pays for the <strong>support workers</strong> who assist you with daily living activities (showering, medication, cooking, community outings) 24 hours a day, 7 days a week. It does <em>not</em> pay for your rent, food, or electricity bills, which are covered by your ordinary living allowance (e.g. Disability Support Pension and Commonwealth Rent Assistance).
+            </div>
+
+            <h3>1. Understanding the Differences: SIL vs SDA vs ILO</h3>
+            <ul>
+                <li><strong>SIL (Supported Independent Living):</strong> The <strong>care & support staff</strong> in the home (day shifts, active night, sleepover care) for participants with high or complex daily needs.</li>
+                <li><strong>SDA (Specialist Disability Accommodation):</strong> The <strong>physical building & accessible bricks</strong> (wheelchair accessible, robust, high physical support).</li>
+                <li><strong>ILO (Individualised Living Options):</strong> Flexible alternative arrangements (e.g., host families, flatmates, drop-in support).</li>
+            </ul>
+
+            <h3>2. What Does SIL Funding Pay For vs What Do You Pay?</h3>
+            <p><strong>Covered by NDIS SIL:</strong> 24/7 support worker care, personal care, medication administration, meal prep, household chores, positive behavior support, overnight safety, and medical appointment transport.</p>
+            <p><strong>Paid by Participant:</strong> Rent (typically 25% of DSP + 100% of Rent Assistance), shared grocery kitty, electricity/water/Wi-Fi bills, and personal leisure spending.</p>
+
+            <h3>3. What is a "Roster of Care" (RoC)?</h3>
+            <p>The Roster of Care is an exact, hour-by-hour weekly timetable detailing when you need support, staffing ratios (1:1 vs shared 1:2), and whether overnight support is active or sleepover. The NDIA uses this along with your Functional Capacity Assessment (FCA) to calculate your annual funding.</p>
+
+            <h3>4. How Co-Tenant Matching Works at Support Foundation</h3>
+            <p>We believe shared living must be safe, comfortable, and harmonious. We match housemates based on age, interests, lifestyle routines, and communication styles. We offer meet-and-greets, trial dinners, and weekend respite stays before anyone moves in permanently.</p>
+
+            <h3>5. Your Rights: Separate Tenancy from Service Agreements</h3>
+            <p>Under the new 2026 NDIS Practice Standards, your tenancy agreement is legally separate from your SIL support agreement. <strong>You have the right to change your SIL provider at any time without fear of losing your home.</strong></p>
+
+            <div style="margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--sf-slate-200); display: flex; gap: 12px; flex-wrap: wrap;">
+                <a href="https://zfrmz.com/sIh6uDqI2c9PaujmOoTR" target="_blank" rel="noopener noreferrer" class="sf-btn-primary">Inquire About SIL Vacancies</a>
+                <a href="tel:0283861433" class="sf-btn-primary" style="background: var(--sf-slate-900);">Speak with an Intake Specialist (02 8386 1433)</a>
+            </div>
         </div>
     </div>
 </div>
