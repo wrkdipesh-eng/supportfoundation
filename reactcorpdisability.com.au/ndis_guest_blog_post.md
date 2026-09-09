@@ -10,7 +10,7 @@ In this guide, we outline key factors to consider when selecting an NDIS registe
 
 Not all disability support organizations hold official registration across complex service categories. Working with an **NDIS Registered Provider** ensures strict compliance with national safety guidelines, vetted support workers, and audited quality management standards.
 
-For instance, [ReactCorp Disability Services](https://reactcorpdisability.com.au/) is an officially registered NDIS provider based in Roselands, Sydney (Canterbury-Bankstown region). Approved across **12 core NDIS registration classes**, they offer specialized care ranging from tenancy assistance to high-level clinical coordination.
+For instance, [ReactCorp Disability Services](https://reactcorpdisability.com.au/) is an officially registered NDIS provider based in North Kellyville, Sydney (The Hills Shire / Greater Sydney). Approved across **12 core NDIS registration classes**, they offer specialized care ranging from tenancy assistance to high-level clinical coordination.
 
 ---
 
@@ -22,7 +22,7 @@ Support Coordination helps participants connect with mainstream services, allied
 - **Level 2 (Coordination of Supports):** Medium-term support to navigate complex service agreements and optimize plan funding.
 - **Level 3 (Specialist Support Coordination):** Expert case management for participants facing high-complexity challenges or crisis situations.
 
-To learn more about tailored coordination services in Roselands and Greater Sydney, visit [ReactCorp Support Coordination Services](https://reactcorpdisability.com.au/our-services/).
+To learn more about tailored coordination services in North Kellyville and Greater Sydney, visit [ReactCorp Support Coordination Services](https://reactcorpdisability.com.au/our-services/).
 
 ---
 
@@ -52,4 +52,4 @@ Finding the right support team empowers you to live independently and achieve yo
 
 📍 **Office Location:** 20 Barabati Road, North Kellyville NSW 2155, Australia  
 📞 **24/7 Phone Line:** [0422 069 482](tel:0422069482)  
-🌐 **Online Intake & Referrals:** [Contact ReactCorp Intake Team](https://reactcorpdisability.com.au/contact/)
+🌐 **Online Intake & Referrals:** [Contact ReactCorp Intake Team](https://reactcorpdisability.com.au/contact-us/)

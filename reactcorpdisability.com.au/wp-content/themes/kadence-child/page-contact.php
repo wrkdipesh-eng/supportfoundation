@@ -2,7 +2,7 @@
 /**
  * Template Name: Contact Page Template
  * Redesigned Professional Contact & Intake Page for ReactCorp Disability
- * Optimized for Rank #1 Google Keywords (24/7 Emergency NDIS Intake Sydney, NDIS Provider Roselands NSW)
+ * Optimized for Rank #1 Google Keywords (24/7 Emergency NDIS Intake Sydney, NDIS Provider North Kellyville NSW)
  */
 
 get_header();

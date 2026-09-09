@@ -2,7 +2,7 @@
 /**
  * Template Name: Our Services Page Template
  * Redesigned Professional Our Services Page for ReactCorp Disability
- * Optimized for Rank #1 Google Keywords (NDIS Support Coordination Level 1 2 3 Sydney, SIL Accommodation Roselands Canterbury)
+ * Optimized for Rank #1 Google Keywords (NDIS Support Coordination Level 1 2 3 Sydney, SIL Accommodation North Kellyville Canterbury)
  */
 
 get_header();
@@ -402,10 +402,10 @@ body {
     <!-- OUR SERVICES HERO BANNER WITH TARGET KEYWORDS -->
     <section class="rc-page-hero">
         <div class="rc-container">
-            <span class="rc-hero-tag" style="color:#f0abfc !important;">NDIS Provider Roselands NSW</span>
+            <span class="rc-hero-tag" style="color:#f0abfc !important;">NDIS Provider North Kellyville NSW</span>
             <h1 class="rc-hero-h1" style="color:#ffffff !important;">Our NDIS Registered Support Services</h1>
             <p class="rc-hero-p" style="color:#f1f5f9 !important;">
-                ReactCorp is an officially registered NDIS provider in Roselands Sydney (Canterbury-Bankstown region). We specialize in <strong>NDIS Support Coordination (Level 1, 2 & 3)</strong>, <strong>Supported Independent Living (SIL) Accommodation</strong>, Personal Care, and 24/7 emergency intake.
+                ReactCorp is an officially registered NDIS provider in North Kellyville Sydney (Canterbury-Bankstown region). We specialize in <strong>NDIS Support Coordination (Level 1, 2 & 3)</strong>, <strong>Supported Independent Living (SIL) Accommodation</strong>, Personal Care, and 24/7 emergency intake.
             </p>
             <div class="rc-hero-btn-group">
                 <a href="tel:0422069482" class="rc-btn-white" title="Call 24/7 Emergency NDIS Intake Sydney">
@@ -424,7 +424,7 @@ body {
             <div class="rc-sec-header">
                 <span class="rc-sec-tag">Specialist Focus Areas</span>
                 <h2 class="rc-sec-h2">NDIS Support Coordination & SIL Accommodation Sydney</h2>
-                <p class="rc-sec-p">Designed for participants in Roselands, Canterbury-Bankstown & Greater Sydney requiring expert coordination and quality living environments.</p>
+                <p class="rc-sec-p">Designed for participants in North Kellyville, Canterbury-Bankstown & Greater Sydney requiring expert coordination and quality living environments.</p>
             </div>
 
             <div class="rc-specialist-grid">
@@ -433,15 +433,15 @@ body {
                     <span class="rc-star-badge">⭐ Group 0132 Provider</span>
                     <h3 class="rc-specialist-title">NDIS Support Coordination (Level 1, 2 & 3)</h3>
                     <p class="rc-specialist-desc">
-                        ReactCorp specialises in <strong>Support Coordination Level 1, 2 & 3 in Sydney & Roselands</strong>. Including Level 1 (Support Connection), Level 2 (Coordination of Supports), and Level 3 (Specialist Support Coordination). Our experienced coordinators help participants understand their NDIS plans, connect with appropriate providers, and build the skills needed to manage supports independently. For participants with complex needs, our Specialist Support Coordinators provide high-level expertise to manage challenges, reduce risks, and ensure consistent service delivery. We work collaboratively with families, carers, and allied professionals across Sydney to achieve sustainable outcomes and maximize the value of your NDIS funding.
+                        ReactCorp specialises in <strong>Support Coordination Level 1, 2 & 3 in Sydney & North Kellyville</strong>. Including Level 1 (Support Connection), Level 2 (Coordination of Supports), and Level 3 (Specialist Support Coordination). Our experienced coordinators help participants understand their NDIS plans, connect with appropriate providers, and build the skills needed to manage supports independently. For participants with complex needs, our Specialist Support Coordinators provide high-level expertise to manage challenges, reduce risks, and ensure consistent service delivery. We work collaboratively with families, carers, and allied professionals across Sydney to achieve sustainable outcomes and maximize the value of your NDIS funding.
                     </p>
                     <ul class="rc-specialist-features">
                         <li>✔️ Level 1 Support Connection (0132)</li>
                         <li>✔️ Level 2 Coordination of Supports (0132)</li>
                         <li>✔️ Level 3 Specialist Support Coordination (0132)</li>
-                        <li>✔️ Crisis & Complex Case Resolution Roselands</li>
+                        <li>✔️ Crisis & Complex Case Resolution North Kellyville</li>
                     </ul>
-                    <a href="tel:0422069482" style="background:linear-gradient(135deg, #80387d 0%, #581c87 100%); color:#ffffff; padding:0.8rem 1.4rem; border-radius:50px; font-weight:800; text-decoration:none; text-align:center; display:block;" title="Connect with Roselands Support Coordinator">
+                    <a href="tel:0422069482" style="background:linear-gradient(135deg, #80387d 0%, #581c87 100%); color:#ffffff; padding:0.8rem 1.4rem; border-radius:50px; font-weight:800; text-decoration:none; text-align:center; display:block;" title="Connect with North Kellyville Support Coordinator">
                         📞 Connect with a Support Coordinator
                     </a>
                 </div>
@@ -451,16 +451,16 @@ body {
                     <span class="rc-star-badge">⭐ Group 0115 Provider</span>
                     <h3 class="rc-specialist-title">Supported Independent Living (SIL) Accommodation Sydney</h3>
                     <p class="rc-specialist-desc">
-                        ReactCorp is highly experienced in <strong>Supported Independent Living (SIL) accommodation in Roselands, Canterbury & Greater Sydney</strong>. We provide safe, comfortable, and supportive living environments where participants can build independence while receiving tailored daily assistance. Our SIL homes are designed to promote dignity, inclusion, and community participation. Supports include 24/7 personal care, meal preparation, medication assistance, skill development, and overnight supervision. We match housemates carefully to encourage positive living arrangements and provide 24/7 responsive emergency intake support.
+                        ReactCorp is highly experienced in <strong>Supported Independent Living (SIL) accommodation in North Kellyville, Canterbury & Greater Sydney</strong>. We provide safe, comfortable, and supportive living environments where participants can build independence while receiving tailored daily assistance. Our SIL homes are designed to promote dignity, inclusion, and community participation. Supports include 24/7 personal care, meal preparation, medication assistance, skill development, and overnight supervision. We match housemates carefully to encourage positive living arrangements and provide 24/7 responsive emergency intake support.
                     </p>
                     <ul class="rc-specialist-features">
                         <li>✔️ 24/7 Responsive Active & Overnight SIL Support (0115)</li>
                         <li>✔️ Tailored Daily Living & Skill Development</li>
-                        <li>✔️ Compatible Housemate Matching Roselands</li>
+                        <li>✔️ Compatible Housemate Matching North Kellyville</li>
                         <li>✔️ Dignified Shared Living Homes Sydney</li>
                     </ul>
-                    <a href="tel:0422069482" style="background:linear-gradient(135deg, #80387d 0%, #581c87 100%); color:#ffffff; padding:0.8rem 1.4rem; border-radius:50px; font-weight:800; text-decoration:none; text-align:center; display:block;" title="Inquire About Roselands SIL Homes">
-                        🏠 Inquire About SIL Homes in Roselands
+                    <a href="tel:0422069482" style="background:linear-gradient(135deg, #80387d 0%, #581c87 100%); color:#ffffff; padding:0.8rem 1.4rem; border-radius:50px; font-weight:800; text-decoration:none; text-align:center; display:block;" title="Inquire About North Kellyville SIL Homes">
+                        🏠 Inquire About SIL Homes in North Kellyville
                     </a>
                 </div>
             </div>

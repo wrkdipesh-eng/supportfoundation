@@ -1,7 +1,7 @@
 <?php
 /**
  * Clean, Sleek & Professional Homepage Template for ReactCorp Disability
- * Optimized for Rank #1 Google Keywords (NDIS Provider Roselands NSW, Support Coordination Sydney, SIL Accommodation)
+ * Optimized for Rank #1 Google Keywords (NDIS Provider North Kellyville NSW, Support Coordination Sydney, SIL Accommodation)
  */
 
 get_header();
@@ -390,7 +390,7 @@ body {
             <!-- Hero Content -->
             <div>
                 <h1 class="rc-hero-title" style="color:#ffffff !important;">
-                    NDIS Registered Provider<br><span style="color:#f0abfc !important;">North Kellyville & Sydney NSW.</span>
+                    NDIS Registered Provider<br><span style="color:#f0abfc !important;">Sydney NSW — North Kellyville.</span>
                 </h1>
                 <p class="rc-hero-sub" style="color:#f1f5f9 !important;">
                     At <strong>ReactCorp</strong>, your goals become our mission. Located at 20 Barabati Road, North Kellyville, we deliver reliable, flexible, and person-centred NDIS support coordination, SIL accommodation, and 24/7 crisis support across Sydney & NSW.

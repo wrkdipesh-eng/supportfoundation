@@ -397,10 +397,10 @@ body {
             <span class="rc-hero-tag" style="color:#f0abfc !important;">NDIS Price Guide Compliant Provider Sydney</span>
             <h1 class="rc-hero-h1" style="color:#ffffff !important;">NDIS Pricing & Plan Support Sydney</h1>
             <p class="rc-hero-p" style="color:#f1f5f9 !important;">
-                ReactCorp strictly adheres to the official <strong>NDIS Pricing Arrangements and Price Limits in Roselands & Sydney NSW</strong>. Our pricing is transparent, fair, zero hidden fees, and fully aligned with NDIA government standards to ensure you get maximum value from your plan budget.
+                ReactCorp strictly adheres to the official <strong>NDIS Pricing Arrangements and Price Limits in North Kellyville & Sydney NSW</strong>. Our pricing is transparent, fair, zero hidden fees, and fully aligned with NDIA government standards to ensure you get maximum value from your plan budget.
             </p>
             <div class="rc-hero-btn-group">
-                <a href="tel:0422069482" class="rc-btn-white" title="Discuss Your NDIS Plan Funding Roselands Sydney">
+                <a href="tel:0422069482" class="rc-btn-white" title="Discuss Your NDIS Plan Funding North Kellyville Sydney">
                     📞 Discuss Your Funding (0422 069 482)
                 </a>
                 <a href="https://www.ndis.gov.au/providers/pricing-arrangements" target="_blank" rel="noopener" class="rc-btn-glass" title="Official NDIS Price Guide Link">
@@ -455,7 +455,7 @@ body {
                             <span class="rc-price-badge">0132</span>
                             <h3 class="rc-price-card-title">Support Coordination Level 1, 2 & 3</h3>
                         </div>
-                        <p class="rc-price-card-desc">Comprehensive support coordination to connect you with providers and optimize your NDIS plan setup in Roselands & Sydney.</p>
+                        <p class="rc-price-card-desc">Comprehensive support coordination to connect you with providers and optimize your NDIS plan setup in North Kellyville & Sydney.</p>
                     </div>
                     <div class="rc-price-rate-box">
                         ⚙️ Standard Hourly Rate as per current NDIS Price Limits
@@ -497,7 +497,7 @@ body {
                             <span class="rc-price-badge">0116 / 0125</span>
                             <h3 class="rc-price-card-title">Community Participation</h3>
                         </div>
-                        <p class="rc-price-card-desc">Social engagement, skill building, community outings, and group participation support in Roselands.</p>
+                        <p class="rc-price-card-desc">Social engagement, skill building, community outings, and group participation support in North Kellyville.</p>
                     </div>
                     <div class="rc-price-rate-box">
                         🎉 Hourly support rate as per official NDIS price guide
