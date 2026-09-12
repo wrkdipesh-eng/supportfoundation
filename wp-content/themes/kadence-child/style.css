@@ -1898,6 +1898,16 @@ img.kadence-sticky-logo {
     color: #4a5550 !important;
     margin: 0 !important;
 }
+.sf-footer-copy a {
+    color: #049f82 !important;
+    text-decoration: none !important;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.sf-footer-copy a:hover {
+    color: #00d2aa !important;
+    text-decoration: underline !important;
+}
 .sf-footer-legal {
     display: flex;
     align-items: center;

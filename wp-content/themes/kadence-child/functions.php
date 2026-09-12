@@ -776,7 +776,8 @@ function sf_custom_footer() {
             <div class="sf-footer-container sf-footer-bottom-inner">
                 <p class="sf-footer-copy">
                     &copy; <?php echo date('Y'); ?> Support Foundation Australia Pty Ltd &nbsp;|&nbsp;
-                    NDIS Registered Provider
+                    NDIS Registered Provider &nbsp;|&nbsp;
+                    Digital Marketing by <a href="https://www.thinkcone.com.np/" target="_blank" rel="noopener">Thinkcone</a>
                 </p>
                 <nav class="sf-footer-legal" aria-label="Legal links">
                     <a href="/privacy-policy/">Privacy Policy</a>
